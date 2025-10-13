@@ -34,7 +34,7 @@ const FAQ = () => {
           --fa-font-thin: normal 100 1em / -12 "Font Awesome 6 Pro";
         }
       `}</style>
-      <div className="mx-auto max-w-7xl" style={{ marginLeft: '120px', marginRight: '120px' }}>
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         <h2 className="text-[#111827] text-center font-bold mb-12 text-[35.2px]">
           Frequently Asked Questions
         </h2>

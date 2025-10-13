@@ -5,20 +5,20 @@ import { Laptop, Zap, Waves, Recycle, Cog } from "lucide-react";
 const TopCard = ({ icon, title, desc }) => (
   <article
     className="
-      bg-white rounded-2xl shadow-md
+      bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300
       flex flex-col items-center text-center
       w-full max-w-[520px] mx-auto
-      lg:w-[379.99px] lg:h-[437.6px]
-      p-4 sm:p-5 lg:p-[15px]
+      p-6 sm:p-8
+      border border-gray-100
     "
   >
-    <div className="mb-4 text-green-600">
-      {React.cloneElement(icon, { className: "w-10 h-10 sm:w-12 sm:h-12" })}
+    <div className="mb-6 text-green-600">
+      {React.cloneElement(icon, { className: "w-12 h-12 sm:w-14 sm:h-14" })}
     </div>
-    <h3 className="text-[17px] sm:text-[19px] md:text-[20px] font-bold text-[#111827] mb-3 sm:mb-4">
+    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">
       {title}
     </h3>
-    <p className="text-[15px] sm:text-[16px] leading-7 text-[#333333] text-justify">
+    <p className="text-sm sm:text-base leading-relaxed text-gray-600">
       {desc}
     </p>
   </article>
@@ -27,20 +27,20 @@ const TopCard = ({ icon, title, desc }) => (
 const BottomCard = ({ icon, title, desc }) => (
   <article
     className="
-      bg-white rounded-2xl shadow-md
+      bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300
       flex flex-col items-center text-center
       w-full max-w-[620px] mx-auto
-      lg:w-[585px] lg:h-[341.6px]
-      p-4 sm:p-5 lg:p-[15px]
+      p-6 sm:p-8
+      border border-gray-100
     "
   >
-    <div className="mb-4 text-green-600">
-      {React.cloneElement(icon, { className: "w-10 h-10 sm:w-12 sm:h-12" })}
+    <div className="mb-6 text-green-600">
+      {React.cloneElement(icon, { className: "w-12 h-12 sm:w-14 sm:h-14" })}
     </div>
-    <h3 className="text-[17px] sm:text-[19px] md:text-[20px] font-bold text-[#111827] mb-3 sm:mb-4">
+    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">
       {title}
     </h3>
-    <p className="text-[15px] sm:text-[16px] leading-7 text-[#333333] text-justify">
+    <p className="text-sm sm:text-base leading-relaxed text-gray-600">
       {desc}
     </p>
   </article>
@@ -48,11 +48,8 @@ const BottomCard = ({ icon, title, desc }) => (
 
 const TechnologiesSection = () => {
   return (
-    <section className="w-full bg-[#EBF3ED] py-10 sm:py-12 md:py-14">
-      {/* Outer container – 120px side padding at xl, smaller on mobile */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[120px]">
-        {/* Inner stage fixed at 1200 on desktop; fluid on small screens */}
-        <div className="mx-auto w-full lg:w-[1200px]">
+    <section className="w-full bg-[#EBF3ED] py-10 sm:py-12 md:py-14 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#333333] mb-2">
@@ -66,12 +63,8 @@ const TechnologiesSection = () => {
           {/* TOP ROW – 3 cards on desktop, 2 on tablet, 1 on phone */}
           <div
             className="
-              grid place-items-center
-              gap-y-8 sm:gap-y-10
-              sm:grid-cols-2 sm:gap-x-6
-              lg:grid-cols-[379.99px_379.99px_379.99px]
-              lg:[column-gap:30px]
-              lg:justify-center
+              grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+              gap-6 lg:gap-8
               mb-8 sm:mb-10 md:mb-12
             "
           >
@@ -95,12 +88,8 @@ const TechnologiesSection = () => {
           {/* BOTTOM ROW – 2 cards centered on desktop, 1 per row on phone/tablet */}
           <div
             className="
-              grid place-items-center
-              gap-y-8 sm:gap-y-10
-              sm:grid-cols-1
-              lg:grid-cols-[585px_585px]
-              lg:[column-gap:30px]
-              lg:justify-center
+              grid grid-cols-1 lg:grid-cols-2
+              gap-6 lg:gap-8
             "
           >
             <BottomCard
@@ -114,7 +103,6 @@ const TechnologiesSection = () => {
               desc="Moving Bed Bioreactor (MBR) uses plastic carriers to break down organic matter, making wastewater treatment more efficient."
             />
           </div>
-        </div>
       </div>
     </section>
   );

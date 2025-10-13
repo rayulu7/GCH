@@ -83,7 +83,7 @@ export default function RepaymentTable({ loanAmount = 50_000, loanTerm = 0.5, in
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-        <div className="max-w-[1600px] mx-auto px-[15px]" style={{ marginLeft: '120px', marginRight: '120px' }}>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
         {/* Repayment Table */}
         <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
           <div className="bg-[#008000] text-white px-6 py-4">

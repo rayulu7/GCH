@@ -37,7 +37,7 @@ const GCHBenefits = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="bg-white py-16 px-4" style={{ marginLeft: '120px', marginRight: '120px' }}>
+    <div ref={sectionRef} className="bg-white py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         <motion.h2 
           className="text-gray-800 text-center mb-5 font-bold"

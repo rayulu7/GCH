@@ -67,7 +67,7 @@ export default function FinanceOptions() {
   return (
     <section className={`w-full bg-[#3A954F] pt-[100px] pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Container */}
-      <div className="mx-auto max-w-[1440px] px-[15px] mx-[120px]">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         {/* Features Grid */}
         <div className="flex justify-between items-center gap-8">
           {financeFeatures.map((feature) => (

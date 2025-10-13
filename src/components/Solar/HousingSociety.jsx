@@ -52,7 +52,7 @@ const HousingSociety = () => {
       
       {/* CTA Button Section */}
       <section className="w-full bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6" style={{ marginLeft: '120px', marginRight: '120px' }}>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <div className="flex justify-center items-center">
             <button 
               className="bg-[#3A954F] hover:bg-[#2d7a3d] text-white font-semibold px-8 py-4 text-lg transition-colors duration-200"
@@ -66,7 +66,7 @@ const HousingSociety = () => {
       
       {/* Solar Energy Evolution Section */}
       <section className="w-full bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6" style={{ marginLeft: '120px', marginRight: '120px' }}>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <div className="text-center mb-8">
             <h2 className="text-[32px] font-bold text-[#111827] mb-6">
               SOLAR ENERGY AND ITS EVOLUTION

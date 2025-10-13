@@ -55,27 +55,21 @@ const Clients = () => {
         </div>
 
         {/* Client Display */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="flex justify-center items-center space-x-4">
           {clients.map((client, index) => (
             <div
               key={client.id}
               className={`
-                bg-white rounded-2xl transition-all duration-1000 ease-out
+                bg-white rounded-xl p-4 shadow-lg transition-all duration-1000 ease-out
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
               `}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="p-8 text-center">
-                <div className="mb-6">
-                  <img
-                    src={client.image}
-                    alt={client.name}
-                    className="w-32 h-32 mx-auto object-contain hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{client.name}</h3>
-                <p className="text-gray-600">{client.description}</p>
-              </div>
+              <img
+                src={client.image}
+                alt={client.name}
+                className="w-20 h-20 object-contain"
+              />
             </div>
           ))}
         </div>

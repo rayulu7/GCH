@@ -35,7 +35,7 @@ export default function Components() {
       }`}
     >
       {/* Container */}
-      <div className="mx-auto max-w-[1440px] px-[15px] mx-[120px]">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-[32px] font-bold text-[#111827]">

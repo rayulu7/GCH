@@ -149,7 +149,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
         </div>
 
         {/* Panels */}
-        <div className="flex justify-between gap-8" style={{ marginLeft: '120px', marginRight: '120px' }}>
+        <div className="flex justify-between gap-8">
               {/* Left: Calculator */}
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105" style={{ width: '650px', height: '500px' }}>
             <div className="bg-[#008000] text-white flex items-center justify-center" style={{ width: '650px', height: '60px' }}>

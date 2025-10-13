@@ -2,14 +2,14 @@ import React from "react";
 
 const ExpertSewage = () => {
   return (
-    <section className="w-full bg-[#EBF3ED]">
+    <section className="w-full bg-[#f7f7f7]">
       {/* Fixed Size Container */}
       <div
         className="mx-auto rounded-[15px] shadow-xl px-[15px]"
-        style={{ width: "1200px", height: "598.8px", backgroundColor: "#EBF3ED" }}
+        style={{ width: "1200px", height: "598.8px", backgroundColor: "#f7f7f7" }}
       >
         {/* Heading */}
-        <h4 className="text-[32px] font-bold text-[#333333] text-center mb-[55px] pt-6">
+        <h4 className="text-[48px] font-bold text-[#333333] text-center mb-[55px] pt-6">
           Expert Sewage Treatment Plant Services in India
         </h4>
 

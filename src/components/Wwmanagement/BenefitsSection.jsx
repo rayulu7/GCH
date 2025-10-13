@@ -23,10 +23,10 @@ const BenefitsSection = () => {
         style={{ height: "699px" }}
       >
         {/* Heading */}
-        <h2 className="text-2xl font-bold text-center text-gray-900 mb-[20px]">
+        <h2 className="text-5xl font-bold text-center text-gray-900 mb-[20px]">
           Benefits of Effluent/Sewage Treatment Plant
         </h2>
-        <p className="text-base text-center text-gray-600 mb-8">
+        <p className="font-semibold text-center text-gray-600 mb-8">
           Benefits of Effluent/Sewage Treatment Plants are many, they are
         </p>
 

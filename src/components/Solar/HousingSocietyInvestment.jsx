@@ -6,7 +6,7 @@ export default function HousingSocietyInvestment() {
       {/* Container */}
       <div className="mx-auto max-w-[1440px]">
         {/* Content Section */}
-        <div className="flex items-center justify-center py-16" style={{ marginLeft: '120px', marginRight: '120px' }}>
+        <div className="flex items-center justify-center py-16 px-4 md:px-8 lg:px-16">
           {/* Left Section - Image */}
           <div className="pt-[15px] pr-[15px] pb-[15px]">
             <img

@@ -73,7 +73,7 @@ export default function WhatWeDo() {
   return (
     <section className={`w-full bg-[#EBF3ED] pt-[100px] pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Container */}
-      <div className="mx-auto max-w-[1440px] mx-[120px]">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-[32px] font-bold text-[#111827]">
@@ -87,8 +87,8 @@ export default function WhatWeDo() {
             <div
               key={service.id}
               style={{
-                marginLeft: index === 0 ? '120px' : '0',
-                marginRight: index === 2 ? '120px' : '0'
+                marginLeft: index === 0 ? '0' : '0',
+                marginRight: index === 2 ? '0' : '0'
               }}
             >
               <ServiceCard

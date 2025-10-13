@@ -15,6 +15,7 @@ import ServicesSection from "./Wwmanagement/Servicesection.jsx";
 import Effluenttreatment from "./Wwmanagement/Effluenttreatment.jsx";
 import TechnologiesSection from "./Wwmanagement/TechnologiesSection.jsx";
 import BenefitsSection from "./Wwmanagement/BenefitsSection.jsx";
+import WWHeroSection from "./Wwmanagement/WWMHeroSection.jsx";
 import SolarInstallation from "./Solar/SolarInstallation.jsx";
 import Residential from "./Solar/Residential.jsx";
 import HousingSociety from "./Solar/HousingSociety.jsx";
@@ -24,6 +25,8 @@ import LoadingScreen from "./LoadingScreen.jsx";
 import Maintenance from "./Maintenance.jsx";
 import Investments from "./Investments.jsx";
 import GCHStore from "./GCHStore.jsx";
+import WhyChooseGCH from "./Solar/WhyChooseGCH.jsx";
+import OurClients from "./Solar/OurClients.jsx";
 
 
 // ScrollToTop Component - Scrolls to top on route change
@@ -106,11 +109,14 @@ function IndustrialCommercialPage() {
 function WaterManagementPage() {
   return (
     <Layout>
+      <WWHeroSection />
       <Expertsewage />
       <ServicesSection />
       <Effluenttreatment />
       <TechnologiesSection />
       <BenefitsSection />
+      <WhyGCHSection />
+      <OurClients />
     </Layout>
   );
 }

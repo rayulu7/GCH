@@ -34,7 +34,7 @@ const ServicesSection = () => {
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center mb-10">
-          <h2 className="text-[32px] font-bold text-[#333333]">
+          <h2 className="text-[48px] font-bold text-[#333333]">
             Effluent/Sewage Treatment Plant Services Include:
           </h2>
         </div>

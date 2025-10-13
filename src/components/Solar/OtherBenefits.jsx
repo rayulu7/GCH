@@ -85,7 +85,7 @@ export default function OtherBenefits({ type = "residential", cardHeight = 60 })
   return (
     <section className={`w-full bg-white pt-[100px] pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Container */}
-      <div className="mx-auto max-w-[1440px] mx-[120px]">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-[32px] font-bold text-[#111827]">
@@ -94,7 +94,7 @@ export default function OtherBenefits({ type = "residential", cardHeight = 60 })
         </div>
 
         {/* Content Section */}
-        <div className="flex items-start justify-between gap-8" style={{ marginLeft: '120px', marginRight: '120px' }}>
+        <div className="flex items-start justify-between gap-8">
           {/* Left Section - Benefit Buttons */}
           <div style={{ width: '305.99px' }}>
             <div className="space-y-[15px]">
