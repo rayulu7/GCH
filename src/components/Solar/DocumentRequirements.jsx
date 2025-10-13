@@ -173,7 +173,7 @@ export default function DocumentRequirements() {
         <div className="bg-white p-8 rounded-lg shadow-[2px_4px_rgba(0,0,0,0.05)] border border-gray-200">
           <div className="flex gap-8">
             {/* Sidebar */}
-            <div className="w-[300px] space-y-3">
+            <div className="w-full max-w-xs space-y-3">
               {documentCategories.map((category) => {
                 const categoryMap = {
                   1: "residential",

@@ -94,8 +94,7 @@ const InstallationServices = () => {
                   className="w-full h-full object-cover rounded-t-lg"
                 />
                 <div 
-                  className="service-icon-bounce absolute left-1/2 transform -translate-x-1/2 bg-white group-hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-colors duration-300 z-10"
-                  style={{ width: '80px', height: '80px', bottom: '-40px' }}
+                  className="service-icon-bounce absolute left-1/2 transform -translate-x-1/2 bg-white group-hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-colors duration-300 z-10 w-20 h-20 -bottom-10"
                 >
                   {service.icon}
                 </div>

@@ -75,12 +75,11 @@ const GCHBenefits = () => {
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.id}
-              className="benefit-card"
+              className="benefit-card w-full max-w-sm"
               style={{
-                width: '380px',
-                height: '150px',
                 cursor: 'pointer',
-                position: 'relative'
+                position: 'relative',
+                minHeight: '150px'
               }}
               initial={{ opacity: 0, y: 50 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -115,7 +114,7 @@ const GCHBenefits = () => {
                 }}
               >
                 {React.cloneElement(benefit.icon, { 
-                  style: { width: '48px', height: '48px' } 
+                  className: 'w-12 h-12'
                 })}
               </motion.div>
               <motion.h3 

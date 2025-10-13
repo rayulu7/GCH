@@ -23,7 +23,7 @@ function SolarInstallation() {
   });
 
   return (
-    <>
+    <div className="min-w-0 w-full overflow-x-hidden">
       <SolarHeroSection />
       <CTAButtons />
       <InstallationServices />
@@ -42,7 +42,7 @@ function SolarInstallation() {
         interestRate={sharedLoanData.activeTab === "housingSociety" ? 9.15 : 7.99} 
       />
       <GetALoanForm />
-    </>
+    </div>
   );
 }
 

@@ -149,10 +149,10 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
         </div>
 
         {/* Panels */}
-        <div className="flex justify-between gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Left: Calculator */}
-              <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105" style={{ width: '650px', height: '500px' }}>
-            <div className="bg-[#008000] text-white flex items-center justify-center" style={{ width: '650px', height: '60px' }}>
+              <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <div className="bg-[#008000] text-white flex items-center justify-center h-16">
               <h3 className="text-[20px] font-semibold">Loan Calculator</h3>
             </div>
 
@@ -320,15 +320,15 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
           </div>
 
               {/* Right: Result */}
-              <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105" style={{ width: '650px', height: '500px' }}>
-            <div className="bg-[#008000] text-white flex items-center justify-center" style={{ width: '650px', height: '60px' }}>
+              <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <div className="bg-[#008000] text-white flex items-center justify-center h-16">
               <h3 className="text-[20px] font-semibold">Calculation Result</h3>
             </div>
 
             <div className="p-[25px]">
               <div className="grid grid-cols-2 gap-6">
                 {/* Interest Rate */}
-                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ width: '259.5px', height: '89.6px' }}>
+                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Interest Rate</div>
                   <div className="text-[18px] font-bold text-[#333333]">
                     {interestRate}%
@@ -336,7 +336,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                 </div>
 
                 {/* Loan Amount */}
-                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ width: '259.5px', height: '89.6px' }}>
+                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Loan Amount</div>
                   <div className="text-[18px] font-bold text-[#333333]">
                     ₹{fmtNum(loanAmount)}
@@ -344,7 +344,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                 </div>
 
                 {/* Loan Term */}
-                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ width: '259.5px', height: '89.6px' }}>
+                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Loan Term</div>
                   <div className="text-[18px] font-bold text-[#333333]">
                     {loanTerm === 0.5 ? "0.5 Year(s)" : `${loanTerm} Year(s)`}
@@ -352,7 +352,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                 </div>
 
                 {/* Total Interest */}
-                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ width: '259.5px', height: '89.6px' }}>
+                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Total Interest</div>
                   <div className="text-[18px] font-bold text-[#333333]">
                     {fmtINR(totalInterest)}
@@ -360,7 +360,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                 </div>
 
                 {/* Total Repayment */}
-                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ width: '259.5px', height: '89.6px' }}>
+                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Total Repayment</div>
                   <div className="text-[18px] font-bold text-[#333333]">
                     {fmtINR(totalRepayment)}
@@ -368,7 +368,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                 </div>
 
                 {/* EMI */}
-                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ width: '259.5px', height: '89.6px' }}>
+                <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">EMI</div>
                   <div className="text-[18px] font-bold text-[#333333]">
                     {fmtINR(emi)}

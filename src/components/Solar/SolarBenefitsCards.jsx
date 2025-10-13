@@ -42,58 +42,69 @@ const SolarBenefitsCards = () => {
           Other Benefits
         </h2>
         
-        {/* Top row - 3 cards */}
-        <div className="flex flex-wrap justify-center gap-8 mb-8">
-          {benefits.slice(0, 3).map((benefit) => (
+        {/* Mobile: All cards stacked vertically */}
+        <div className="block lg:hidden space-y-6">
+          {benefits.map((benefit) => (
             <div 
               key={benefit.id}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-8 flex flex-col items-center text-center"
-              style={{ width: '379.99px', height: '459.2px' }}
+              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 flex flex-col items-center text-center"
             >
-              <div className="mb-8">
-                {benefit.icon}
+              <div className="mb-6">
+                {React.cloneElement(benefit.icon, { 
+                  className: "text-green-600 w-12 h-12" 
+                })}
               </div>
-              <h3 
-                className="text-gray-800 font-semibold leading-tight px-4"
-                style={{ fontSize: '18px', marginBottom: '18px' }}
-              >
+              <h3 className="text-base font-semibold text-gray-800 leading-tight mb-4">
                 {benefit.title}
               </h3>
-              <p 
-                className="text-gray-600 leading-relaxed text-justify px-4"
-                style={{ fontSize: '18px' }}
-              >
+              <p className="text-sm text-gray-600 leading-relaxed text-center">
                 {benefit.description}
               </p>
             </div>
           ))}
         </div>
-        
-        {/* Bottom row - 2 cards centered */}
-        <div className="flex justify-center gap-8">
-          {benefits.slice(3, 5).map((benefit) => (
-            <div 
-              key={benefit.id}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-8 flex flex-col items-center text-center"
-              style={{ width: '379.99px', height: '459.2px' }}
-            >
-              <div className="mb-8">
-                {benefit.icon}
+
+        {/* Desktop: First 3 cards in row, last 2 centered */}
+        <div className="hidden lg:block">
+          {/* Top row - 3 cards */}
+          <div className="flex justify-center gap-8 mb-8">
+            {benefits.slice(0, 3).map((benefit) => (
+              <div 
+                key={benefit.id}
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-8 flex flex-col items-center text-center w-full max-w-sm"
+              >
+                <div className="mb-8">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800 leading-tight px-4 mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-base text-gray-600 leading-relaxed text-justify px-4">
+                  {benefit.description}
+                </p>
               </div>
-              <h3 
-                className="text-gray-800 font-semibold leading-tight px-4"
-                style={{ fontSize: '18px', marginBottom: '18px' }}
+            ))}
+          </div>
+          
+          {/* Bottom row - 2 cards centered */}
+          <div className="flex justify-center gap-8">
+            {benefits.slice(3, 5).map((benefit) => (
+              <div 
+                key={benefit.id}
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-8 flex flex-col items-center text-center w-full max-w-sm"
               >
-                {benefit.title}
-              </h3>
-              <p 
-                className="text-gray-600 leading-relaxed text-justify px-4"
-                style={{ fontSize: '18px' }}
-              >
-                {benefit.description}
-              </p>
-            </div>
-          ))}
+                <div className="mb-8">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800 leading-tight px-4 mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-base text-gray-600 leading-relaxed text-justify px-4">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

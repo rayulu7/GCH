@@ -30,11 +30,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="bg-[#EBF3ED] py-16">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6">
+    <section className="bg-[#EBF3ED] py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-[48px] font-bold text-[#333333]">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333]">
             Effluent/Sewage Treatment Plant Services Include:
           </h2>
         </div>
@@ -42,8 +42,7 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div
           className="
-            grid grid-cols-1 gap-y-12
-            md:[grid-template-columns:585px_585px] md:gap-x-[30px]
+            grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8
             justify-center place-items-center
           "
         >
@@ -53,7 +52,8 @@ const ServicesSection = () => {
               className="
                 group relative bg-white rounded-2xl
                 shadow-[0_10px_30px_rgba(0,0,0,0.10)]
-                w-full md:w-[585px] h-[389.6px] p-6
+                w-full max-w-md md:max-w-lg lg:max-w-xl
+                p-4 md:p-6
                 flex flex-col justify-start
                 transition-transform duration-300
                 focus-within:outline-none
@@ -86,7 +86,7 @@ const ServicesSection = () => {
               {/* Title */}
               <h3
                 className="
-                  text-[20px] font-bold text-center text-[#111827] mb-4
+                  text-lg md:text-xl font-bold text-center text-[#111827] mb-4
                   transition-colors duration-200 cursor-pointer
                   group-hover:text-green-600 group-focus-within:text-green-600
                 "
@@ -96,7 +96,7 @@ const ServicesSection = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-[16px] leading-7 text-justify text-[#333333]">
+              <p className="text-sm md:text-base leading-relaxed text-justify text-[#333333]">
                 {service.description}
               </p>
             </article>

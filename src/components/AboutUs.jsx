@@ -31,12 +31,11 @@ const AboutUs = () => {
       {/* Hero Section with Banner Image */}
       <section className="relative">
         {/* Banner Image */}
-        <div className="relative w-full" style={{ height: '469px' }}>
+        <div className="relative w-full h-64 md:h-96 lg:h-[469px]">
           <img 
             src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=1440&h=469&dpr=1"
             alt="About Green Carbon Hub"
             className="w-full h-full object-cover"
-            style={{ width: '1440px', height: '469px' }}
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
@@ -59,7 +58,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Certified Engineers Card */}
-            <div className="flex items-center p-6 bg-white shadow-lg rounded-lg" style={{ width: '409.99px', height: '149.6px' }}>
+            <div className="flex items-center p-6 bg-white shadow-lg rounded-lg w-full">
               <div className="flex-shrink-0 mr-6">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
                   <Users className="w-10 h-10 text-green-600" />
@@ -74,7 +73,7 @@ const AboutUs = () => {
             </div>
 
             {/* 24/7 Customer Support Card */}
-            <div className="flex items-center p-6 bg-white shadow-lg rounded-lg" style={{ width: '409.99px', height: '149.6px' }}>
+            <div className="flex items-center p-6 bg-white shadow-lg rounded-lg w-full">
               <div className="flex-shrink-0 mr-6">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
                   <svg className="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -91,7 +90,7 @@ const AboutUs = () => {
             </div>
 
             {/* Affordable Solar Solutions Card */}
-            <div className="flex items-center p-6 bg-white shadow-lg rounded-lg" style={{ width: '409.99px', height: '149.6px' }}>
+            <div className="flex items-center p-6 bg-white shadow-lg rounded-lg w-full">
               <div className="flex-shrink-0 mr-6">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
                   <div className="w-8 h-8 bg-green-600 rounded-full"></div>
@@ -115,16 +114,15 @@ const AboutUs = () => {
             {/* Left Column - Image */}
             <div className="relative">
               {/* Main Image */}
-              <div className="relative" style={{ paddingRight: '160px' }}>
+              <div className="relative lg:pr-40">
                 <img 
                   src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=425&h=588&dpr=1"
                   alt="Solar Engineer"
-                  className="rounded-lg shadow-lg"
-                  style={{ width: '425px', height: '587.76px' }}
+                  className="rounded-lg shadow-lg w-full max-w-md h-auto"
                 />
                 
                 {/* Success Badge with Rotation Animation - Half on Image */}
-                <div className="absolute top-6 right-0 tp-about-icon-space p-relative d-inline-block" style={{ width: '130px', height: '131px', right: '95px' }}>
+                <div className="absolute top-6 -right-12 lg:right-24 w-32 h-32">
                   {/* Rotating Text Badge */}
                   <img 
                     src="/about-text.png" 
@@ -136,8 +134,7 @@ const AboutUs = () => {
                   <img 
                     src="/about-text-shape.png" 
                     alt="thumb"
-                    className="position-middle object-contain"
-                    style={{ width: '34px', height: '36px' }}
+                    className="position-middle object-contain w-9 h-9"
                   />
                 </div>
                 
@@ -220,7 +217,7 @@ const AboutUs = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Standardized Service Card */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer" style={{ width: '277.5px', height: '350px' }}>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full max-w-xs mx-auto">
               <div className="p-5" style={{ paddingTop: '40px', paddingLeft: '20px', paddingRight: '20px' }}>
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 hover:bg-green-600 hover:scale-110">
@@ -237,7 +234,7 @@ const AboutUs = () => {
             </div>
 
             {/* Affordability Card */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer" style={{ width: '277.5px', height: '350px' }}>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full max-w-xs mx-auto">
               <div className="p-5" style={{ paddingTop: '40px', paddingLeft: '20px', paddingRight: '20px' }}>
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 hover:bg-green-600 hover:scale-110">
@@ -255,7 +252,7 @@ const AboutUs = () => {
             </div>
 
             {/* All-in-One Solutions Card */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer" style={{ width: '277.5px', height: '350px' }}>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full max-w-xs mx-auto">
               <div className="p-5" style={{ paddingTop: '40px', paddingLeft: '20px', paddingRight: '20px' }}>
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 hover:bg-green-600 hover:scale-110">
@@ -272,7 +269,7 @@ const AboutUs = () => {
             </div>
 
             {/* Quality Assurance Card */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer" style={{ width: '277.5px', height: '350px' }}>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full max-w-xs mx-auto">
               <div className="p-5" style={{ paddingTop: '40px', paddingLeft: '20px', paddingRight: '20px' }}>
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 hover:bg-green-600 hover:scale-110">

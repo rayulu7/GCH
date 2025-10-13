@@ -44,23 +44,14 @@ export default function Components() {
         </div>
 
         {/* Components Grid */}
-        <div className="flex justify-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
           {components.map((component) => (
             <div 
               key={component.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
-              style={{
-                width: "379.99px",
-                height: "415.34px" // 318.54 + 96.8
-              }}
+              className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-sm lg:max-w-md"
             >
               {/* Image Section */}
-              <div 
-                className="w-full"
-                style={{
-                  height: "318.54px"
-                }}
-              >
+              <div className="w-full h-64 md:h-80">
                 <img
                   src={component.image}
                   alt={component.name}
@@ -69,13 +60,8 @@ export default function Components() {
               </div>
 
               {/* Heading Section */}
-              <div 
-                className="flex items-center justify-center"
-                style={{
-                  height: "96.8px"
-                }}
-              >
-                <h3 className="text-[24px] font-bold text-[#1F2220] text-center">
+              <div className="flex items-center justify-center p-4 md:p-6">
+                <h3 className="text-lg md:text-xl font-bold text-[#1F2220] text-center">
                   {component.name}
                 </h3>
               </div>
