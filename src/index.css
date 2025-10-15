@@ -259,3 +259,32 @@ body {
 .animate-fade-in-left {
   animation: fadeInLeft 0.8s ease-out forwards;
 }
+
+/* Floating Action Buttons - Ensure they stay fixed */
+.floating-buttons-container {
+  position: fixed !important;
+  z-index: 99999999 !important;
+  pointer-events: auto !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  contain: layout style paint !important;
+}
+
+/* Prevent any parent container from affecting floating buttons */
+body, html, #root {
+  position: relative !important;
+}
+
+/* Ensure no transform or positioning conflicts - except for navbar and floating buttons */
+*:not(header):not(nav):not(.floating-buttons-container):not(.floating-buttons-container *) {
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+.floating-buttons-container,
+.floating-buttons-container * {
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}

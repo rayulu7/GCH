@@ -27,6 +27,7 @@ import Investments from "./Investments.jsx";
 import GCHStore from "./GCHStore.jsx";
 import WhyChooseGCH from "./Solar/WhyChooseGCH.jsx";
 import OurClients from "./Solar/OurClients.jsx";
+import FloatingActionButtons from "./FloatingActionButtons.jsx";
 
 
 // ScrollToTop Component - Scrolls to top on route change
@@ -188,6 +189,7 @@ function App() {
         <Route path="/investments" element={<InvestmentsPage />} />
         <Route path="/gch-store" element={<GCHStorePage />} />
       </Routes>
+      <FloatingActionButtons />
     </Router>
   );
 }
