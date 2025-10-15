@@ -151,29 +151,29 @@ export default function DocumentRequirements() {
 
   return (
     <section
-      className={`w-full bg-white pt-[100px] pb-[70px] transition-opacity duration-1000 ${
+      className={`w-full bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-[100px] pb-12 sm:pb-16 md:pb-20 lg:pb-[70px] transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-[32px] font-bold text-[#111827] mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827] mb-4">
             Our Finance Options
           </h2>
-          <h3 className="text-[24px] font-semibold text-[#111827] mb-4">
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[24px] font-semibold text-[#111827] mb-4">
             Document List
           </h3>
-          <p className="text-[16px] text-[#666666]">
+          <p className="text-sm sm:text-base lg:text-[16px] text-[#666666]">
             Here are the required documents for your solar project.
           </p>
         </div>
 
         {/* Content Section */}
-        <div className="bg-white p-8 rounded-lg shadow-[2px_4px_rgba(0,0,0,0.05)] border border-gray-200">
-          <div className="flex gap-8">
+        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-[2px_4px_rgba(0,0,0,0.05)] border border-gray-200">
+          <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
             {/* Sidebar */}
-            <div className="w-full max-w-xs space-y-3">
+            <div className="w-full lg:w-full lg:max-w-xs space-y-2 sm:space-y-3">
               {documentCategories.map((category) => {
                 const categoryMap = {
                   1: "residential",
@@ -186,7 +186,7 @@ export default function DocumentRequirements() {
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(categoryMap[category.id])}
-                    className={`w-full text-left py-4 px-6 rounded-lg font-medium transition-all duration-200 ${
+                    className={`w-full text-left py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-medium transition-all duration-200 text-sm sm:text-base ${
                       activeCategory === categoryMap[category.id]
                         ? "bg-[#008000] text-white"
                         : "bg-gray-100 text-[#333333] hover:bg-gray-200"
@@ -199,8 +199,8 @@ export default function DocumentRequirements() {
             </div>
 
             {/* Right Content */}
-            <div className="flex-1 p-[30px] rounded-lg bg-[rgb(218_201_201_/_15%)]">
-              <h2 className="text-[32px] font-bold text-[#2D3748] mb-[25px] pb-[10px] border-b-2 border-[#008000]">
+            <div className="flex-1 p-4 sm:p-6 md:p-[30px] rounded-lg bg-[rgb(218_201_201_/_15%)]">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold text-[#2D3748] mb-4 sm:mb-6 md:mb-[25px] pb-2 sm:pb-[10px] border-b-2 border-[#008000]">
                 {getCategoryTitle(activeCategory)}
               </h2>
 
@@ -208,17 +208,17 @@ export default function DocumentRequirements() {
                {activeCategory === "residential" && (
                 <>
                   {/* General */}
-                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
-                    <div className="flex items-center mb-4">
-                      <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
+                  <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm mb-4 sm:mb-6">
+                    <div className="flex items-center mb-3 sm:mb-4">
+                      <h4 className="text-base sm:text-lg lg:text-[18px] font-semibold text-[#111827] flex items-center">
                         <Star /> Documents Needed
                       </h4>
                     </div>
-                     <ul className="space-y-[12px]">
+                     <ul className="space-y-2 sm:space-y-[12px]">
                        {documentLists.residential.general.map((doc, i) => (
                          <li key={i} className="flex items-start">
                            <Bullet />
-                           <span className="text-[#828282] text-[16px] font-inter">
+                           <span className="text-[#828282] text-sm sm:text-base lg:text-[16px] font-inter leading-relaxed">
                              {doc}
                            </span>
                          </li>
@@ -227,17 +227,17 @@ export default function DocumentRequirements() {
                   </div>
 
                   {/* Salaried */}
-                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
-                    <div className="flex items-center mb-4">
-                      <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
+                  <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm mb-4 sm:mb-6">
+                    <div className="flex items-center mb-3 sm:mb-4">
+                      <h4 className="text-base sm:text-lg lg:text-[18px] font-semibold text-[#111827] flex items-center">
                         <Star /> For Salaried Employees
                       </h4>
                     </div>
-                     <ul className="space-y-[12px]">
+                     <ul className="space-y-2 sm:space-y-[12px]">
                        {documentLists.residential.salaried.map((doc, i) => (
                          <li key={i} className="flex items-start">
                            <Bullet />
-                           <span className="text-[#828282] text-[16px] font-inter">
+                           <span className="text-[#828282] text-sm sm:text-base lg:text-[16px] font-inter leading-relaxed">
                              {doc}
                            </span>
                          </li>
@@ -246,17 +246,17 @@ export default function DocumentRequirements() {
                   </div>
 
                   {/* Self Employed */}
-                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                    <div className="flex items-center mb-4">
-                      <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
+                  <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div className="flex items-center mb-3 sm:mb-4">
+                      <h4 className="text-base sm:text-lg lg:text-[18px] font-semibold text-[#111827] flex items-center">
                         <Star /> For Self Employed
                       </h4>
                     </div>
-                     <ul className="space-y-[12px]">
+                     <ul className="space-y-2 sm:space-y-[12px]">
                        {documentLists.residential.selfEmployed.map((doc, i) => (
                          <li key={i} className="flex items-start">
                            <Bullet />
-                           <span className="text-[#828282] text-[16px] font-inter">
+                           <span className="text-[#828282] text-sm sm:text-base lg:text-[16px] font-inter leading-relaxed">
                              {doc}
                            </span>
                          </li>

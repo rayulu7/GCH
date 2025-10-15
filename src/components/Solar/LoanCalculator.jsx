@@ -109,25 +109,25 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
 
   return (
     <section
-      className={`w-full bg-gray-50 pt-[100px] pb-[70px] transition-opacity duration-1000 ${
+      className={`w-full bg-gray-50 pt-12 sm:pt-16 md:pt-20 lg:pt-[100px] pb-16 sm:pb-20 md:pb-24 lg:pb-[100px] transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
       {/* Container */}
-      <div className="max-w-[1600px] mx-auto px-[15px]">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-[15px]">
         {/* Heading */}
-        <div className="text-center mb-8">
-          <h2 className="text-[32px] font-bold text-[#111827] mb-2 drop-shadow-lg">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827] mb-2 drop-shadow-lg">
             Loan Calculator
           </h2>
-          <p className="text-[16px] text-[#666666]">
+          <p className="text-sm sm:text-base lg:text-[16px] text-[#666666]">
             Calculate your loan EMI and repayment details
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-8">
-          <div className="flex bg-gray-100 rounded-lg p-1">
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full max-w-md sm:max-w-none">
             {[
               { id: "residential", label: "Residential" },
               { id: "commercial", label: "Commercial" },
@@ -136,7 +136,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
               <button
                 key={tab.id}
                     onClick={() => updateActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+                className={`px-3 sm:px-6 py-2 sm:py-3 rounded-md font-medium transition-all duration-200 text-sm sm:text-base ${
                   activeTab === tab.id
                     ? "bg-[#008000] text-white shadow-sm"
                     : "text-[#333333] hover:bg-gray-200"
@@ -149,17 +149,17 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
         </div>
 
         {/* Panels */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {/* Left: Calculator */}
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-            <div className="bg-[#008000] text-white flex items-center justify-center h-16">
-              <h3 className="text-[20px] font-semibold">Loan Calculator</h3>
+            <div className="bg-[#008000] text-white flex items-center justify-center h-12 sm:h-14 md:h-16">
+              <h3 className="text-base sm:text-lg md:text-[20px] font-semibold">Loan Calculator</h3>
             </div>
 
-            <div className="p-[25px]">
+            <div className="p-4 sm:p-6 md:p-[25px]">
               {/* Loan Amount */}
-              <div className="mb-8">
-                <label className="block text-[16px] font-semibold text-[#333333] mb-3">
+              <div className="mb-6 sm:mb-8">
+                <label className="block text-sm sm:text-base lg:text-[16px] font-semibold text-[#333333] mb-2 sm:mb-3">
                   Loan Amount:
                 </label>
 
@@ -238,8 +238,8 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
               </div>
 
               {/* Loan Term */}
-              <div className="mb-2">
-                <label className="block text-[16px] font-semibold text-[#333333] mb-3">
+              <div className="mb-2 pb-4">
+                <label className="block text-sm sm:text-base lg:text-[16px] font-semibold text-[#333333] mb-2 sm:mb-3">
                   Loan Term:
                 </label>
 
@@ -321,12 +321,12 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
 
               {/* Right: Result */}
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-            <div className="bg-[#008000] text-white flex items-center justify-center h-16">
-              <h3 className="text-[20px] font-semibold">Calculation Result</h3>
+            <div className="bg-[#008000] text-white flex items-center justify-center h-12 sm:h-14 md:h-16">
+              <h3 className="text-base sm:text-lg md:text-[20px] font-semibold">Calculation Result</h3>
             </div>
 
-            <div className="p-[25px]">
-              <div className="grid grid-cols-2 gap-6">
+            <div className="p-4 sm:p-6 md:p-[25px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {/* Interest Rate */}
                 <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Interest Rate</div>

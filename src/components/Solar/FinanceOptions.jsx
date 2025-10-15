@@ -65,20 +65,22 @@ export default function FinanceOptions() {
   }, []);
 
   return (
-    <section className={`w-full bg-[#3A954F] pt-[100px] pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <section className={`w-full bg-[#3A954F] pt-12 sm:pt-16 md:pt-20 lg:pt-[100px] pb-12 sm:pb-16 md:pb-20 lg:pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Container */}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         {/* Features Grid */}
-        <div className="flex justify-between items-center gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:justify-between items-center gap-4 sm:gap-6 lg:gap-8">
           {financeFeatures.map((feature) => (
             <div key={feature.id} className="text-center transform transition-all duration-300 hover:scale-110 cursor-pointer flex-1">
               {/* Icon */}
-              <div className="text-white mb-4 flex justify-center items-center transform transition-transform duration-300 hover:scale-125">
-                {feature.icon}
+              <div className="text-white mb-2 sm:mb-4 flex justify-center items-center transform transition-transform duration-300 hover:scale-125">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center">
+                  {feature.icon}
+                </div>
               </div>
               
               {/* Title */}
-              <div className="text-white text-[17px] font-black mb-2 transform transition-transform duration-300 hover:scale-110 whitespace-nowrap">
+              <div className="text-white text-xs sm:text-sm md:text-base lg:text-[17px] font-black mb-2 transform transition-transform duration-300 hover:scale-110 leading-tight">
                 {feature.title}
               </div>
             </div>
