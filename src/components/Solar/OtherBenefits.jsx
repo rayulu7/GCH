@@ -1,48 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Sun, DollarSign, Wrench, Heart, Clock } from "lucide-react";
+import { Sun, DollarSign, Wrench, Heart, Clock, Home, Building, Car, Warehouse } from "lucide-react";
 
-const residentialBenefits = [
-  {
-    id: 1,
-    name: "Renewable & Clean Energy",
-    icon: <Sun className="w-16 h-16 text-yellow-500" />,
-    title: "Renewable & Clean Source of Energy",
-    description:
-      "As Solar Energy is a clean and renewable source, you are helping the environment by reducing carbon footprint and protecting the Earth."
-  },
-  {
-    id: 2,
-    name: "Reduces Electricity Cost",
-    icon: <DollarSign className="w-16 h-16 text-blue-500" />,
-    title: "Solar Energy Reduces Electricity Cost",
-    description:
-      "Rooftop Solar Panels can generate a good amount of electricity to power your home, which helps you to save energy bills each year."
-  },
-  {
-    id: 3,
-    name: "Low Maintenance",
-    icon: <Wrench className="w-16 h-16 text-green-500" />,
-    title: "Low Maintenance",
-    description:
-      "As the solar panels are stable, they do not require any high maintenance services, which saves time and money."
-  },
-  {
-    id: 4,
-    name: "Adds Value to Life",
-    icon: <Heart className="w-16 h-16 text-red-500" />,
-    title: "Adds Value to Your Life",
-    description:
-      "Choosing the Rooftop Solar Energy adds value to your home and makes it more attractive to potential buyers."
-  },
-  {
-    id: 5,
-    name: "High Life Span",
-    icon: <Clock className="w-16 h-16 text-purple-500" />,
-    title: "High Life Span",
-    description:
-      "Solar panels have a lifespan of 25+ years with minimal degradation, providing decades of reliable clean energy generation for your home."
-  }
-];
+const residentialBenefits = [];
 
 const industrialBenefits = [
   {
@@ -84,32 +43,37 @@ const residentialSolutions = [
   {
     id: 1,
     name: "Standard Residential",
-    image: "/standard.jpeg",
-    description: "Perfect for homes with standard roof structure - Mounting Dimensions: Back Leg 3 Feet and Front Leg 2 Feet"
+    icon: <Home className="w-16 h-16 text-green-600" />,
+    title: "Standard Residential Solar Installation",
+    description: "Perfect for homes with standard roof structure - Mounting Dimensions: Back Leg 3 Feet and Front Leg 2 Feet. Ideal for most residential homes with conventional roof designs."
   },
   {
     id: 2,
     name: "Elevated Residential",
-    image: "/Elevated.jpeg",
-    description: "Ideal for homes needing elevated panels - Mounting Dimensions: Back Leg 7 Feet and Front Leg 6 Feet"
+    icon: <Building className="w-16 h-16 text-blue-600" />,
+    title: "Elevated Residential Solar Setup",
+    description: "Ideal for homes needing elevated panels - Mounting Dimensions: Back Leg 7 Feet and Front Leg 6 Feet. Perfect for homes with specific roof angles or shading issues."
   },
   {
     id: 3,
     name: "High-Rise Residential",
-    image: "/Highrise.jpeg",
-    description: "Best for multi-story homes - Mounting Dimensions: Back Leg 10 Feet and Front Leg 9 Feet"
+    icon: <Building className="w-16 h-16 text-purple-600" />,
+    title: "High-Rise Residential Solar System",
+    description: "Best for multi-story homes - Mounting Dimensions: Back Leg 10 Feet and Front Leg 9 Feet. Designed for tall residential buildings and apartments."
   },
   {
     id: 4,
     name: "Residential Car Port",
-    image: "/Carport.jpeg",
-    description: "Solar car port structure for home parking areas"
+    icon: <Car className="w-16 h-16 text-orange-600" />,
+    title: "Solar Car Port Solution",
+    description: "Solar car port structure for home parking areas. Dual-purpose solution providing shade for vehicles while generating clean energy."
   },
   {
     id: 5,
     name: "Shed Mounted Residential",
-    image: "/shed.webp",
-    description: "Shed mounted solar panels for residential outbuildings"
+    icon: <Warehouse className="w-16 h-16 text-gray-600" />,
+    title: "Shed Mounted Solar Panels",
+    description: "Shed mounted solar panels for residential outbuildings. Perfect for garages, sheds, and other auxiliary structures on your property."
   }
 ];
 
@@ -129,11 +93,11 @@ const ResidentialRooftopSolutions = () => {
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827]">
-            Our Residential Rooftop Solutions
+            Other Benefits
           </h2>
-          <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+          {/* <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
             Choose the perfect solar installation solution for your home with our range of residential rooftop mounting systems
-          </p>
+          </p> */}
         </div>
 
         {/* Content Section */}
@@ -158,28 +122,25 @@ const ResidentialRooftopSolutions = () => {
             </div>
           </div>
 
-          {/* Right Section - Image */}
+          {/* Right Section - Content */}
           <div className="w-full lg:w-[800px] relative mb-6 lg:mb-[30px] order-1 lg:order-2">
-            <div className="relative">
-              <img
-                src={activeSolution.image}
-                alt={activeSolution.name}
-                className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover rounded-lg"
-              />
+            <div className="bg-white rounded-lg shadow-lg p-8 lg:p-12 text-center">
+              {/* Icon */}
+              <div className="flex justify-center mb-6">
+                {React.cloneElement(activeSolution.icon, {
+                  className: "w-20 h-20 lg:w-24 lg:h-24"
+                })}
+              </div>
               
-              {/* Gradient Overlay */}
-              <div 
-                className="absolute bottom-0 left-0 w-full h-full rounded-lg"
-                style={{
-                  background: 'linear-gradient(180deg, rgba(31, 34, 32, 0) 30.39%, rgba(31, 34, 32, 0.8) 73.54%)'
-                }}
-              ></div>
-            </div>
-            
-            {/* Image Overlay */}
-            <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-3 sm:left-4 text-white p-3 sm:p-4 rounded-lg">
-              <h3 className="text-base sm:text-lg font-bold mb-1">{activeSolution.name}</h3>
-              <p className="text-xs sm:text-sm leading-relaxed">{activeSolution.description}</p>
+              {/* Title */}
+              <h3 className="text-xl lg:text-2xl font-bold text-[#111827] mb-4">
+                {activeSolution.title}
+              </h3>
+              
+              {/* Description */}
+              <p className="text-sm lg:text-base text-[#333333] leading-relaxed">
+                {activeSolution.description}
+              </p>
             </div>
           </div>
         </div>
@@ -223,7 +184,7 @@ export default function OtherBenefits({ type = "residential" }) {
             {benefits.map((benefit) => (
               <div
                 key={benefit.id}
-                className="w-full mb-6 bg-white rounded-lg shadow-lg p-6"
+                className="w-full mb-6 bg-white rounded-lg  p-6"
                 style={{ 
                   display: 'block', 
                   width: '100%', 
