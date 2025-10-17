@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { Eye, EyeOff, Mail, Lock, User, Phone } from 'lucide-react';
+import { createUser, findUserByEmail } from '../utils/userStorage';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -81,19 +82,34 @@ const Signup = () => {
     setIsLoading(true);
 
     try {
+      // Check if user already exists
+      const existingUser = findUserByEmail(formData.email);
+      if (existingUser) {
+        setErrors({ email: 'An account with this email already exists. Please use a different email or try logging in.' });
+        return;
+      }
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      // Simulate successful signup
+      // Create user data from form
       const userData = {
-        id: Date.now().toString(),
         name: formData.name.trim(),
         email: formData.email,
         phone: formData.phone,
-        signupTime: new Date().toISOString()
+        password: formData.password // In real app, this would be hashed
+      };
+
+      // Create user in storage
+      const newUser = createUser(userData);
+      
+      // Add login time for immediate login after signup
+      const loginUserData = {
+        ...newUser,
+        loginTime: new Date().toISOString()
       };
       
-      login(userData);
+      login(loginUserData);
       navigate('/');
     } catch (error) {
       setErrors({ general: 'An error occurred during signup. Please try again.' });

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { Eye, EyeOff, Mail, Lock, User } from 'lucide-react';
+import { findUserByEmail, updateUserLoginTime } from '../utils/userStorage';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -60,13 +61,25 @@ const Login = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // Simulate login logic
-      const userData = {
-        id: '1',
-        name: 'Pavan Mohit',
-        email: formData.email,
-        loginTime: new Date().toISOString()
-      };
+      // Find user by email
+      const user = findUserByEmail(formData.email);
+      
+      if (!user) {
+        setErrors({ general: 'No account found with this email address.' });
+        return;
+      }
+
+      // Check password (in real app, this would be hashed comparison)
+      if (user.password !== formData.password) {
+        setErrors({ general: 'Invalid password. Please try again.' });
+        return;
+      }
+
+      // Update login time
+      const updatedUser = updateUserLoginTime(user.id);
+      
+      // Prepare user data for login (exclude password)
+      const { password, ...userData } = updatedUser;
       
       login(userData);
       navigate('/');
