@@ -1,12 +1,16 @@
 import React, { useState, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ChevronDown, Menu, X, LogOut, User } from "lucide-react";
+import { useAuth } from "../contexts/AuthContext";
 
 const Navbar = () => {
   const [isInstallationDropdownOpen, setIsInstallationDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const timeoutRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, logout, isAuthenticated } = useAuth();
 
   // Scroll to section function
   const scrollToSection = (sectionId) => {
@@ -45,6 +49,33 @@ const Navbar = () => {
   const toggleMobileInstallationDropdown = () => {
     setIsInstallationDropdownOpen((prev) => !prev);
   };
+
+  const handleLogin = () => {
+    navigate('/login');
+    setIsMobileMenuOpen(false);
+  };
+
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+    setIsMobileMenuOpen(false);
+    setIsUserDropdownOpen(false);
+  };
+
+  // Close dropdowns when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isUserDropdownOpen && !event.target.closest('.user-dropdown')) {
+        setIsUserDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isUserDropdownOpen]);
 
 
   return (
@@ -149,11 +180,44 @@ const Navbar = () => {
         {/* Spacer for layout balance */}
         <div className="hidden lg:block w-32"></div>
 
-        {/* Login + Mobile Toggle */}
+        {/* Login/Logout + Mobile Toggle */}
         <div className="flex items-center space-x-2 sm:space-x-4">
-          <button className="hidden lg:block bg-green-600 hover:bg-green-700 text-white px-4 xl:px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg text-sm xl:text-base">
-            Login
-          </button>
+          {isAuthenticated ? (
+            <div className="hidden lg:block relative user-dropdown">
+              <button
+                onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
+                className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 xl:px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg text-sm xl:text-base"
+              >
+                <User className="w-4 h-4" />
+                <span>{user?.name || 'User'}</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {isUserDropdownOpen && (
+                <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                  <div className="py-2">
+                    <div className="px-4 py-2 text-sm text-gray-600 border-b border-gray-100">
+                      {user?.email}
+                    </div>
+                    <button
+                      onClick={handleLogout}
+                      className="w-full flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      <span>Logout</span>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <button 
+              onClick={handleLogin}
+              className="hidden lg:block bg-green-600 hover:bg-green-700 text-white px-4 xl:px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg text-sm xl:text-base"
+            >
+              Login
+            </button>
+          )}
 
           {/* Mobile Hamburger */}
           <button
@@ -239,9 +303,28 @@ const Navbar = () => {
             GCH Store
           </Link>
 
-          <button className="w-full bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg text-sm sm:text-base">
-            Login
-          </button>
+          {isAuthenticated ? (
+            <div className="space-y-2">
+              <div className="px-4 py-2 text-sm text-gray-600 bg-gray-50 rounded-lg">
+                <div className="font-medium">{user?.name}</div>
+                <div className="text-xs text-gray-500">{user?.email}</div>
+              </div>
+              <button 
+                onClick={handleLogout}
+                className="w-full flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg text-sm sm:text-base"
+              >
+                <LogOut className="w-4 h-4" />
+                <span>Logout</span>
+              </button>
+            </div>
+          ) : (
+            <button 
+              onClick={handleLogin}
+              className="w-full bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg text-sm sm:text-base"
+            >
+              Login
+            </button>
+          )}
         </div>
       )}
     </header>

@@ -28,6 +28,11 @@ import GCHStore from "./GCHStore.jsx";
 import WhyChooseGCH from "./Solar/WhyChooseGCH.jsx";
 import OurClients from "./Solar/OurClients.jsx";
 import FloatingActionButtons from "./FloatingActionButtons.jsx";
+import Login from "./Login.jsx";
+import Signup from "./Signup.jsx";
+import ForgotPassword from "./ForgotPassword.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
+import { AuthProvider } from "../contexts/AuthContext.jsx";
 
 
 // ScrollToTop Component - Scrolls to top on route change
@@ -175,22 +180,35 @@ function App() {
   }
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/solar-installation" element={<SolarInstallationPage />} />
-        <Route path="/water-management" element={<WaterManagementPage />} />
-        <Route path="/about-us" element={<AboutUsPage />} />
-        <Route path="/residential" element={<ResidentialPage />} />
-        <Route path="/housing-society" element={<HousingSocietyPage />} />
-        <Route path="/industrial-commercial" element={<IndustrialCommercialPage />} />
-        <Route path="/maintenance" element={<MaintenancePage />} />
-        <Route path="/investments" element={<InvestmentsPage />} />
-        <Route path="/gch-store" element={<GCHStorePage />} />
-      </Routes>
-      <FloatingActionButtons />
-    </Router>
+    <AuthProvider>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/solar-installation" element={<SolarInstallationPage />} />
+          <Route path="/water-management" element={<WaterManagementPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/residential" element={<ResidentialPage />} />
+          <Route path="/housing-society" element={<HousingSocietyPage />} />
+          <Route path="/industrial-commercial" element={<IndustrialCommercialPage />} />
+          <Route path="/maintenance" element={<MaintenancePage />} />
+          <Route path="/investments" element={<InvestmentsPage />} />
+          <Route path="/gch-store" element={<GCHStorePage />} />
+          <Route path="/login" element={
+            <ProtectedRoute>
+              <Login />
+            </ProtectedRoute>
+          } />
+          <Route path="/signup" element={
+            <ProtectedRoute>
+              <Signup />
+            </ProtectedRoute>
+          } />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+        </Routes>
+        <FloatingActionButtons />
+      </Router>
+    </AuthProvider>
   );
 }
 
