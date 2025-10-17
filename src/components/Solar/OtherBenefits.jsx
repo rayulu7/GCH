@@ -10,31 +10,39 @@ const industrialBenefits = [
     icon: <Sun className="w-16 h-16 text-yellow-500" />,
     title: "Renewable & Clean Source Of Energy",
     description:
-      "Industrial solar energy is a clean and renewable source that helps businesses reduce their carbon footprint and contribute to environmental sustainability."
+      "As Solar Energy is a clean and renewable source, you are helping the environment by reducing carbon footprint and protecting the Earth."
   },
   {
     id: 2,
-    name: "Solar Energy Reduces Electricity Cost",
+    name: "Reduces Electricity Cost",
     icon: <DollarSign className="w-16 h-16 text-blue-500" />,
     title: "Solar Energy Reduces Electricity Cost",
     description:
-      "Industrial rooftop solar panels can generate significant electricity to power manufacturing facilities, reducing operational costs and energy bills."
+      "Rooftop Solar Panels can generate a good amount of electricity to power your home, which helps you to save energy bills each year."
   },
   {
     id: 3,
-    name: "Maintenance Of Industrial Rooftop Solar Panels Is Low",
+    name: "Low Maintenance",
     icon: <Wrench className="w-16 h-16 text-green-500" />,
-    title: "Maintenance Of Industrial Rooftop Solar Panels Is Low",
+    title: "Low Maintenance",
     description:
       "As the solar panels are stable, they do not require any high maintenance services, which saves time and money."
   },
   {
     id: 4,
-    name: "Eco-Friendly And Reduces CO2 Emissions",
+    name: "Adds Value to Life",
     icon: <Heart className="w-16 h-16 text-red-500" />,
-    title: "Eco-Friendly And Reduces CO2 Emissions",
+    title: "Adds Value to Your Life",
     description:
-      "Industrial solar installations help businesses reduce CO2 emissions and demonstrate environmental responsibility to stakeholders and customers."
+      "Choosing the Rooftop Solar Energy adds value to your home and makes it more attractive to potential buyers."
+  },
+  {
+    id: 5,
+    name: "High Life Span",
+    icon: <Heart className="w-16 h-16 text-red-500" />,
+    title: "High Life Span",
+    description:
+      "Once you install Solar Panels, the lifespan can range from 25 to 30 years. Moreover, Solar Panels are reliable & long-term energy solutions."
   }
 ];
 
@@ -80,14 +88,14 @@ const residentialSolutions = [
 // Rooftop Solutions Component
 const ResidentialRooftopSolutions = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeSolution, setActiveSolution] = useState(residentialSolutions[0]);
+  const [activeSolution, setActiveSolution] = useState(industrialBenefits[0]);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
   return (
-    <section className={`w-full bg-gray-50 pt-12 sm:pt-16 md:pt-20 lg:pt-[80px] pb-12 sm:pb-16 md:pb-20 lg:pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <section className={`w-full bg-gray-50 pt-8 sm:pt-10 md:pt-12 lg:pt-16 pb-6 sm:pb-8 md:pb-10 lg:pb-12 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Container */}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
         {/* Heading */}
@@ -103,9 +111,9 @@ const ResidentialRooftopSolutions = () => {
         {/* Content Section */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8">
           {/* Left Section - Solution Buttons */}
-          <div className="w-full lg:w-[400px] order-2 lg:order-1">
+          <div className="w-full lg:w-[400px] order-1 lg:order-1">
             <div className="space-y-3 sm:space-y-[15px]">
-              {residentialSolutions.map((solution) => (
+              {industrialBenefits.map((solution) => (
                 <button
                   key={solution.id}
                   onClick={() => setActiveSolution(solution)}
@@ -123,7 +131,7 @@ const ResidentialRooftopSolutions = () => {
           </div>
 
           {/* Right Section - Content */}
-          <div className="w-full lg:w-[800px] relative mb-6 lg:mb-[30px] order-1 lg:order-2">
+          <div className="w-full lg:w-[800px] relative mb-6 lg:mb-[30px] order-2 lg:order-2">
             <div className="bg-white rounded-lg shadow-lg p-8 lg:p-12 text-center">
               {/* Icon */}
               <div className="flex justify-center mb-6">
@@ -166,18 +174,13 @@ export default function OtherBenefits({ type = "residential" }) {
       
       {/* Other Benefits Section */}
       <section
-        className={`w-full bg-white py-12 md:py-16 lg:py-20 transition-opacity duration-1000 ${
+        className={`w-full bg-white py-2 md:py-3 lg:py-4 transition-opacity duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{ display: 'block', width: '100%' }}
       >
         <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16" style={{ display: 'block', width: '100%' }}>
-          {/* Heading */}
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827]">
-              Other Benefits
-            </h2>
-          </div>
+          {/* Heading - Removed to avoid duplicate with interactive section */}
 
           {/* Force single column - NO FLEX, NO GRID */}
           <div style={{ display: 'block', width: '100%' }}>

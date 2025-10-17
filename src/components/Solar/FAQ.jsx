@@ -28,30 +28,29 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-0">
+    <section className="bg-white py-8 sm:py-12 md:py-16 px-0">
       <style>{`
         :host, :root {
           --fa-font-thin: normal 100 1em / -12 "Font Awesome 6 Pro";
         }
       `}</style>
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        <h2 className="text-[#111827] text-center font-bold mb-12 text-[35.2px]">
+        <h2 className="text-[#111827] text-center font-bold mb-8 sm:mb-10 md:mb-12 text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35.2px]">
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-4 flex flex-col items-center">
+        <div className="space-y-3 sm:space-y-4 w-full">
           {faqs.map((faq) => (
             <div
               key={faq.id}
-              className="bg-white rounded-lg shadow-md border border-gray-200"
+              className="bg-white rounded-lg shadow-md border border-gray-200 w-full"
               style={{
-                width: '1198.4px',
                 minHeight: '59.2px',
-                paddingTop: '18px',
-                paddingRight: '55px',
-                paddingBottom: '18px',
-                paddingLeft: '30px',
-                fontSize: '18px',
+                paddingTop: '16px',
+                paddingRight: '20px',
+                paddingBottom: '16px',
+                paddingLeft: '20px',
+                fontSize: '16px',
                 fontWeight: '600',
                 color: openId === faq.id ? '#3A954F' : 'var(--tp-heading-primary)',
                 transition: 'all 0.3s ease'
@@ -61,14 +60,17 @@ const FAQ = () => {
                 onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
                 className="w-full flex items-center justify-between text-left"
               >
-                <h3 className="pr-4" style={{ color: openId === faq.id ? '#3A954F' : 'var(--tp-heading-primary)' }}>
+                <h3 
+                  className="pr-4 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] leading-tight" 
+                  style={{ color: openId === faq.id ? '#3A954F' : 'var(--tp-heading-primary)' }}
+                >
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   {openId === faq.id ? (
-                    <Minus className="w-5 h-5" style={{ color: '#3A954F' }} />
+                    <Minus className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#3A954F' }} />
                   ) : (
-                    <Plus className="w-5 h-5" style={{ color: 'var(--tp-heading-primary)' }} />
+                    <Plus className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: 'var(--tp-heading-primary)' }} />
                   )}
                 </div>
               </button>
@@ -77,14 +79,14 @@ const FAQ = () => {
                 <div 
                   className="mt-4"
                   style={{
-                    padding: '0px 128px 34px 0px',
+                    padding: '0px 0px 20px 0px',
                     color: '#828282',
-                    fontSize: '16px',
+                    fontSize: '14px',
                     fontFamily: 'Inter, sans-serif',
                     lineHeight: '1.5'
                   }}
                 >
-                  <p>
+                  <p className="text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

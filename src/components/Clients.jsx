@@ -54,8 +54,8 @@ const Clients = () => {
           </p>
         </div>
 
-        {/* Client Display */}
-        <div className="flex justify-center items-center space-x-4">
+        {/* Client Display - Responsive */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-3 lg:gap-4">
           {clients.map((client, index) => (
             <div
               key={client.id}
