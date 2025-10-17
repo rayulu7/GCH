@@ -117,6 +117,29 @@ const MediumCard = ({ icon, title, desc }) => (
 
 const IndustrialCommercial = () => {
   const [isVisible, setIsVisible] = useState(false);
+  
+  // Form state for hero section
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    locality: "",
+    city: "",
+    units: '',
+    businessType: 'industrial-commercial'
+  });
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form Submitted:\n" + JSON.stringify(form, null, 2));
+  };
 
   useEffect(() => {
     setIsVisible(true);
@@ -125,6 +148,126 @@ const IndustrialCommercial = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      
+      {/* Hero Section */}
+      <div 
+        className="relative min-h-screen"
+        style={{
+          backgroundImage: "url('/bg_banner.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}
+      >
+        {/* Background overlay for better text readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        
+        <div className="relative z-10 flex flex-col lg:flex-row min-h-screen">
+          {/* Left Section - Promotional Content */}
+          <div className="flex-1 flex items-center justify-center p-6 md:p-8 lg:p-12">
+            <div className="text-white max-w-2xl">
+              {/* Subsidy Banner */}
+              <div className=" px-4 md:px-6 py-3 rounded-full text-center mb-6 md:mb-8 inline-block">
+                <span className="text-sm md:text-lg font-bold text-green-600">Save Money, Save The Environment!</span>
+              </div>
+              
+              {/* Main Heading */}
+              <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
+              Reduce Your Power Bill By Upto 90% By Switching To Solar
+              </h1>
+              
+              {/* Additional promotional text */}
+              <p className="text-base md:text-md lg:text-xl text-blue-100 mb-6 md:mb-8">
+              Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free Industrial Solar System Consultation in Hyderabad
+              </p>
+            </div>
+          </div>
+
+          {/* Right Section - Contact Form */}
+          <div className="w-full lg:w-[600px] xl:w-[700px] p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+            {/* Form Container with Background */}
+            <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:max-w-none lg:mx-0">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 md:mb-8 text-center lg:text-left">Contact Us</h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-6" autoComplete="off">
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-sm sm:text-base"
+                  placeholder="Your Name"
+                  value={form.name}
+                  onChange={handleChange}
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-sm sm:text-base"
+                  placeholder="Phone Number"
+                  value={form.phone}
+                  onChange={handleChange}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-sm sm:text-base"
+                  placeholder="Email"
+                  value={form.email}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="locality"
+                  required
+                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-sm sm:text-base"
+                  placeholder="Locality"
+                  value={form.locality}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="city"
+                  required
+                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-sm sm:text-base"
+                  placeholder="City"
+                  value={form.city}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="units"
+                  required
+                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-sm sm:text-base"
+                  placeholder="Average Monthly Units"
+                  value={form.units}
+                  onChange={handleChange}
+                />
+                <select
+                  name="businessType"
+                  required
+                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 text-sm sm:text-base"
+                  value={form.businessType}
+                  onChange={handleChange}
+                >
+                  <option value="">Select Type</option>
+                  <option value="residential">Residential</option>
+                  <option value="housing-society">Housing Society</option>
+                  <option value="industrial-commercial">Industrial/Commercial</option>
+                </select>
+                
+                <button
+                  type="submit"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base min-w-[120px] sm:min-w-[150px] mx-auto lg:mx-0"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       
       {/* VIEW FINANCE OPTIONS Button Section */}
       <section className="w-full bg-white pt-[120px] pb-[80px]">
@@ -194,7 +337,7 @@ const IndustrialCommercial = () => {
       </section>
       
       {/* Other Benefits Section */}
-      <OtherBenefits type="industrial" cardHeight={84} />
+      <OtherBenefits />
       
       {/* Industrial Applications Section */}
       <section className="w-full bg-[#EBF3ED] py-10 sm:py-12 md:py-14">
@@ -204,8 +347,8 @@ const IndustrialCommercial = () => {
           <div className="mx-auto w-full lg:w-[1200px]">
             {/* Heading */}
             <div className="text-center mb-8 sm:mb-10 md:mb-12">
-              <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#333333] mb-2">
-                Rooftop Solar Applications for Industrial & Commercial Sectors
+              <h2 className="text-[24px] sm:text-[28px] md:text-[42px] font-bold text-[#333333] mb-2">
+                How Businesses Can Utilize Industrial Solar Power System?
               </h2>
               <p 
                 className="text-[#000000] mb-5 text-left"
@@ -213,10 +356,11 @@ const IndustrialCommercial = () => {
                   fontFamily: 'Inter, sans-serif',
                   fontSize: '16px',
                   lineHeight: '24px',
-                  margin: '0px 0px 5px'
+                  margin: '0px 0px 5px',
+                  textAlign: 'center'
                 }}
               >
-                Industrial and commercial rooftop solar installations have become more efficient and cost-effective, making them a viable option for various sectors. Rooftop solar panel installation not only helps reduce electricity costs but also provides sustainable energy solutions for different industries.
+                Discover how Industries and businesses can use Industrial Solar Power Systems and Solar Energy for their daily purposes.
               </p>
             </div>
 

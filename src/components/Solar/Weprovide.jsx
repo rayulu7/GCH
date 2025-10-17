@@ -43,15 +43,14 @@ export default function Weprovide({ type = "residential" }) {
         </h2>
 
         {/* Card row */}
-        <div className="flex xl:flex-nowrap flex-wrap justify-between gap-y-8">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 lg:gap-6">
           {cards.map((c) => {
             const expanded = openId === c.id;
             return (
               <article
                 key={c.id}
-                className="bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.10)] transition-all duration-300 flex flex-col mx-[15px] mb-6"
+                className="bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.10)] transition-all duration-300 flex flex-col w-full max-w-[380px] lg:flex-1 lg:max-w-none"
                 style={{
-                  width: "379.99px",
                   height: expanded ? expandedHeight : "229.2px",
                   border: "0.8px solid #e5e7eb",
                 }}

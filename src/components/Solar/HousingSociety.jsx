@@ -186,9 +186,9 @@ const HousingSociety = () => {
                 
                 <button
                   type="submit"
-                  className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 bg-green-600 hover:bg-green-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg transition-colors duration-200 text-sm sm:text-base"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base min-w-[120px] sm:min-w-[150px] mx-auto lg:mx-0"
                 >
-                  Get Free Quote
+                  Send Message
                 </button>
               </form>
             </div>
