@@ -5,7 +5,7 @@ const WhyChooseSolar = () => {
     {
       id: 1,
       title: 'Environmental Benefits',
-      image: 'https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=380&h=349&dpr=1',
+      image: '/enviroment_image.jpg',
       bgColor: 'bg-green-900',
       popupColor: 'bg-green-600',
       description: 'Installing 1 kW solar panel cuts 0.84 tonnes of CO₂ annually. Aligning with this, India aims to achieve 500 GW of renewable energy capacity by 2030.'
@@ -13,7 +13,7 @@ const WhyChooseSolar = () => {
     {
       id: 2,
       title: 'Economical Benefits',
-      image: 'https://images.pexels.com/photos/9875365/pexels-photo-9875365.jpeg?auto=compress&cs=tinysrgb&w=380&h=349&dpr=1',
+      image: 'economical_image.jpg',
       bgColor: 'bg-blue-900',
       popupColor: 'bg-green-600',
       description: 'Solar energy reduces electricity bills by up to 90%. With government subsidies and net metering, payback period is just 3-5 years with 25+ years of savings.'
@@ -21,7 +21,7 @@ const WhyChooseSolar = () => {
     {
       id: 3,
       title: 'National Interest',
-      image: 'https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=380&h=349&dpr=1',
+      image: 'national_image.jpg',
       bgColor: 'bg-yellow-900',
       popupColor: 'bg-green-600',
       description: 'Solar adoption reduces dependency on fossil fuel imports, strengthens energy security, and supports India\'s commitment to carbon neutrality by 2070.'

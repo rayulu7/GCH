@@ -23,7 +23,7 @@ const HomeServicesSection = () => {
     {
       id: 3,
       title: 'GCH Store',
-      image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+      image: '/solar_service.jpg',
       content: 'We\'re working on our sustainable technology store.',
       link: '/store'
     }
