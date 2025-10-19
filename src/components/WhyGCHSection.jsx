@@ -17,6 +17,7 @@ const WhyGCHSection = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setHasAnimated(true);
         }
       },
       { threshold: 0.2 }
@@ -28,7 +29,7 @@ const WhyGCHSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gray-50"
+      className="py-8 sm:py-12 bg-gray-50"
     >
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex justify-center">

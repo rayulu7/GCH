@@ -5,6 +5,7 @@ import { useAuth } from "../contexts/AuthContext";
 
 const Navbar = () => {
   const [isInstallationDropdownOpen, setIsInstallationDropdownOpen] = useState(false);
+  const [isSolarDropdownOpen, setIsSolarDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const timeoutRef = useRef(null);
@@ -44,6 +45,10 @@ const Navbar = () => {
 
   const toggleMobileInstallationDropdown = () => {
     setIsInstallationDropdownOpen((prev) => !prev);
+  };
+
+  const toggleSolarDropdown = () => {
+    setIsSolarDropdownOpen((prev) => !prev);
   };
 
   const handleLogin = () => {
@@ -243,15 +248,51 @@ const Navbar = () => {
             </button>
             {isInstallationDropdownOpen && (
               <div className="mt-2 pl-4 space-y-2">
-                <div>
-                  <Link
-                    to="/solar-installation"
-                    className="flex items-center justify-between w-full text-black hover:text-orange-500 transition-colors text-sm sm:text-base"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Solar Installation
-                    <ChevronDown className="ml-2 w-4 h-4" />
-                  </Link>
+                <div className="relative">
+                  <div className="flex items-center justify-between w-full">
+                    <Link
+                      to="/solar-installation"
+                      className="flex-1 text-black hover:text-orange-500 transition-colors text-sm sm:text-base"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Solar Installation
+                    </Link>
+                    <button
+                      onClick={toggleSolarDropdown}
+                      className="ml-2 p-1"
+                    >
+                      <ChevronDown 
+                        className={`w-4 h-4 transform transition-transform ${
+                          isSolarDropdownOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
+                  {isSolarDropdownOpen && (
+                    <div className="mt-2 pl-4 space-y-1">
+                      <Link
+                        to="/residential"
+                        className="block text-gray-600 hover:text-orange-500 transition-colors text-sm"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Residential
+                      </Link>
+                      <Link
+                        to="/housing-society"
+                        className="block text-gray-600 hover:text-orange-500 transition-colors text-sm"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Housing Society
+                      </Link>
+                      <Link
+                        to="/industrial-commercial"
+                        className="block text-gray-600 hover:text-orange-500 transition-colors text-sm"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Industrial/Commercial
+                      </Link>
+                    </div>
+                  )}
                 </div>
                 <Link
                   to="/water-management"
