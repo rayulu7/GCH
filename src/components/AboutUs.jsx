@@ -435,28 +435,28 @@ const AboutUs = () => {
             <p className="text-base sm:text-lg lg:text-xl text-gray-600">Experienced professionals driving sustainable solutions</p>
           </div>
           
-          <div className="flex justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 sm:gap-8 max-w-sm lg:max-w-md">
-              {leadershipTeam.map((member) => (
-                <div key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="relative">
-                    <img 
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-48 sm:h-56 lg:h-64 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div className="flex justify-center">
+              <div className="w-full max-w-xs sm:max-w-xs lg:max-w-xs">
+                {leadershipTeam.map((member) => (
+                  <div key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div className="relative">
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-32 sm:h-40 lg:h-44 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div className="p-6 sm:p-8 lg:p-10">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{member.name}</h3>
+                      <p className="text-green-600 font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">{member.position}</p>
+                      <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">{member.experience}</p>
+                      <p className="text-xs sm:text-sm lg:text-base text-gray-500 leading-relaxed">{member.specialization}</p>
+                    </div>
                   </div>
-                  <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-2">{member.name}</h3>
-                    <p className="text-green-600 font-semibold mb-2 text-sm sm:text-base">{member.position}</p>
-                    <p className="text-gray-600 mb-2 text-sm sm:text-base">{member.experience}</p>
-                    <p className="text-xs sm:text-sm text-gray-500">{member.specialization}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
         </div>
       </section>
 

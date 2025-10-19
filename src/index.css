@@ -286,7 +286,7 @@ body, html, #root {
 }
 
 /* Ensure no transform or positioning conflicts - except for navbar and floating buttons */
-*:not(header):not(nav):not(.floating-buttons-container):not(.floating-buttons-container *):not(.group):not(.group *):not(img) {
+*:not(header):not(nav):not(.floating-buttons-container):not(.floating-buttons-container *):not(.group):not(.group *):not(img):not(.animate-spin):not(.animate-bounce):not(.animate-pulse):not(.animate-ping):not(.loading-screen):not(.loading-screen *):not([class*="loading"]):not([class*="animate"]) {
   -webkit-transform: none !important;
   transform: none !important;
 }
