@@ -27,8 +27,7 @@ const ServiceCards = ({ image, title, description, path }) => {
           <img
             src={image}
             alt={title}
-            className="h-28 w-28 sm:h-32 sm:w-32 object-cover rounded-md mx-auto"
-            style={{ display: 'block' }}
+            className="h-28 w-28 sm:h-32 sm:w-32 object-cover rounded-md"
           />
         </div>
         <div className="w-full text-center flex-1 flex flex-col justify-between">
