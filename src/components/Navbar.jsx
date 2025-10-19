@@ -51,7 +51,6 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-
   const handleLogout = () => {
     logout();
     navigate('/');
@@ -71,7 +70,6 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isUserDropdownOpen]);
-
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-3 md:py-4 bg-white shadow-md">

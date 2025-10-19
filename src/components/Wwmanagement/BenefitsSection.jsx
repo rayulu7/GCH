@@ -12,7 +12,7 @@ const BenefitsSection = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        {/* Heading */}
+        {}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4 md:mb-6">
           Benefits of Effluent/Sewage Treatment Plant
         </h2>
@@ -20,7 +20,7 @@ const BenefitsSection = () => {
           Benefits of Effluent/Sewage Treatment Plants are many, they are
         </p>
 
-        {/* Benefits List */}
+        {}
         <ul className="space-y-4 md:space-y-6">
           {benefits.map((text, i) => (
             <li key={i}>
@@ -34,7 +34,7 @@ const BenefitsSection = () => {
                   hover:shadow-md transition
                 "
               >
-                {/* Icon */}
+                {}
                 <span className="mr-3 md:mr-4 text-blue-600 flex-shrink-0 mt-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const BenefitsSection = () => {
                   </svg>
                 </span>
 
-                {/* Text */}
+                {}
                 <p className="text-sm md:text-base leading-relaxed text-gray-800 m-0">
                   {text}
                 </p>

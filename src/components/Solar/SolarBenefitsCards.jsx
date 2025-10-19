@@ -42,7 +42,7 @@ const SolarBenefitsCards = () => {
           Other Benefits
         </h2>
         
-        {/* Mobile: All cards stacked vertically */}
+        {}
         <div className="block lg:hidden space-y-6">
           {benefits.map((benefit) => (
             <div 
@@ -64,9 +64,9 @@ const SolarBenefitsCards = () => {
           ))}
         </div>
 
-        {/* Desktop: First 3 cards in row, last 2 centered */}
+        {}
         <div className="hidden lg:block">
-          {/* Top row - 3 cards */}
+          {}
           <div className="flex justify-center gap-8 mb-8">
             {benefits.slice(0, 3).map((benefit) => (
               <div 
@@ -86,7 +86,7 @@ const SolarBenefitsCards = () => {
             ))}
           </div>
           
-          {/* Bottom row - 2 cards centered */}
+          {}
           <div className="flex justify-center gap-8">
             {benefits.slice(3, 5).map((benefit) => (
               <div 
@@ -112,5 +112,4 @@ const SolarBenefitsCards = () => {
 };
 
 export default SolarBenefitsCards;
-
 

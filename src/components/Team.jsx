@@ -26,7 +26,6 @@ const Team = () => {
   const departments = [
   ];
 
-
   useEffect(() => {
     const headerObserver = new IntersectionObserver(
       ([entry]) => {
@@ -163,44 +162,13 @@ const Team = () => {
             </div>
           </div>
 
-          {/* <div className={`
-            mb-12 lg:mb-16 transition-all duration-1000 delay-500
-            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
-          `}>
-            <h3 className="text-2xl font-bold text-gray-800 text-center mb-6 lg:mb-8">Our Departments</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-              {departments.map((dept, index) => (
-                <div
-                  key={index}
-                  className="text-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                  style={{ transitionDelay: ${index * 100}ms }}
-                >
-                  <div className={w-12 h-12 rounded-full bg-gradient-to-br ${dept.color} mx-auto mb-3 flex items-center justify-center}>
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-semibold text-gray-800 mb-1">{dept.name}</h4>
-                  <p className="text-sm text-gray-600">{dept.count} Member{dept.count > 1 ? 's' : ''}</p>
-                </div>
-              ))}
-            </div>
-          </div> */}
+          {}
 
         </div>
       </section>
 
-      {/* Coming Soon Section */}
-      {/* <section className="pt-2 pb-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
-              Coming Soon!
-            </h2>
-            <p className="text-xl text-gray-600">
-              We're working on exciting new features and services. Stay tuned for updates!
-            </p>
-          </div>
-        </div>
-      </section> */}
+      {}
+      {}
     </div>
   );
 };

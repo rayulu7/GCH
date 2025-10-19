@@ -43,18 +43,18 @@ export default function RooftopSolutions() {
 
   return (
     <section className={`w-full bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-[100px] pb-12 sm:pb-16 md:pb-20 lg:pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Container */}
+      {}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        {/* Heading */}
+        {}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827]">
             Our rooftop solutions
           </h2>
         </div>
 
-        {/* Content Section */}
+        {}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8">
-          {/* Left Section - Solution Buttons */}
+          {}
           <div className="w-full lg:w-[400px] order-2 lg:order-1">
             <div className="space-y-3 sm:space-y-[15px]">
               {solutions.map((solution) => (
@@ -74,7 +74,7 @@ export default function RooftopSolutions() {
             </div>
           </div>
 
-          {/* Right Section - Image */}
+          {}
           <div className="w-full lg:w-[800px] relative mb-6 lg:mb-[30px] order-1 lg:order-2">
             <div className="relative">
               <img
@@ -83,7 +83,7 @@ export default function RooftopSolutions() {
                 className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover rounded-lg"
               />
               
-              {/* Gradient Overlay */}
+              {}
               <div 
                 className="absolute bottom-0 left-0 w-full h-full rounded-lg"
                 style={{
@@ -92,7 +92,7 @@ export default function RooftopSolutions() {
               ></div>
             </div>
             
-            {/* Image Overlay */}
+            {}
             <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-3 sm:left-4 text-white p-3 sm:p-4 rounded-lg">
               <h3 className="text-base sm:text-lg font-bold mb-1">{activeSolution.name}</h3>
               <p className="text-xs sm:text-sm leading-relaxed">{activeSolution.description}</p>

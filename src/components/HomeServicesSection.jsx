@@ -16,7 +16,7 @@ const HomeServicesSection = () => {
     {
       id: 2,
       title: 'Investments',
-      image: 'https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+      image: 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
       content: 'We\'re working on sustainable investment opportunities.',
       link: '/investments'
     },
@@ -64,7 +64,6 @@ const HomeServicesSection = () => {
                 transitionDelay: `${index * 200}ms`
               }}
             >
-              {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.image}
@@ -73,7 +72,6 @@ const HomeServicesSection = () => {
                 />
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
                   {service.title}
@@ -87,7 +85,6 @@ const HomeServicesSection = () => {
                   Stay tuned for updates!
                 </p>
 
-                {/* View More Button */}
                 <Link
                   to={service.link}
                   className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 text-sm"

@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="relative z-10 bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Company Info */}
+          {}
           <div className="md:col-span-1">
             <div className="mb-6">
               <h2 className="text-2xl font-bold mb-2">
@@ -24,12 +24,12 @@ export default function Footer() {
             </p>
           </div>
 
-        {/* Our Offerings */}
+        {}
         <div>
           <h3 className="text-lg font-semibold mb-6 text-gray-200">Our Offerings</h3>
           <ul className="space-y-8">
 
-            {/* Solar Installation */}
+            {}
             <li>
               <h4 className="text-sm font-medium text-gray-300">Solar Installation</h4>
               <div className="flex flex-col mt-2 space-y-1 text-xs text-gray-400">
@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
             </li>
 
-            {/* Water & Waste-water Management */}
+            {}
             <li>
               <h4 className="text-sm font-medium text-gray-300">Water & Waste-water Management</h4>
               <div className="flex flex-col mt-2 space-y-1 text-xs text-gray-400">
@@ -52,7 +52,7 @@ export default function Footer() {
           </ul>
         </div>
 
-          {/* Quick Links */}
+          {}
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
@@ -64,7 +64,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Us */}
+          {}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-center">Contact Us</h3>
             <div className="space-y-4">
@@ -90,7 +90,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom */}
+        {}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">

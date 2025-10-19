@@ -45,14 +45,14 @@ const WhyChooseGCH = () => {
   return (
     <section className="bg-white py-16 px-5 md:px-10 lg:px-20 overflow-x-hidden">
       <div className="max-w-7xl mx-auto text-center">
-        {/* Heading */}
+        {}
         <h2 className="text-gray-900 font-extrabold text-2xl sm:text-3xl md:text-4xl leading-snug mb-6">
           Why Choose{" "}
           <span className="text-green-600">GreenCarbonHub</span> for Your
           Rooftop Solar Power Project?
         </h2>
 
-        {/* Intro Paragraph */}
+        {}
         <p className="text-gray-600 text-base sm:text-lg md:text-[17.5px] leading-relaxed max-w-4xl mx-auto mb-12 text-justify md:text-center">
           <span className="font-semibold text-gray-800">GreenCarbonHub</span> is
           promoted by a Civil Servant with 23 years of experience in
@@ -62,7 +62,7 @@ const WhyChooseGCH = () => {
           Hyderabad, here’s why we stand out:
         </p>
 
-        {/* Benefit Cards */}
+        {}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {benefits.map((benefit) => (
             <div
@@ -77,7 +77,7 @@ const WhyChooseGCH = () => {
           ))}
         </div>
 
-        {/* Closing Paragraph */}
+        {}
         <p className="text-gray-600 text-base sm:text-lg md:text-[17.5px] leading-relaxed max-w-4xl mx-auto mt-14 text-justify md:text-center">
           <span className="font-semibold text-gray-800">GreenCarbonHub</span>’s
           engineers have successfully designed and installed numerous rooftop

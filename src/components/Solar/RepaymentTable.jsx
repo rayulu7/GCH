@@ -9,7 +9,6 @@ export default function RepaymentTable({ loanAmount = 50_000, loanTerm = 0.5, in
     setIsVisible(true);
   }, []);
 
-
   const calculateRepaymentData = () => {
     const P = loanAmount;
     const r = interestRate / 100 / 12;

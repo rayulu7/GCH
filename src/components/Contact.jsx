@@ -7,7 +7,6 @@ const services = [
   "Water & Waste-water Management",
 ];
 
-
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -39,48 +38,7 @@ export default function Contact() {
           </h2>
         </div>
 
-        {/* <div className="space-y-8 animate-fade-in-left">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              Contact Us for Affordable Solutions
-            </h3>
-            <p className="text-gray-600 text-lg">
-              We're here to help you. Reach out for inquiries, collaborations, or support and we'll respond promptly.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="bg-green-100 p-3 rounded-full">
-                <Phone className="w-6 h-6 text-green-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-800">Phone</p>
-                <p className="text-gray-600">+91-9182445715 / +91-9182445300</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <div className="bg-green-100 p-3 rounded-full">
-                <MapPin className="w-6 h-6 text-green-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-800">Address</p>
-                <p className="text-gray-600">Mansoorabad, Telangana, India</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <div className="bg-green-100 p-3 rounded-full">
-                <Mail className="w-6 h-6 text-green-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-800">Email</p>
-                <p className="text-gray-600">info@greencarbonhub.com</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        {}
 
         <div className="max-w-xl mx-auto">
           <div className="bg-gray-50 p-8 rounded-lg animate-fade-in-right">
@@ -121,18 +79,7 @@ export default function Contact() {
                 value={form.city}
                 onChange={handleChange}
               />
-              {/* <select
-                name="city"
-                required
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white"
-                value={form.city}
-                onChange={handleChange}
-              >
-                <option value="">Choose City</option>
-                {cities.map((city) => (
-                  <option key={city} value={city}>{city}</option>
-                ))}
-              </select> */}
+              {}
               <select
                 name="service"
                 required

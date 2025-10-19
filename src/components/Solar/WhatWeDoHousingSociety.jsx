@@ -30,16 +30,16 @@ export default function WhatWeDoHousingSociety() {
 
   return (
     <section className={`w-full bg-white pt-[100px] pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Container */}
+      {}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        {/* Heading */}
+        {}
         <div className="text-center mb-16">
           <h2 className="text-[32px] font-bold text-[#111827] text-center">
             What We Do?
           </h2>
         </div>
 
-        {/* Services Grid */}
+        {}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
             <div

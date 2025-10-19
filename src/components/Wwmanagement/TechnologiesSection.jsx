@@ -1,7 +1,6 @@
 import React from "react";
 import { Laptop, Zap, Waves, Recycle, Cog } from "lucide-react";
 
-/** Reusable cards with responsive padding/typography */
 const TopCard = ({ icon, title, desc }) => (
   <article
     className="
@@ -50,7 +49,7 @@ const TechnologiesSection = () => {
   return (
     <section className="w-full bg-[#EBF3ED] py-10 sm:py-12 md:py-14 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-          {/* Heading */}
+          {}
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#333333] mb-2">
               Technologies Used in Effluent/Sewage Treatment Plants
@@ -60,7 +59,7 @@ const TechnologiesSection = () => {
             </p>
           </div>
 
-          {/* TOP ROW – 3 cards on desktop, 2 on tablet, 1 on phone */}
+          {}
           <div
             className="
               grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
@@ -85,7 +84,7 @@ const TechnologiesSection = () => {
             />
           </div>
 
-          {/* BOTTOM ROW – 2 cards centered on desktop, 1 per row on phone/tablet */}
+          {}
           <div
             className="
               grid grid-cols-1 lg:grid-cols-2

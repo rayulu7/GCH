@@ -45,33 +45,31 @@ const WWHeroSection = () => {
         backgroundRepeat: "no-repeat"
       }}
     >
-      {/* Background overlay for better text readability */}
+      {}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       
       <div className="relative z-10 flex flex-col lg:flex-row min-h-screen">
-        {/* Left Section - Promotional Content */}
+        {}
         <div className="flex-1 flex items-center justify-center p-6 md:p-8 lg:p-12">
           <div className="text-white max-w-2xl">
-            {/* Banner */}
-            {/* <div className="bg-green-600 px-4 md:px-6 py-3 rounded-full text-center mb-6 md:mb-8 inline-block">
-              <span className="text-sm md:text-lg font-bold text-white">PROFESSIONAL WATER & WASTE MANAGEMENT</span>
-            </div> */}
+            {}
+            {}
             
-            {/* Main Heading */}
+            {}
             <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
             Best Effluent/ Sewage Treatment Plant Services in India
             </h1>
             
-            {/* Additional promotional text */}
+            {}
             <p className="font-semibold  md:text-xl lg:text-2xl text-black mb-6 md:mb-8">
             Choose Greencarbonhub’s Expert Wastewater Treatment Plant Team For Optimal Water Quality
             </p>
           </div>
         </div>
 
-        {/* Right Section - Contact Form */}
+        {}
         <div className="w-full lg:w-[600px] xl:w-[700px] p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-          {/* Form Container with Background */}
+          {}
           <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:max-w-none lg:mx-0">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 md:mb-8 text-center lg:text-left">Contact Us</h2>
             
@@ -121,27 +119,8 @@ const WWHeroSection = () => {
                 value={form.city}
                 onChange={handleChange}
               />
-              {/* <input
-                type="text"
-                name="capacity"
-                required
-                className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-sm sm:text-base"
-                placeholder="Plant Capacity (KLD/MLD)"
-                value={form.capacity}
-                onChange={handleChange}
-              /> */}
-              {/* <select
-                name="service"
-                required
-                className="w-full max-w-sm mx-auto lg:max-w-none lg:mx-0 block border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 text-sm sm:text-base"
-                value={form.service}
-                onChange={handleChange}
-              >
-                <option value="">Select Treatment Type</option>
-                {services.map((svc) => (
-                  <option key={svc} value={svc}>{svc}</option>
-                ))}
-              </select> */}
+              {}
+              {}
               <div className="flex justify-center lg:justify-start">
                 <button
                   type="submit"

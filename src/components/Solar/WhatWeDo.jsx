@@ -22,7 +22,6 @@ const services = [
   }
 ];
 
-/** Reusable cards with responsive dimensions and padding */
 const ServiceCard = ({ icon, title, desc }) => (
   <article
     className="
@@ -72,16 +71,16 @@ export default function WhatWeDo() {
 
   return (
     <section className={`w-full bg-[#EBF3ED] pt-12 sm:pt-16 md:pt-20 lg:pt-[100px] pb-12 sm:pb-16 md:pb-20 lg:pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Container */}
+      {}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        {/* Heading */}
+        {}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#111827]">
             What GreenCarbonHub Does?
           </h2>
         </div>
 
-        {/* Services Grid - Responsive */}
+        {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8 justify-items-center">
           {services.map((service) => (
             <div key={service.id} className="w-full">

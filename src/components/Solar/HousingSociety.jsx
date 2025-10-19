@@ -96,9 +96,7 @@ const HousingSociety = () => {
               <p className="text-base md:text-md lg:text-xl text-blue-100 mb-6 md:mb-8">
               Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free solar consultation for housing society in Hyderabad Today!
               </p>
-              {/* <p className="text-base md:text-md lg:text-xl text-blue-100">
-                A Best Solar Company in Hyderabad that saves your Society's Money and Time.
-              </p> */}
+              {}
             </div>
           </div>
 

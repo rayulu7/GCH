@@ -47,34 +47,32 @@ const SolarHeroSection = () => {
         backgroundRepeat: "no-repeat"
       }}
     >
-      {/* Background overlay for better text readability */}
+      {}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       
       <div className="relative z-10 flex flex-col lg:flex-row min-h-screen">
-        {/* Left Section - Promotional Content */}
+        {}
         <div className="flex-1 flex items-center justify-center p-6 md:p-8 lg:p-12">
           <div className="text-white max-w-2xl">
-            {/* Subsidy Banner */}
+            {}
             <div className=" text-green-600 px-4 md:px-6 py-3 rounded-full text-center mb-6 md:mb-8 inline-block">
               <span className="text-sm md:text-lg font-bold">AVAIL SUBSIDY UP TO ₹78,000</span>
             </div>
             
-            {/* Main Heading */}
+            {}
             <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
               Reduce Your Power Bill in a transparent and haggle-free manner with our Solar Installations
               
             </h1>
             
-            {/* Additional promotional text */}
-            {/* <p className="text-base md:text-xl lg:text-2xl text-blue-100 mb-6 md:mb-8">
-              Switch to clean energy and save up to 90% on your electricity bills
-            </p> */}
+            {}
+            {}
           </div>
         </div>
 
-        {/* Right Section - Contact Form */}
+        {}
         <div className="w-full lg:w-[600px] xl:w-[700px] p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-          {/* Form Container with Background */}
+          {}
           <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:max-w-none lg:mx-0">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 md:mb-8 text-center lg:text-left">Contact Us</h2>
             

@@ -99,9 +99,7 @@ const ResidentialRooftopSolutions = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827]">
             Other Benefits
           </h2>
-          {/* <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
-            Choose the perfect solar installation solution for your home with our range of residential rooftop mounting systems
-          </p> */}
+          {}
         </div>
 
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8">

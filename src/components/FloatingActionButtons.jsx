@@ -41,7 +41,6 @@ const FloatingActionButtons = () => {
             perspective: 1000px !important;
           }
           
-          /* Mobile-specific styles */
           @media (max-width: 1024px) {
             .floating-buttons-container {
               position: fixed !important;
@@ -91,7 +90,6 @@ const FloatingActionButtons = () => {
             }
           }
           
-          /* Ensure buttons stay fixed during scroll on all devices */
           .floating-buttons-container * {
             -webkit-transform: translateZ(0) !important;
             transform: translateZ(0) !important;
@@ -99,7 +97,6 @@ const FloatingActionButtons = () => {
         `
       }} />
       <div className="floating-buttons-container">
-      {/* WhatsApp Button */}
       <button
         onClick={handleWhatsApp}
         style={{
@@ -130,7 +127,6 @@ const FloatingActionButtons = () => {
         </svg>
       </button>
 
-      {/* Phone Button */}
       <button
         onClick={handlePhone}
         style={{
@@ -161,7 +157,6 @@ const FloatingActionButtons = () => {
         </svg>
       </button>
 
-      {/* Chatbot Button */}
       <button
         onClick={handleChatbot}
         style={{

@@ -54,7 +54,7 @@ const WhyChooseSolar = () => {
                 </div>
               </div>
               
-              {/* Square popup that moves to top */}
+              {}
               <div className={`absolute top-4 left-4 right-4 bottom-4 ${benefit.popupColor} text-white p-6 sm:p-8 rounded-lg transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out shadow-lg flex flex-col justify-start items-center text-center opacity-0 group-hover:opacity-100 pt-8`}>
                 <h4 className="font-bold text-lg sm:text-xl lg:text-2xl mb-4">{benefit.title}</h4>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed">

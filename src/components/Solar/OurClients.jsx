@@ -24,16 +24,16 @@ const OurClients = () => {
 
   return (
     <section className={`w-full bg-white pt-[100px] pb-[70px] transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Container */}
+      {}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        {/* Heading */}
+        {}
         <div className="text-center mb-16">
           <h2 className="text-[32px] font-bold text-[#111827]">
             Our Clients
           </h2>
         </div>
 
-        {/* Client Logos */}
+        {}
         <div className="flex justify-between items-center px-8">
           {clients.map((client, index) => (
             <div key={client.id} className="flex justify-center">

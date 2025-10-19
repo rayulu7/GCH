@@ -70,7 +70,7 @@ const GCHBenefits = () => {
           we are just a few miles away. Here are the reasons to choose us:
         </motion.p>
 
-        {/* Benefit Cards */}
+        {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {benefits.map((benefit, index) => (
             <motion.div
@@ -141,7 +141,7 @@ const GCHBenefits = () => {
           ))}
         </div>
 
-        {/* Bottom Paragraph */}
+        {}
         <motion.p
           className="text-left mx-auto mt-12"
           style={{

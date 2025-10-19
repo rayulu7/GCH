@@ -213,7 +213,7 @@ const Residential = () => {
       <section className="w-full bg-[#EBF3ED] py-10 sm:py-12 md:py-14">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[120px]">
           <div className="mx-auto w-full lg:w-[1200px]">
-            {/* Heading */}
+            {}
             <div className="text-center mb-8 sm:mb-10 md:mb-12">
               <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#333333] mb-2">
                 Benefits of Choosing Rooftop Solar Power for Homes
@@ -231,7 +231,7 @@ const Residential = () => {
               </p>
             </div>
 
-            {/* 3 CARDS ONLY – matching the image layout */}
+            {}
             <div
               className="
                 grid place-items-center
@@ -262,25 +262,25 @@ const Residential = () => {
         </div>
       </section>
       
-      {/* Other Benefits Section */}
+      {}
       <OtherBenefits />
       
-      {/* Subsidy Structure Section */}
+      {}
       <Subsidy />
       
-      {/* What GreenCarbonHub Does Section */}
+      {}
       <WhatWeDo />
       
-      {/* Why Solar For Residential Section */}
+      {}
       <WhySolarResidential />
       
-      {/* Why Choose GCH Section */}
+      {}
       <WhyChooseGCH />
       
-      {/* FAQ Section */}
+      {}
       <FAQ />
       
-      {/* Our Clients Section */}
+      {}
       <OurClients />
     </div>
   );

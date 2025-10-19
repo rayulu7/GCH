@@ -9,7 +9,7 @@ const AboutUs = () => {
       position: 'Founder & CEO',
       experience: '23+ Years Experience',
       specialization: 'Power Management, Waste Management',
-      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1'
+      image: 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1'
     }
   ];
 
@@ -31,7 +31,7 @@ const AboutUs = () => {
       <section className="relative">
         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[469px]">
           <img 
-            src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=1440&h=469&dpr=1"
+            src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"//images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
             alt="About Green Carbon Hub"
             className="w-full h-full object-cover"
           />
@@ -104,7 +104,7 @@ const AboutUs = () => {
             <div className="relative order-2 lg:order-1">
               <div className="relative lg:pr-40">
                 <img 
-                  src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=425&h=588&dpr=1"
+                  src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"//images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                   alt="Solar Engineer"
                   className="rounded-lg shadow-lg w-full max-w-md h-auto mx-auto lg:mx-0"
                 />
@@ -125,7 +125,7 @@ const AboutUs = () => {
                 
                 <div className="hidden lg:block absolute bottom-6 right-6 rounded-lg overflow-hidden shadow-lg w-80 h-80">
                   <img 
-                    src="https://images.pexels.com/photos/9875365/pexels-photo-9875365.jpeg?auto=compress&cs=tinysrgb&w=310&h=330&dpr=1"
+                    src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                     alt="Solar Installation Team"
                     className="w-full h-full object-cover"
                   />
@@ -277,7 +277,7 @@ const AboutUs = () => {
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
                     <img 
-                      src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1"
+                      src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="Initial Consultation"
                       className="w-full h-full object-cover"
                     />
@@ -302,7 +302,7 @@ const AboutUs = () => {
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
                     <img 
-                      src="https://images.pexels.com/photos/9875365/pexels-photo-9875365.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1"
+                      src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="System Design"
                       className="w-full h-full object-cover"
                     />
@@ -327,7 +327,7 @@ const AboutUs = () => {
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
                     <img 
-                      src="https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1"
+                      src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="Install & Activate"
                       className="w-full h-full object-cover"
                     />
@@ -352,7 +352,7 @@ const AboutUs = () => {
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
                     <img 
-                      src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=1"
+                      src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="System Monitoring"
                       className="w-full h-full object-cover"
                     />
@@ -395,7 +395,7 @@ const AboutUs = () => {
             </div>
             <div className="relative order-1 lg:order-2">
               <img 
-                src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+                src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                 alt="Green Carbon Hub Team"
                 className="rounded-lg shadow-lg w-full h-auto"
               />

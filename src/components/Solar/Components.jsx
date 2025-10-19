@@ -34,23 +34,23 @@ export default function Components() {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      {/* Container */}
+      {}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        {/* Heading */}
+        {}
         <div className="text-center mb-16">
           <h2 className="text-[32px] font-bold text-[#111827]">
             Components
           </h2>
         </div>
 
-        {/* Components Grid */}
+        {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
           {components.map((component) => (
             <div 
               key={component.id}
               className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-sm lg:max-w-md"
             >
-              {/* Image Section */}
+              {}
               <div className="w-full h-64 md:h-80">
                 <img
                   src={component.image}
@@ -59,7 +59,7 @@ export default function Components() {
                 />
               </div>
 
-              {/* Heading Section */}
+              {}
               <div className="flex items-center justify-center p-4 md:p-6">
                 <h3 className="text-lg md:text-xl font-bold text-[#1F2220] text-center">
                   {component.name}

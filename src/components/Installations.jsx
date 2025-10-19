@@ -14,44 +14,7 @@ const cardData = [
     description: "Offering innovative water and wastewater management solutions to ensure efficient usage and sustainable recycling processes.",
     path: "/water-and-wastewater-management"
   },
-  // {
-  //   image: './bioMethanation.jpg',
-  //   title: "Bio-Methanation",
-  //   description: "Convert organic waste into valuable biogas through our efficient and eco-friendly bio-methanation solutions.",
-  //   path: "/bio-methanation"
-  // },
-  //  {
-  //   image: './SofaService.jpg',
-  //   title: "Bio-Methanation",
-  //   description: "Convert organic waste into valuable biogas through our efficient and eco-friendly bio-methanation solutions.",
-  //   path: "/bio-methanation"
-  // },
-//   {
-//     image: './ChairService.jpg',
-//     title: "Chair Cleaning",
-//     description: "Get your Chair cleaned with Eco-Friendly Chemicals containing only 10% moisture to increase the life of Fabric.",
-//     path: "/chair-cleaning"
-//   },
-//   {
-//     image: "./DeepService.jpg",
-//     title: "Deep Cleaning",
-//     description: "Our professional team ensures a clean and dust-free office atmosphere with optimum indoor air quality to increase employee productivity.",
-//     path: "/deep-cleaning"
-//   },
-  
-//   {
-//     image: "./workstationService.jpg",
-//     title: "Workstation Panels/Rollers",
-//     description: "PCS Care improves the Indoor Air Quality by making the panels/rollers allergen and dust free.",
-//     path: "/workstation-cleaning"
-//   },
-  
-//   {
-//     image: "./PestService.jpg",
-//     title: "Pest Control",
-//     description: "Protect your office/Industry against pests by engaging our experts & professionals with 19+ years of experience.",
-//     path: "/pest-control"
-//   },
+
 ];
 
 const ServiceCards = ({ image, title, description, path }) => {

@@ -34,12 +34,42 @@ import ForgotPassword from "./ForgotPassword.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { AuthProvider } from "../contexts/AuthContext.jsx";
 
-
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function DocumentTitle() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const getPageTitle = (path) => {
+      const titles = {
+        '/': 'Green Carbon Hub - Leading Net-Zero Solutions & Solar Energy',
+        '/solar-installation': 'Solar Installation Services - Green Carbon Hub',
+        '/water-management': 'Water & Waste Management Solutions - Green Carbon Hub',
+        '/about-us': 'About Us - Green Carbon Hub | 23+ Years Experience',
+        '/residential': 'Residential Solar Solutions - Green Carbon Hub',
+        '/housing-society': 'Housing Society Solar Solutions - Green Carbon Hub',
+        '/industrial-commercial': 'Industrial & Commercial Solar Solutions - Green Carbon Hub',
+        '/maintenance': 'Solar Maintenance Services - Green Carbon Hub',
+        '/investments': 'Solar Investment Opportunities - Green Carbon Hub',
+        '/gch-store': 'GCH Store - Green Carbon Hub Products',
+        '/login': 'Login - Green Carbon Hub',
+        '/signup': 'Sign Up - Green Carbon Hub',
+        '/forgot-password': 'Forgot Password - Green Carbon Hub'
+      };
+      
+      return titles[path] || 'Green Carbon Hub - Sustainable Energy Solutions';
+    };
+
+    const title = getPageTitle(pathname);
+    document.title = title;
   }, [pathname]);
 
   return null;
@@ -170,6 +200,7 @@ function App() {
     <AuthProvider>
       <Router>
         <ScrollToTop />
+        <DocumentTitle />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/solar-installation" element={<SolarInstallationPage />} />

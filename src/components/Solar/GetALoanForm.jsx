@@ -12,14 +12,12 @@ export default function GetALoanForm() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid items-center gap-6 sm:gap-8 md:gap-10 md:grid-cols-2">
-          {/* Left: Text */}
           <div className="text-white">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Get A Loan</h2>
 
             <div>
               <p className="text-base sm:text-lg mb-3 sm:mb-4">Follow us</p>
               <div className="flex items-center gap-4 sm:gap-6">
-                {/* Facebook */}
                 <a
                   href="#"
                   aria-label="Facebook"
@@ -30,7 +28,6 @@ export default function GetALoanForm() {
                   </svg>
                 </a>
 
-                {/* Instagram */}
                 <a
                   href="#"
                   aria-label="Instagram"
@@ -41,7 +38,6 @@ export default function GetALoanForm() {
                   </svg>
                 </a>
 
-                {/* X */}
                 <a
                   href="#"
                   aria-label="X"
@@ -55,10 +51,10 @@ export default function GetALoanForm() {
             </div>
           </div>
 
-          {/* Right: Form (card grows naturally; button inside) */}
+          {}
           <div className="bg-white rounded-xl shadow-lg w-full max-w-xl p-4 sm:p-6 md:p-7">
             <form className="space-y-4 sm:space-y-6">
-              {/* Name */}
+              {}
               <div>
                 <label className="block text-sm font-medium text-[#333] mb-2">
                   Your Name
@@ -70,7 +66,7 @@ export default function GetALoanForm() {
                 />
               </div>
 
-              {/* Email / Phone */}
+              {}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-sm font-medium text-[#333] mb-2">
@@ -94,7 +90,7 @@ export default function GetALoanForm() {
                 </div>
               </div>
 
-              {/* Category / Location */}
+              {}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-sm font-medium text-[#333] mb-2">
@@ -121,7 +117,7 @@ export default function GetALoanForm() {
                 </div>
               </div>
 
-              {/* Message */}
+              {}
               <div>
                 <label className="block text-sm font-medium text-[#333] mb-2">
                   Any Messages
@@ -133,7 +129,7 @@ export default function GetALoanForm() {
                 />
               </div>
 
-              {/* Submit — stays INSIDE the card */}
+              {}
               <button
                 type="submit"
                 className="w-full py-3 text-white font-semibold rounded-lg transition hover:shadow-lg"
@@ -146,17 +142,8 @@ export default function GetALoanForm() {
         </div>
       </div>
 
-      {/* Optional: Floating actions (remove if not needed) */}
-      {/* 
-      <div className="fixed right-6 bottom-6 flex flex-col gap-4 z-40">
-        <button className="w-12 h-12 bg-[#3a954f] rounded-full text-white text-xl shadow-lg hover:scale-110 transition">
-          📞
-        </button>
-        <button className="w-12 h-12 bg-[#3a954f] rounded-full text-white text-xl shadow-lg hover:scale-110 transition">
-          💬
-        </button>
-      </div>
-      */}
+      {}
+      {}
     </section>
   );
 }

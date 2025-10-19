@@ -4,14 +4,14 @@ const ExpertSewage = () => {
   return (
     <section className="w-full bg-[#f7f7f7] py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        {/* Heading */}
+        {}
         <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] text-center mb-8 md:mb-12">
           Expert Sewage Treatment Plant Services in India
         </h4>
 
-        {/* Content Grid */}
+        {}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left: Image */}
+          {}
           <div className="flex justify-center lg:justify-start">
             <img
               src="/w1.png"
@@ -20,7 +20,7 @@ const ExpertSewage = () => {
             />
           </div>
 
-          {/* Right: Description */}
+          {}
           <div className="space-y-6">
             <p className="text-base md:text-lg leading-relaxed text-justify text-[#333333]">
               Sewage Treatment Plant or simply called STP, plays a crucial role
