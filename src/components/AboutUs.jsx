@@ -275,7 +275,7 @@ const AboutUs = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
-                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
+                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative transition-all duration-300 hover:border-green-500 hover:border-8">
                     <img 
                       src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="Initial Consultation"
@@ -300,7 +300,7 @@ const AboutUs = () => {
 
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
-                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
+                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative transition-all duration-300 hover:border-green-500 hover:border-8">
                     <img 
                       src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="System Design"
@@ -325,7 +325,7 @@ const AboutUs = () => {
 
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
-                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
+                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative transition-all duration-300 hover:border-green-500 hover:border-8">
                     <img 
                       src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="Install & Activate"
@@ -350,7 +350,7 @@ const AboutUs = () => {
 
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
-                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
+                  <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative transition-all duration-300 hover:border-green-500 hover:border-8">
                     <img 
                       src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
                       alt="System Monitoring"
