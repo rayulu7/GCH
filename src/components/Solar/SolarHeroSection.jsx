@@ -41,7 +41,7 @@ const SolarHeroSection = () => {
     <div 
       className="relative min-h-screen"
       style={{
-        backgroundImage: "url('/bg_banner.jpeg')",
+        backgroundImage: "url('/demo_image.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"

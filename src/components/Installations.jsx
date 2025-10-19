@@ -22,28 +22,31 @@ const ServiceCards = ({ image, title, description, path }) => {
     <div className="relative bg-white rounded-xl shadow-md border border-gray-200 flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 w-full max-w-sm sm:max-w-md mx-auto group"
       style={{ minHeight: '420px' }}
     >
-      <Link to={path} className="w-full flex flex-col items-center">
-        <img
-          src={image}
-          alt={title}
-          className="h-28 w-28 sm:h-32 sm:w-32 object-cover rounded-md mb-4 sm:mb-6 z-10 relative"
-        />
-      </Link>
-      <div className="flex flex-col items-center w-full z-10 relative flex-1 justify-between">
-        <div className="w-full text-center">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-1 sm:mb-3 group-hover:text-white transition-colors">
-            {title}
-          </h3>
-          <p className="text-sm sm:text-base text-gray-600 font-poppins mb-2 sm:mb-6 group-hover:text-white transition-colors">
-            {description}
-          </p>
+      <div className="flex flex-col items-center w-full z-10 relative flex-1">
+        <div className="flex justify-center items-center mb-4 sm:mb-6 w-full">
+          <img
+            src={image}
+            alt={title}
+            className="h-28 w-28 sm:h-32 sm:w-32 object-cover rounded-md mx-auto"
+            style={{ display: 'block' }}
+          />
         </div>
-        <Link
-          to={path}
-          className="mt-auto font-poppins text-[#3A954F] font-semibold hover:underline text-base sm:text-lg group-hover:text-white transition-colors"
-        >
-          Read More
-        </Link>
+        <div className="w-full text-center flex-1 flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-1 sm:mb-3 group-hover:text-white transition-colors">
+              {title}
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 font-poppins mb-2 sm:mb-6 group-hover:text-white transition-colors">
+              {description}
+            </p>
+          </div>
+          <Link
+            to={path}
+            className="mt-auto font-poppins text-[#3A954F] font-semibold hover:underline text-base sm:text-lg group-hover:text-white transition-colors"
+          >
+            Read More
+          </Link>
+        </div>
       </div>
 
       <div className="absolute inset-0 rounded-xl pointer-events-none transition-colors duration-200 group-hover:bg-[#3A954F] z-0" />
