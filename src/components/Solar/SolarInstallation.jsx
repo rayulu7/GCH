@@ -15,7 +15,6 @@ import RepaymentTable from "./RepaymentTable.jsx";
 import GetALoanForm from "./GetALoanForm.jsx";
 
 function SolarInstallation() {
-  // Shared loan state for both components
   const [sharedLoanData, setSharedLoanData] = useState({
     loanAmount: 50_000,
     loanTerm: 0.5,

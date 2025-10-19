@@ -13,14 +13,10 @@ const WhyGCHSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
 
-  // Observe scroll into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log('Animation triggered!'); // Debug log
-          setHasAnimated(true); // play animation once
-          observer.disconnect(); // stop observing (keeps it visible)
         }
       },
       { threshold: 0.2 }
@@ -33,11 +29,9 @@ const WhyGCHSection = () => {
     <section
       ref={sectionRef}
       className="py-20 bg-gray-50"
-      onMouseEnter={() => setHasAnimated(true)} // also trigger on hover
     >
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex justify-center">
-          {/* Content - Centered */}
           <div className={`
             w-full max-w-2xl
             transition-all duration-700

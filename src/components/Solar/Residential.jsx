@@ -10,7 +10,6 @@ import Subsidy from "./Subsidy.jsx";
 import WhatWeDo from "./WhatWeDo.jsx";
 import { Home, DollarSign, Leaf, Zap, Shield, Settings } from "lucide-react";
 
-/** Reusable cards with original dimensions and padding */
 const TopCard = ({ icon, title, desc }) => (
   <article
     className="
@@ -68,7 +67,6 @@ const BottomCard = ({ icon, title, desc }) => (
   </article>
 );
 
-// Hero Section Component for Residential Page
 const ResidentialHeroSection = () => {
   const [form, setForm] = useState({
     name: "",
@@ -102,25 +100,20 @@ const ResidentialHeroSection = () => {
         backgroundRepeat: "no-repeat"
       }}
     >
-      {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       
       <div className="relative z-10 flex flex-col lg:flex-row min-h-screen">
-        {/* Left Section - Promotional Content */}
         <div className="flex-1 flex items-center justify-center p-6 md:p-8 lg:p-12">
           <div className="text-white max-w-2xl">
-            {/* Subsidy Banner */}
             <div className=" px-4 md:px-6 py-3 rounded-full text-center mb-6 md:mb-8 inline-block">
               <span className="text-sm md:text-lg font-bold text-green-600">Save Money, Save The Environment!</span>
             </div>
             
-            {/* Main Heading */}
             <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
             Best Residential Rooftop Solar Panel
             Installation Company in Hyderabad
             </h1>
             
-            {/* Additional promotional text */}
             <p className="text-base md:text-md lg:text-xl text-blue-100 mb-6 md:mb-8">
             Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Reduce 0.84 tonnes of CO2 emissions per annum per KW of Solar power installed. Get Started Today! </p>
             <p>
@@ -129,9 +122,7 @@ const ResidentialHeroSection = () => {
           </div>
         </div>
 
-        {/* Right Section - Contact Form */}
         <div className="w-full lg:w-[600px] xl:w-[700px] p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-          {/* Form Container with Background */}
           <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:max-w-none lg:mx-0">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 md:mb-8 text-center lg:text-left">Contact Us</h2>
             
@@ -219,11 +210,8 @@ const Residential = () => {
       <ResidentialHeroSection />
       <CTAButtons />
       
-      {/* Benefits Section */}
       <section className="w-full bg-[#EBF3ED] py-10 sm:py-12 md:py-14">
-        {/* Outer container – 120px side padding at xl, smaller on mobile */}
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[120px]">
-          {/* Inner stage fixed at 1200 on desktop; fluid on small screens */}
           <div className="mx-auto w-full lg:w-[1200px]">
             {/* Heading */}
             <div className="text-center mb-8 sm:mb-10 md:mb-12">

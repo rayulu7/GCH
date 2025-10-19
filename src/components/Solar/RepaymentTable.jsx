@@ -10,11 +10,10 @@ export default function RepaymentTable({ loanAmount = 50_000, loanTerm = 0.5, in
   }, []);
 
 
-  // Calculate repayment data based on loan parameters
   const calculateRepaymentData = () => {
     const P = loanAmount;
-    const r = interestRate / 100 / 12; // monthly rate
-    const n = Math.round(loanTerm * 12); // months
+    const r = interestRate / 100 / 12;
+    const n = Math.round(loanTerm * 12);
     
     const EMI = r === 0 ? P / n : (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
     
@@ -27,7 +26,6 @@ export default function RepaymentTable({ loanAmount = 50_000, loanTerm = 0.5, in
       const principalPayment = EMI - interestPayment;
       remainingBalance -= principalPayment;
       
-      // Format month as "Oct-2025" style
       const paymentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + i + 1, 1);
       const monthName = paymentDate.toLocaleDateString('en-US', { 
         month: 'short', 
@@ -84,7 +82,6 @@ export default function RepaymentTable({ loanAmount = 50_000, loanTerm = 0.5, in
       }`}
     >
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        {/* Repayment Table */}
         <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
           <div className="bg-[#008000] text-white px-4 sm:px-6 py-3 sm:py-4">
             <h3 className="text-base sm:text-lg md:text-[20px] font-semibold">Repayment Table</h3>
@@ -115,7 +112,6 @@ export default function RepaymentTable({ loanAmount = 50_000, loanTerm = 0.5, in
                   
                   return (
                     <React.Fragment key={year}>
-                      {/* Year Summary Row */}
                       <tr className="border-b border-gray-200 hover:bg-gray-200 bg-gray-100">
                         <td className="px-3 sm:px-6 py-3 sm:py-4 text-center">
                           <button
@@ -139,7 +135,6 @@ export default function RepaymentTable({ loanAmount = 50_000, loanTerm = 0.5, in
                         </td>
                       </tr>
                       
-                      {/* Monthly Breakdown Rows */}
                       {isExpanded && yearData.map((month, index) => (
                         <tr key={index} className={`border-b border-gray-100 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}`}>
                           <td className="px-3 sm:px-6 py-2 sm:py-3 pl-6 sm:pl-12 text-center text-xs sm:text-sm lg:text-[13px] text-[#666666]">

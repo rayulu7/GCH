@@ -35,7 +35,6 @@ import ProtectedRoute from "./ProtectedRoute.jsx";
 import { AuthProvider } from "../contexts/AuthContext.jsx";
 
 
-// ScrollToTop Component - Scrolls to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -46,7 +45,6 @@ function ScrollToTop() {
   return null;
 }
 
-// Layout Component with Navbar and Footer
 function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
@@ -59,7 +57,6 @@ function Layout({ children }) {
   );
 }
 
-// Home Page Component
 function HomePage() {
   return (
     <Layout>
@@ -75,7 +72,6 @@ function HomePage() {
   );
 }
 
-// Solar Installation Page
 function SolarInstallationPage() {
   return (
     <Layout>
@@ -84,7 +80,6 @@ function SolarInstallationPage() {
   );
 }
 
-// Residential Page
 function ResidentialPage() {
   return (
     <Layout>
@@ -93,7 +88,6 @@ function ResidentialPage() {
   );
 }
 
-// Housing Society Page
 function HousingSocietyPage() {
   return (
     <Layout>
@@ -102,7 +96,6 @@ function HousingSocietyPage() {
   );
 }
 
-// Industrial Commercial Page
 function IndustrialCommercialPage() {
   return (
     <Layout>
@@ -111,7 +104,6 @@ function IndustrialCommercialPage() {
   );
 }
 
-// Water Management Page
 function WaterManagementPage() {
   return (
     <Layout>
@@ -127,7 +119,6 @@ function WaterManagementPage() {
   );
 }
 
-// About Us Page
 function AboutUsPage() {
   return (
     <Layout>
@@ -136,7 +127,6 @@ function AboutUsPage() {
   );
 }
 
-// Maintenance Page
 function MaintenancePage() {
   return (
     <Layout>
@@ -145,7 +135,6 @@ function MaintenancePage() {
   );
 }
 
-// Investments Page
 function InvestmentsPage() {
   return (
     <Layout>
@@ -154,7 +143,6 @@ function InvestmentsPage() {
   );
 }
 
-// GCH Store Page
 function GCHStorePage() {
   return (
     <Layout>
@@ -167,7 +155,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Show loading screen for 3 seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000);

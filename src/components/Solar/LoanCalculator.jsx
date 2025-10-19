@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Use shared state or local state as fallback
   const { loanAmount, loanTerm, activeTab } = sharedLoanData || { loanAmount: 50_000, loanTerm: 0.5, activeTab: "residential" };
   
-  // Helper functions to update shared state
   const updateLoanAmount = (amount) => {
     if (setSharedLoanData) {
       setSharedLoanData(prev => ({ ...prev, loanAmount: amount }));
@@ -25,7 +23,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
     }
   };
   
-  // Dynamic interest rate based on tab
   const getInterestRate = () => {
     switch(activeTab) {
       case 'residential': return 7.99;
@@ -39,11 +36,10 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
 
   useEffect(() => setIsVisible(true), []);
 
-  // ---- Helpers ----
   const emi = React.useMemo(() => {
     const P = loanAmount;
-    const r = interestRate / 100 / 12;     // monthly rate
-    const n = Math.round(loanTerm * 12);   // months
+    const r = interestRate / 100 / 12;
+    const n = Math.round(loanTerm * 12);
 
     if (r === 0) return P / n;
     return (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
@@ -58,11 +54,9 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
     );
   const fmtNum = (v) => new Intl.NumberFormat("en-IN").format(Math.round(v));
 
-  // Track fill % - non-linear mapping
   const amtMin = 50_000;
   const amtMax = 10_000_000;
   
-  // Calculate which segment we're in and the percentage within that segment
   const getAmountPercentage = (amount) => {
     if (amount <= 50_000) return 0;
     if (amount <= 1_000_000) return 20;
@@ -77,7 +71,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
   const termMin = 0.5;
   const termMax = 5;
   
-  // Calculate which term stop we're at for visual fill progress
   const getTermPercentage = (term) => {
     if (term <= 0.5) return 0;
     if (term <= 1) return 20;
@@ -113,9 +106,7 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      {/* Container */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-[15px]">
-        {/* Heading */}
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827] mb-2 drop-shadow-lg">
             Loan Calculator
@@ -125,7 +116,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
           </p>
         </div>
 
-        {/* Tabs */}
         <div className="flex justify-center mb-6 sm:mb-8">
           <div className="flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full max-w-md sm:max-w-none">
             {[
@@ -148,16 +138,13 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
           </div>
         </div>
 
-        {/* Panels */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-              {/* Left: Calculator */}
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
             <div className="bg-[#008000] text-white flex items-center justify-center h-12 sm:h-14 md:h-16">
               <h3 className="text-base sm:text-lg md:text-[20px] font-semibold">Loan Calculator</h3>
             </div>
 
             <div className="p-4 sm:p-6 md:p-[25px]">
-              {/* Loan Amount */}
               <div className="mb-6 sm:mb-8">
                 <label className="block text-sm sm:text-base lg:text-[16px] font-semibold text-[#333333] mb-2 sm:mb-3">
                   Loan Amount:
@@ -171,7 +158,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                     if (/^\d*$/.test(raw)) {
                       const n = Number(raw || 0);
                       if (n >= amtMin && n <= amtMax) {
-                        // Find closest stop for snapping
                         const closestStop = amtStops.reduce((closest, stop) => 
                           Math.abs(stop.value - n) < Math.abs(closest.value - n) ? stop : closest
                         );
@@ -182,7 +168,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#008000] focus:border-transparent"
                 />
 
-                {/* Range + dots */}
                 <div className="mt-6">
                   <div className="relative">
                   <input
@@ -200,7 +185,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                       background: `linear-gradient(to right,#008000 0%,#008000 ${amtPct}%,#e5e7eb ${amtPct}%,#e5e7eb 100%)`,
                     }}
                   />
-                    {/* Dots */}
                     <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full h-2 pointer-events-none">
                       {amtStops.map((s) => {
                         const filled = loanAmount >= s.value;
@@ -219,7 +203,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                     </div>
                   </div>
 
-                  {/* Amount Labels */}
                   <div className="relative text-sm text-gray-700 mt-3">
                     {amtStops.map((s, index) => (
                       <span
@@ -237,7 +220,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                 </div>
               </div>
 
-              {/* Loan Term */}
               <div className="mb-2 pb-4">
                 <label className="block text-sm sm:text-base lg:text-[16px] font-semibold text-[#333333] mb-2 sm:mb-3">
                   Loan Term:
@@ -250,20 +232,16 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                     const raw = e.target.value.replace(/[^\d.]/g, "");
                     const n = Number(raw || 0);
                     
-                    // Allow any value within range with smart snapping
                     if (n >= termMin && n <= termMax) {
-                      // Find closest stop for snapping
                       const closestStop = termStops.reduce((closest, stop) => 
                         Math.abs(stop.value - n) < Math.abs(closest.value - n) ? stop : closest
                       );
-                      // Snap if within 0.25 of a year
                       updateLoanTerm(Math.abs(n - closestStop.value) <= 0.25 ? closestStop.value : n);
                     }
                   }}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#008000] focus:border-transparent"
                 />
 
-                {/* Range + dots */}
                 <div className="mt-6">
                   <div className="relative">
                     <input
@@ -281,7 +259,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                         background: `linear-gradient(to right,#008000 0%,#008000 ${termPct}%,#e5e7eb ${termPct}%,#e5e7eb 100%)`,
                       }}
                     />
-                    {/* Dots */}
                     <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full h-2 pointer-events-none">
                       {termStops.map((s) => {
                         const filled = loanTerm >= s.value;
@@ -299,7 +276,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                       })}
                     </div>
                   </div>
-                  {/* Term Labels */}
                   <div className="relative text-sm text-gray-700 mt-3">
                     {termStops.map((s, index) => (
                       <span
@@ -319,7 +295,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
             </div>
           </div>
 
-              {/* Right: Result */}
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
             <div className="bg-[#008000] text-white flex items-center justify-center h-12 sm:h-14 md:h-16">
               <h3 className="text-base sm:text-lg md:text-[20px] font-semibold">Calculation Result</h3>
@@ -327,7 +302,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
 
             <div className="p-4 sm:p-6 md:p-[25px]">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                {/* Interest Rate */}
                 <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Interest Rate</div>
                   <div className="text-[18px] font-bold text-[#333333]">
@@ -335,7 +309,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                   </div>
                 </div>
 
-                {/* Loan Amount */}
                 <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Loan Amount</div>
                   <div className="text-[18px] font-bold text-[#333333]">
@@ -343,7 +316,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                   </div>
                 </div>
 
-                {/* Loan Term */}
                 <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Loan Term</div>
                   <div className="text-[18px] font-bold text-[#333333]">
@@ -351,7 +323,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                   </div>
                 </div>
 
-                {/* Total Interest */}
                 <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Total Interest</div>
                   <div className="text-[18px] font-bold text-[#333333]">
@@ -359,7 +330,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                   </div>
                 </div>
 
-                {/* Total Repayment */}
                 <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">Total Repayment</div>
                   <div className="text-[18px] font-bold text-[#333333]">
@@ -367,7 +337,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
                   </div>
                 </div>
 
-                {/* EMI */}
                 <div className="bg-gray-50 rounded-lg flex flex-col justify-center items-center transition-all duration-300 hover:scale-105 hover:shadow-lg p-4">
                   <div className="text-[14px] text-[#666666]">EMI</div>
                   <div className="text-[18px] font-bold text-[#333333]">
@@ -381,7 +350,6 @@ export default function LoanCalculator({ sharedLoanData, setSharedLoanData }) {
       </div>
       </div>
 
-       {/* slider thumbs (WebKit + Firefox) - hidden */}
        <style>{`
          .slider::-webkit-slider-thumb {
            -webkit-appearance: none;

@@ -22,7 +22,6 @@ const Login = () => {
       ...prev,
       [name]: value
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -58,10 +57,8 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // Find user by email
       const user = findUserByEmail(formData.email);
       
       if (!user) {
@@ -69,16 +66,13 @@ const Login = () => {
         return;
       }
 
-      // Check password (in real app, this would be hashed comparison)
       if (user.password !== formData.password) {
         setErrors({ general: 'Invalid password. Please try again.' });
         return;
       }
 
-      // Update login time
       const updatedUser = updateUserLoginTime(user.id);
       
-      // Prepare user data for login (exclude password)
       const { password, ...userData } = updatedUser;
       
       login(userData);

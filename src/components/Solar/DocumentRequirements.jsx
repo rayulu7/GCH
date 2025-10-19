@@ -106,14 +106,12 @@ const documentLists = {
   }
 };
 
-// ⭐ Reusable Star Component
 const Star = () => (
   <span className="inline-flex items-center justify-center w-8 h-8 text-[32px] leading-none text-[#008000] mr-2 align-middle">
     ★
   </span>
 );
 
-// • Reusable Bullet Component
 const Bullet = () => (
   <span className="text-[#008000] text-[18px] w-8 h-8 flex items-center justify-center mr-2">
     •
@@ -156,7 +154,6 @@ export default function DocumentRequirements() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        {/* Heading */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827] mb-4">
             Our Finance Options
@@ -169,10 +166,8 @@ export default function DocumentRequirements() {
           </p>
         </div>
 
-        {/* Content Section */}
         <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-[2px_4px_rgba(0,0,0,0.05)] border border-gray-200">
           <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
-            {/* Sidebar */}
             <div className="w-full lg:w-full lg:max-w-xs space-y-2 sm:space-y-3">
               {documentCategories.map((category) => {
                 const categoryMap = {
@@ -198,16 +193,13 @@ export default function DocumentRequirements() {
               })}
             </div>
 
-            {/* Right Content */}
             <div className="flex-1 p-4 sm:p-6 md:p-[30px] rounded-lg bg-[rgb(218_201_201_/_15%)]">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold text-[#2D3748] mb-4 sm:mb-6 md:mb-[25px] pb-2 sm:pb-[10px] border-b-2 border-[#008000]">
                 {getCategoryTitle(activeCategory)}
               </h2>
 
-               {/* Residential Documents */}
                {activeCategory === "residential" && (
                 <>
-                  {/* General */}
                   <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm mb-4 sm:mb-6">
                     <div className="flex items-center mb-3 sm:mb-4">
                       <h4 className="text-base sm:text-lg lg:text-[18px] font-semibold text-[#111827] flex items-center">
@@ -226,7 +218,6 @@ export default function DocumentRequirements() {
                      </ul>
                   </div>
 
-                  {/* Salaried */}
                   <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm mb-4 sm:mb-6">
                     <div className="flex items-center mb-3 sm:mb-4">
                       <h4 className="text-base sm:text-lg lg:text-[18px] font-semibold text-[#111827] flex items-center">
@@ -245,7 +236,6 @@ export default function DocumentRequirements() {
                      </ul>
                   </div>
 
-                  {/* Self Employed */}
                   <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center mb-3 sm:mb-4">
                       <h4 className="text-base sm:text-lg lg:text-[18px] font-semibold text-[#111827] flex items-center">
@@ -266,10 +256,8 @@ export default function DocumentRequirements() {
                  </>
                )}
 
-               {/* Proprietorship Company */}
                {activeCategory === "proprietorship" && (
                  <>
-                   {/* KYC Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -288,7 +276,6 @@ export default function DocumentRequirements() {
                      </ul>
                    </div>
 
-                   {/* Financial Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -307,7 +294,6 @@ export default function DocumentRequirements() {
                      </ul>
                    </div>
 
-                   {/* Project Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -328,10 +314,8 @@ export default function DocumentRequirements() {
                  </>
                )}
 
-               {/* Partnership Company */}
                {activeCategory === "partnership" && (
                  <>
-                   {/* KYC Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -350,7 +334,6 @@ export default function DocumentRequirements() {
                      </ul>
                    </div>
 
-                   {/* Financial Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -369,7 +352,6 @@ export default function DocumentRequirements() {
                      </ul>
                    </div>
 
-                   {/* Project Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -390,10 +372,8 @@ export default function DocumentRequirements() {
                  </>
                )}
 
-               {/* Private Limited Company */}
                {activeCategory === "privateLimited" && (
                  <>
-                   {/* KYC Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -412,7 +392,6 @@ export default function DocumentRequirements() {
                      </ul>
                    </div>
 
-                   {/* Financial Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -431,7 +410,6 @@ export default function DocumentRequirements() {
                      </ul>
                    </div>
 
-                   {/* Project Documents */}
                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                      <div className="flex items-center mb-4">
                        <h4 className="text-[18px] font-semibold text-[#111827] flex items-center">
@@ -452,7 +430,6 @@ export default function DocumentRequirements() {
                  </>
                )}
 
-               {/* Housing Society */}
                {activeCategory === "housingSociety" && (
                  <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                    <div className="flex items-center mb-4">

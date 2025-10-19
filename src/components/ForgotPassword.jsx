@@ -25,10 +25,8 @@ const ForgotPassword = () => {
     setError('');
 
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Simulate successful email send
       setIsEmailSent(true);
     } catch (error) {
       setError('Failed to send reset email. Please try again.');
@@ -42,10 +40,8 @@ const ForgotPassword = () => {
     setError('');
 
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Show success message
       setError('Reset email sent successfully!');
     } catch (error) {
       setError('Failed to resend email. Please try again.');

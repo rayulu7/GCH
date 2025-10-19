@@ -21,74 +21,12 @@ const Team = () => {
       linkedin: "https://linkedin.com/in/pavan-mohit",
       email: "pavan@gch.com"
     },
-    // {
-    //   name: "Priya Sharma",
-    //   position: "Chief Technology Officer",
-    //   department: "Technology",
-    //   experience: "12+ Years",
-    //   image: "/team/priya.jpg",
-    //   bio: "Technology expert specializing in solar energy systems and smart grid solutions.",
-    //   skills: ["Solar Technology", "System Design", "Innovation"],
-    //   linkedin: "https://linkedin.com/in/priya-sharma",
-    //   email: "priya@gch.com"
-    // },
-    // {
-    //   name: "Amit Patel",
-    //   position: "Head of Operations",
-    //   department: "Operations",
-    //   experience: "10+ Years",
-    //   image: "/team/amit.jpg",
-    //   bio: "Operations specialist ensuring smooth project execution and quality delivery.",
-    //   skills: ["Project Management", "Quality Control", "Team Leadership"],
-    //   linkedin: "https://linkedin.com/in/amit-patel",
-    //   email: "amit@gch.com"
-    // },
-    // {
-    //   name: "Dr. Sunita Reddy",
-    //   position: "Head of Research",
-    //   department: "R&D",
-    //   experience: "14+ Years",
-    //   image: "/team/sunita.jpg",
-    //   bio: "Research scientist focused on advancing renewable energy technologies.",
-    //   skills: ["Research", "Innovation", "Technical Analysis"],
-    //   linkedin: "https://linkedin.com/in/sunita-reddy",
-    //   email: "sunita@gch.com"
-    // },
-    // {
-    //   name: "Vikram Singh",
-    //   position: "Head of Sales",
-    //   department: "Sales",
-    //   experience: "8+ Years",
-    //   image: "/team/vikram.jpg",
-    //   bio: "Sales leader driving growth and building strong client relationships.",
-    //   skills: ["Sales Strategy", "Client Relations", "Business Development"],
-    //   linkedin: "https://linkedin.com/in/vikram-singh",
-    //   email: "vikram@gch.com"
-    // },
-    // {
-    //   name: "Meera Joshi",
-    //   position: "Head of Finance",
-    //   department: "Finance",
-    //   experience: "11+ Years",
-    //   image: "/team/meera.jpg",
-    //   bio: "Finance expert managing investments and ensuring sustainable growth.",
-    //   skills: ["Financial Planning", "Investment Analysis", "Risk Management"],
-    //   linkedin: "https://linkedin.com/in/meera-joshi",
-    //   email: "meera@gch.com"
-    // }
   ];
 
   const departments = [
-    // { name: "Leadership", count: 1, color: "from-purple-500 to-purple-600" },
-    // { name: "Technology", count: 1, color: "from-blue-500 to-blue-600" },
-    // { name: "Operations", count: 1, color: "from-green-500 to-green-600" },
-    // { name: "Research", count: 1, color: "from-orange-500 to-orange-600" },
-    // { name: "Sales", count: 1, color: "from-red-500 to-red-600" },
-    // { name: "Finance", count: 1, color: "from-indigo-500 to-indigo-600" }
   ];
 
 
-  // Intersection Observer for header animation
   useEffect(() => {
     const headerObserver = new IntersectionObserver(
       ([entry]) => {
@@ -104,7 +42,6 @@ const Team = () => {
     return () => headerObserver.disconnect();
   }, []);
 
-  // Intersection Observer for scroll animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -120,7 +57,6 @@ const Team = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Auto-rotate team members
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveMember(prev => (prev + 1) % teamMembers.length);
@@ -131,7 +67,6 @@ const Team = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-green-50">
-      {/* Hero Section */}
       <section ref={headerRef} className="pt-20 pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className={`
@@ -158,11 +93,9 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Team Members Section */}
       <section ref={sectionRef} className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Team Members Grid - Centered for single member */}
           <div className="flex justify-center mb-8 md:mb-12 lg:mb-16">
             <div className="w-full max-w-sm mx-4 md:mx-0">
             {teamMembers.map((member, index) => (
@@ -181,7 +114,6 @@ const Team = () => {
                 }}
                 onMouseLeave={() => setHoveredMember(null)}
               >
-                {/* Member Image */}
                 <div className="relative h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                   <Users className="w-16 h-16 text-gray-400" />
                   <div className="absolute top-4 right-4">
@@ -191,7 +123,6 @@ const Team = () => {
                   </div>
                 </div>
 
-                {/* Member Info */}
                 <div className="p-4 md:p-6">
                   <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
                   <p className="text-green-600 font-semibold mb-1 text-sm md:text-base">{member.position}</p>
@@ -201,7 +132,6 @@ const Team = () => {
                     {member.bio}
                   </p>
 
-                  {/* Skills */}
                   <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                     {member.skills.map((skill, skillIndex) => (
                     <span
@@ -213,7 +143,6 @@ const Team = () => {
                   ))}
                   </div>
 
-                  {/* Contact Links */}
                   <div className="flex space-x-2 md:space-x-3">
                     <a
                       href={member.linkedin}
@@ -234,7 +163,6 @@ const Team = () => {
             </div>
           </div>
 
-          {/* Departments */}
           {/* <div className={`
             mb-12 lg:mb-16 transition-all duration-1000 delay-500
             ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}

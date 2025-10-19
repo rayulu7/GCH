@@ -46,7 +46,6 @@ const industrialBenefits = [
   }
 ];
 
-// Residential rooftop solutions data
 const residentialSolutions = [
   {
     id: 1,
@@ -85,7 +84,6 @@ const residentialSolutions = [
   }
 ];
 
-// Rooftop Solutions Component
 const ResidentialRooftopSolutions = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeSolution, setActiveSolution] = useState(industrialBenefits[0]);
@@ -96,9 +94,7 @@ const ResidentialRooftopSolutions = () => {
 
   return (
     <section className={`w-full bg-gray-50 pt-8 sm:pt-10 md:pt-12 lg:pt-16 pb-6 sm:pb-8 md:pb-10 lg:pb-12 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Container */}
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16">
-        {/* Heading */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold text-[#111827]">
             Other Benefits
@@ -108,9 +104,7 @@ const ResidentialRooftopSolutions = () => {
           </p> */}
         </div>
 
-        {/* Content Section */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8">
-          {/* Left Section - Solution Buttons */}
           <div className="w-full lg:w-[400px] order-1 lg:order-1">
             <div className="space-y-3 sm:space-y-[15px]">
               {industrialBenefits.map((solution) => (
@@ -130,22 +124,18 @@ const ResidentialRooftopSolutions = () => {
             </div>
           </div>
 
-          {/* Right Section - Content */}
           <div className="w-full lg:w-[800px] relative mb-6 lg:mb-[30px] order-2 lg:order-2">
             <div className="bg-white rounded-lg shadow-lg p-8 lg:p-12 text-center">
-              {/* Icon */}
               <div className="flex justify-center mb-6">
                 {React.cloneElement(activeSolution.icon, {
                   className: "w-20 h-20 lg:w-24 lg:h-24"
                 })}
               </div>
               
-              {/* Title */}
               <h3 className="text-xl lg:text-2xl font-bold text-[#111827] mb-4">
                 {activeSolution.title}
               </h3>
               
-              {/* Description */}
               <p className="text-sm lg:text-base text-[#333333] leading-relaxed">
                 {activeSolution.description}
               </p>
@@ -169,10 +159,8 @@ export default function OtherBenefits({ type = "residential" }) {
 
   return (
     <>
-      {/* Rooftop Solutions Section - Only for Residential */}
       {type === "residential" && <ResidentialRooftopSolutions />}
       
-      {/* Other Benefits Section */}
       <section
         className={`w-full bg-white py-2 md:py-3 lg:py-4 transition-opacity duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
@@ -180,9 +168,7 @@ export default function OtherBenefits({ type = "residential" }) {
         style={{ display: 'block', width: '100%' }}
       >
         <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16" style={{ display: 'block', width: '100%' }}>
-          {/* Heading - Removed to avoid duplicate with interactive section */}
 
-          {/* Force single column - NO FLEX, NO GRID */}
           <div style={{ display: 'block', width: '100%' }}>
             {benefits.map((benefit) => (
               <div

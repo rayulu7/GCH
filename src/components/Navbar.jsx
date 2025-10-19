@@ -12,7 +12,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { user, logout, isAuthenticated } = useAuth();
 
-  // Scroll to section function
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -22,13 +21,10 @@ const Navbar = () => {
     setIsInstallationDropdownOpen(false);
   };
 
-  // Handle navigation for different pages
   const handleNavigation = (path, sectionId) => {
     if (location.pathname === '/') {
-      // If on homepage, scroll to section
       scrollToSection(sectionId);
     } else {
-      // If on other page, navigate to homepage and then scroll
       window.location.href = `/#${sectionId}`;
     }
   };
@@ -63,7 +59,6 @@ const Navbar = () => {
     setIsUserDropdownOpen(false);
   };
 
-  // Close dropdowns when clicking outside
   React.useEffect(() => {
     const handleClickOutside = (event) => {
       if (isUserDropdownOpen && !event.target.closest('.user-dropdown')) {
@@ -81,7 +76,6 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-3 md:py-4 bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo */}
         <div className="flex items-center space-x-2 sm:space-x-3">
           <div>
             <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
@@ -93,7 +87,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Nav - Centered */}
         <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6 absolute left-1/2 transform -translate-x-1/2">
           <Link
             to="/"
@@ -102,7 +95,6 @@ const Navbar = () => {
             Home
           </Link>
 
-          {/* Installation Dropdown */}
           <div
             className="relative"
             onMouseEnter={handleInstallationMouseEnter}
@@ -156,7 +148,6 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Maintenance Link */}
           <Link
             to="/maintenance"
             className="text-green-600 hover:text-orange-500 transition-colors font-medium text-sm xl:text-base"
@@ -177,10 +168,8 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Spacer for layout balance */}
         <div className="hidden lg:block w-32"></div>
 
-        {/* Login/Logout + Mobile Toggle */}
         <div className="flex items-center space-x-2 sm:space-x-4">
           {isAuthenticated ? (
             <div className="hidden lg:block relative user-dropdown">
@@ -219,7 +208,6 @@ const Navbar = () => {
             </button>
           )}
 
-          {/* Mobile Hamburger */}
           <button
             className="lg:hidden p-2 rounded-md focus:outline-none"
             onClick={toggleMobileMenu}
@@ -233,7 +221,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden mt-4 px-4 pb-4 space-y-3 bg-white rounded-lg shadow-lg">
           <Link
@@ -244,7 +231,6 @@ const Navbar = () => {
             Home
           </Link>
 
-          {/* Mobile Dropdown */}
           <div>
             <button
               className="flex items-center justify-between w-full text-green-600 font-medium hover:text-orange-500 transition-colors text-sm sm:text-base"
@@ -280,7 +266,6 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Mobile Maintenance Link */}
           <Link
             to="/maintenance"
             className="block text-green-600 hover:text-orange-500 transition-colors font-medium text-sm sm:text-base"

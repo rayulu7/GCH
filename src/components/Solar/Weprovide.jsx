@@ -30,19 +30,15 @@ export default function Weprovide({ type = "residential" }) {
   const [openId, setOpenId] = useState(null);
   const toggle = (id) => setOpenId((p) => (p === id ? null : id));
   
-  // Set height based on type
   const expandedHeight = "650px";
 
   return (
     <section className="w-full bg-[#EAF3ED]">
-      {/* Container */}
       <div className="mx-auto max-w-[1200px] px-[15px]">
-        {/* Heading with 100px padding top and bottom */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#111827] pt-[100px] pb-[100px]">
           We Provide
         </h2>
 
-        {/* Card row */}
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 lg:gap-6">
           {cards.map((c) => {
             const expanded = openId === c.id;
@@ -93,7 +89,6 @@ export default function Weprovide({ type = "residential" }) {
           })}
         </div>
       </div>
-      {/* Bottom padding for container */}
       <div className="pb-[100px]"></div>
     </section>
   );

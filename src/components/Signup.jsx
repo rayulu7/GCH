@@ -26,7 +26,6 @@ const Signup = () => {
       ...prev,
       [name]: value
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -82,28 +81,23 @@ const Signup = () => {
     setIsLoading(true);
 
     try {
-      // Check if user already exists
       const existingUser = findUserByEmail(formData.email);
       if (existingUser) {
         setErrors({ email: 'An account with this email already exists. Please use a different email or try logging in.' });
         return;
       }
 
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      // Create user data from form
       const userData = {
         name: formData.name.trim(),
         email: formData.email,
         phone: formData.phone,
-        password: formData.password // In real app, this would be hashed
+        password: formData.password
       };
 
-      // Create user in storage
       const newUser = createUser(userData);
       
-      // Add login time for immediate login after signup
       const loginUserData = {
         ...newUser,
         loginTime: new Date().toISOString()

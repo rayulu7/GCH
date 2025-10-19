@@ -28,19 +28,14 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Banner Image */}
       <section className="relative">
-        {/* Banner Image */}
         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[469px]">
           <img 
             src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=1440&h=469&dpr=1"
             alt="About Green Carbon Hub"
             className="w-full h-full object-cover"
           />
-          {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
-          
-          {/* Content */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-4 sm:px-6">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">About Green Carbon Hub</h1>
@@ -53,11 +48,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Three Feature Cards Section */}
       <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Certified Engineers Card */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start p-4 sm:p-6 bg-white shadow-lg rounded-lg w-full">
               <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full flex items-center justify-center">
@@ -72,7 +65,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* 24/7 Customer Support Card */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start p-4 sm:p-6 bg-white shadow-lg rounded-lg w-full">
               <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full flex items-center justify-center">
@@ -89,7 +81,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* Affordable Solar Solutions Card */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start p-4 sm:p-6 bg-white shadow-lg rounded-lg w-full sm:col-span-2 lg:col-span-1">
               <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-100 rounded-full flex items-center justify-center">
@@ -107,13 +98,10 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* About Green Carbon Hub Section */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left Column - Image */}
             <div className="relative order-2 lg:order-1">
-              {/* Main Image */}
               <div className="relative lg:pr-40">
                 <img 
                   src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=425&h=588&dpr=1"
@@ -121,16 +109,13 @@ const AboutUs = () => {
                   className="rounded-lg shadow-lg w-full max-w-md h-auto mx-auto lg:mx-0"
                 />
                 
-                {/* Success Badge with Rotation Animation - Hidden on mobile, visible on larger screens */}
                 <div className="hidden lg:block absolute top-6 -right-12 lg:right-24 w-32 h-32">
-                  {/* Rotating Text Badge */}
                   <img 
                     src="/about-text.png" 
                     alt="text"
                     className="tp-rotate-infinite w-full h-full object-contain"
                   />
                   
-                  {/* Centered Logo */}
                   <img 
                     src="/about-text-shape.png" 
                     alt="thumb"
@@ -138,7 +123,6 @@ const AboutUs = () => {
                   />
                 </div>
                 
-                {/* Small Embedded Image - Hidden on mobile, visible on larger screens */}
                 <div className="hidden lg:block absolute bottom-6 right-6 rounded-lg overflow-hidden shadow-lg w-80 h-80">
                   <img 
                     src="https://images.pexels.com/photos/9875365/pexels-photo-9875365.jpeg?auto=compress&cs=tinysrgb&w=310&h=330&dpr=1"
@@ -149,7 +133,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* Right Column - Content */}
             <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
               <div>
                 <h3 className="text-green-600 font-semibold text-xs sm:text-sm uppercase tracking-wide mb-2 sm:mb-3">
@@ -166,7 +149,6 @@ const AboutUs = () => {
                 a cleaner, greener planet for generations to come.
               </p>
 
-              {/* Key Points */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <div className="w-5 h-5 sm:w-6 sm:h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -196,7 +178,6 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              {/* CTA Button */}
               <div className="pt-2 sm:pt-4">
                 <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-300 text-sm sm:text-base">
                   Learn More About Us
@@ -207,7 +188,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Why Choose GreenCarbonHub Section */}
       <section className="py-12 sm:py-16 bg-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
@@ -216,7 +196,6 @@ const AboutUs = () => {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {/* Standardized Service Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full">
               <div className="p-4 sm:p-5">
                 <div className="text-center mb-4 sm:mb-6">
@@ -233,7 +212,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* Affordability Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full">
               <div className="p-4 sm:p-5">
                 <div className="text-center mb-4 sm:mb-6">
@@ -251,7 +229,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* All-in-One Solutions Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full">
               <div className="p-4 sm:p-5">
                 <div className="text-center mb-4 sm:mb-6">
@@ -268,7 +245,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* Quality Assurance Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer w-full">
               <div className="p-4 sm:p-5">
                 <div className="text-center mb-4 sm:mb-6">
@@ -288,7 +264,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Our Proven Process Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
@@ -298,7 +273,6 @@ const AboutUs = () => {
           
           <div className="relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {/* Step 01: Initial Consultation */}
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
@@ -317,7 +291,6 @@ const AboutUs = () => {
                   We start by understanding your energy needs and evaluating your location to determine the best solar solution for you.
                 </p>
                 
-                {/* Arrow to Step 02 - Hidden on mobile and tablet, visible on desktop */}
                 <div className="hidden lg:block absolute top-16 left-full transform translate-x-4">
                   <svg className="w-8 h-8 text-gray-300 transition-colors duration-300 hover:text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
@@ -325,7 +298,6 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              {/* Step 02: System Design */}
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
@@ -344,7 +316,6 @@ const AboutUs = () => {
                   Our team of experts designs a customized solar energy system that maximizes efficiency and savings based on your needs.
                 </p>
                 
-                {/* Arrow to Step 03 - Hidden on mobile and tablet, visible on desktop */}
                 <div className="hidden lg:block absolute top-16 left-full transform translate-x-4">
                   <svg className="w-8 h-8 text-gray-300 transition-colors duration-300 hover:text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
@@ -352,7 +323,6 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              {/* Step 03: Install & Activate */}
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
@@ -371,7 +341,6 @@ const AboutUs = () => {
                   Our professional team installs the solar panels and system components efficiently, ensuring everything is up and running smoothly.
                 </p>
                 
-                {/* Arrow to Step 04 - Hidden on mobile and tablet, visible on desktop */}
                 <div className="hidden lg:block absolute top-16 left-full transform translate-x-4">
                   <svg className="w-8 h-8 text-gray-300 transition-colors duration-300 hover:text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
@@ -379,7 +348,6 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              {/* Step 04: System Monitoring */}
               <div className="text-center relative">
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-green-100 relative">
@@ -403,7 +371,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Company Overview */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -438,7 +405,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Mission, Vision, Values */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
@@ -462,7 +428,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Leadership Team */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
@@ -495,7 +460,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Certifications */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
@@ -517,7 +481,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-12 sm:py-16 bg-gradient-to-r from-green-600 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
@@ -561,7 +524,6 @@ const AboutUs = () => {
         </div>
       </section>
       
-      {/* Animation Styles */}
       <style>{`
         @keyframes rotateInfinite {
           from {

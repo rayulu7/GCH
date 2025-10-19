@@ -1,6 +1,4 @@
-// Simple user storage simulation (in real app, this would be a database/API)
 let users = [
-  // Sample users for testing
   {
     id: '1',
     name: 'Pavan M',

@@ -22,7 +22,6 @@ const Clients = () => {
     }
   ];
 
-  // Intersection Observer for scroll animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -43,13 +42,11 @@ const Clients = () => {
       ref={sectionRef}
       className="py-20 bg-gradient-to-br from-gray-50 via-white to-green-50 relative overflow-hidden"
     >
-      {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="absolute top-10 left-10 w-32 h-32 bg-green-200 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className={`
           text-center mb-20 transition-all duration-1000
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
@@ -66,7 +63,6 @@ const Clients = () => {
           </p>
         </div>
 
-        {/* Client Display - Premium Design */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {clients.map((client, index) => (
             <div
@@ -81,12 +77,9 @@ const Clients = () => {
               onMouseEnter={() => setHoveredClient(client.id)}
               onMouseLeave={() => setHoveredClient(null)}
             >
-              {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              {/* Content */}
               <div className="relative z-10">
-                {/* Client Logo */}
                 <div className="flex justify-center mb-6">
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-gray-50 rounded-xl flex items-center justify-center group-hover:bg-white transition-colors duration-300 shadow-sm group-hover:shadow-md">
                     <img
@@ -97,7 +90,6 @@ const Clients = () => {
                   </div>
                 </div>
 
-                {/* Client Info */}
                 <div className="text-center">
                   <div className="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full mb-4">
                     {client.category}
@@ -112,18 +104,15 @@ const Clients = () => {
                   </p>
                 </div>
 
-                {/* Decorative elements */}
                 <div className="absolute top-4 right-4 w-8 h-8 bg-green-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 <div className="absolute bottom-4 left-4 w-6 h-6 bg-blue-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
               </div>
 
-              {/* Shine effect on hover */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transform -skew-x-12 translate-x-full group-hover:translate-x-[-100%] transition-transform duration-1000"></div>
             </div>
           ))}
         </div>
 
-        {/* Stats Section */}
         <div className={`
           mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}

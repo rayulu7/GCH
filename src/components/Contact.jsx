@@ -7,13 +7,6 @@ const services = [
   "Water & Waste-water Management",
 ];
 
-// const cities = [
-//   "Hyderabad",
-//   "Bangalore",
-//   "Chennai",
-//   "Delhi",
-//   "Mumbai"
-// ];
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -40,14 +33,12 @@ export default function Contact() {
     <section id="contact-us" className="min-h-screen bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Main Heading */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
             Contact Us
           </h2>
         </div>
 
-        {/* Left Column - Contact Information */}
         {/* <div className="space-y-8 animate-fade-in-left">
           <div>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
@@ -91,7 +82,6 @@ export default function Contact() {
           </div>
         </div> */}
 
-        {/* Contact Form - Centered */}
         <div className="max-w-xl mx-auto">
           <div className="bg-gray-50 p-8 rounded-lg animate-fade-in-right">
             <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
