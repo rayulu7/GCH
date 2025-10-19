@@ -106,7 +106,7 @@ const FloatingActionButtons = () => {
           color: 'white',
           borderRadius: '50%',
           border: 'none',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+          boxShadow: 'none',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -115,11 +115,11 @@ const FloatingActionButtons = () => {
         }}
         onMouseEnter={(e) => {
           e.target.style.transform = 'scale(1.1)';
-          e.target.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
+          e.target.style.boxShadow = 'none';
         }}
         onMouseLeave={(e) => {
           e.target.style.transform = 'scale(1)';
-          e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+          e.target.style.boxShadow = 'none';
         }}
       >
         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -136,7 +136,7 @@ const FloatingActionButtons = () => {
           color: 'white',
           borderRadius: '50%',
           border: 'none',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+          boxShadow: 'none',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -145,11 +145,11 @@ const FloatingActionButtons = () => {
         }}
         onMouseEnter={(e) => {
           e.target.style.transform = 'scale(1.1)';
-          e.target.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
+          e.target.style.boxShadow = 'none';
         }}
         onMouseLeave={(e) => {
           e.target.style.transform = 'scale(1)';
-          e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+          e.target.style.boxShadow = 'none';
         }}
       >
         <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,7 +166,7 @@ const FloatingActionButtons = () => {
           color: 'white',
           borderRadius: '50%',
           border: 'none',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+          boxShadow: 'none',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -175,11 +175,11 @@ const FloatingActionButtons = () => {
         }}
         onMouseEnter={(e) => {
           e.target.style.transform = 'scale(1.1)';
-          e.target.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
+          e.target.style.boxShadow = 'none';
         }}
         onMouseLeave={(e) => {
           e.target.style.transform = 'scale(1)';
-          e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+          e.target.style.boxShadow = 'none';
         }}
       >
         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
