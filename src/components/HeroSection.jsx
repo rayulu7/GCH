@@ -3,21 +3,16 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section className="relative h-[100svh] md:h-screen overflow-hidden">
-      {}
       <img
         src="/bg_banner.jpeg"
         alt="Sustainability background"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10" />
 
-      {}
       <div className="relative z-10 max-w-7xl mx-auto h-full px-6">
-        {}
         <div className="h-full flex flex-col justify-start pt-32 md:pt-40">
-          {}
           <h1
             className="text-white font-extrabold leading-tight max-w-4xl
                        text-3xl sm:text-4xl md:text-6xl lg:text-7xl animate-fade-up"
@@ -25,10 +20,13 @@ const HeroSection = () => {
           >
             Reduce/Offset your Carbon Footprint
           </h1>
+          <br/>
+          <br />
+          <h2 className="text-orange-400 font-extrabold leading-tight max-w-4xl
+                       text-[15px] sm:text-[22px] md:text-[32px] lg:text-[37.5px] animate-fade-up" style={{ animationDelay: "0.12s" }}>We offer Integrated Net-zero solutions, with focus on solar and water & wastewater management, for businesses and individuals looking to reduce their carbon footprint. </h2>
         </div>
       </div>
 
-      {}
       <div
         className="absolute right-6 md:right-10 bottom-20 md:bottom-24"
         style={{ animationDelay: "0.25s" }}
@@ -47,7 +45,6 @@ const HeroSection = () => {
         </a>
       </div>
 
-      {}
       <style>{`
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(12px); }

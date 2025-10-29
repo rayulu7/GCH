@@ -3,10 +3,11 @@ import { Check } from 'lucide-react';
 
 const WhyGCHSection = () => {
   const benefits = [
-    "Standardised scope of work",
-    "Lowest industry prices", 
-    "Transparent and Haggle-free purchase",
-    "Get assured returns from sustainable projects"
+    "Integrated Net-Zero Solutions",
+    "Installation at lowest industry prices with branded components", 
+    "Optimum performance through lifetime maintenance",
+    "Online store for components and consumables",
+    "Assured returns through investments in curated projects"
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);

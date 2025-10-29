@@ -116,20 +116,20 @@ const Team = () => {
                 <div className="relative h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                   <Users className="w-16 h-16 text-gray-400" />
                   <div className="absolute top-4 right-4">
-                    <div className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    {/* <div className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                       {member.experience}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
+                  {/* <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
                   <p className="text-green-600 font-semibold mb-1 text-sm md:text-base">{member.position}</p>
                   <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4">{member.department}</p>
                   
                   <p className="text-gray-700 text-xs md:text-sm mb-3 md:mb-4 leading-relaxed">
                     {member.bio}
-                  </p>
+                  </p> */}
 
                   <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                     {member.skills.map((skill, skillIndex) => (

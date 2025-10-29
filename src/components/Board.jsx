@@ -129,34 +129,34 @@ const Board = () => {
                 <div className="relative h-64 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                   <Users className="w-16 h-16 text-gray-400" />
                   <div className="absolute top-4 right-4">
-                    <div className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    {/* <div className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                       {advisor.experience}
-                    </div>
+                    </div> */}
                   </div>
                   <div className="absolute top-4 left-4">
-                    <div className="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    {/* <div className="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                       {advisor.position.split(' - ')[0]}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
                 {}
                 <div className="p-4 md:p-6">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{advisor.name}</h3>
+                  {/* <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{advisor.name}</h3>
                   <p className="text-green-600 font-semibold mb-1 text-sm md:text-base">{advisor.position}</p>
                   <p className="text-gray-600 text-xs md:text-sm mb-2">{advisor.expertise}</p>
                   <p className="text-gray-500 text-xs mb-3 md:mb-4">{advisor.currentRole}</p>
                   
                   <p className="text-gray-700 text-xs md:text-sm mb-3 md:mb-4 leading-relaxed">
                     {advisor.bio}
-                  </p>
+                  </p> */}
 
                   {}
                   <div className="flex items-center space-x-2 md:space-x-4 mb-3 md:mb-4 text-xs text-gray-600">
-                    <div className="flex items-center space-x-1">
+                    {/* <div className="flex items-center space-x-1">
                       <GraduationCap className="w-3 h-3" />
                       <span className="text-xs">{advisor.education}</span>
-                    </div>
+                    </div> */}
                   </div>
 
                   {}

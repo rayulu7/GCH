@@ -10,22 +10,22 @@ const HomeServicesSection = () => {
       id: 1,
       title: 'Maintenance',
       image: 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-      content: 'We\'re working on comprehensive solar maintenance solutions.',
+      content: 'Keep your system at peak efficiency with our predictive maintenance solutions. Ensure maximum output through regular cleaning and professional up-keep. Rely on our expert maintenance services for long lasting worry-free performance.',
       link: '/maintenance'
     },
     {
       id: 2,
       title: 'Investments',
       image: 'https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-      content: 'We\'re working on sustainable investment opportunities.',
+      content: 'Earn assured returns with our expertly curated solar and carbon removal investments. Support a sustainable future future while growing your portfolio with confidence. Join us in powering progress through profitable, eco-friendly opportunities.',
       link: '/investments'
     },
     {
       id: 3,
       title: 'GCH Store',
       image: '/solar_service.jpg',
-      content: 'We\'re working on our sustainable technology store.',
-      link: '/store'
+      content: 'Get high-quality solar, water and wastewater management components consumables all in one place. Designed for the conveinence of our customers and partners. We make sourcing simple. Enjoy discounted prices with reliable products that ensure long-term performance.',
+      link: '/gch-store'
     }
   ];
 
@@ -53,44 +53,56 @@ const HomeServicesSection = () => {
   return (
     <section ref={sectionRef} className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="flex flex-col gap-12 md:gap-16">
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 ease-out transform hover:-translate-y-2 w-full max-w-sm ${
+              className={`w-full ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{
-                transitionDelay: `${index * 200}ms`
+                transitionDelay: `${index * 200}ms`,
+                transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
               }}
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
+              
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6 text-center">
+                {service.title}
+              </h3>
+              
+             
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-center max-w-3xl mx-auto">
+                {service.content}
+              </p>
+              
+              
+              <div className="relative bg-white rounded-xl shadow-md border border-gray-200 flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 w-full max-w-sm sm:max-w-md mx-auto group mb-6"
+                style={{ minHeight: '320px' }}
+              >
+                <div className="flex flex-col items-center w-full z-10 relative flex-1">
+                  <div className="flex justify-center items-center mb-4 sm:mb-6 w-full">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="h-28 w-28 sm:h-32 sm:w-32 object-cover rounded-md"
+                    />
+                  </div>
+                  <div className="w-full text-center flex-1 flex flex-col justify-between">
+                    <div>
+                      <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 group-hover:text-white transition-colors">
+                        Stay tuned for updates!
+                      </p>
+                    </div>
+                    <Link
+                      to={service.link}
+                      className="mt-auto text-[#3A954F] font-semibold hover:underline text-base sm:text-lg group-hover:text-white transition-colors"
+                    >
+                      View More
+                    </Link>
+                  </div>
+                </div>
 
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  {service.content}
-                </p>
-                
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Stay tuned for updates!
-                </p>
-
-                <Link
-                  to={service.link}
-                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 text-sm"
-                >
-                  View More
-                </Link>
+                <div className="absolute inset-0 rounded-xl pointer-events-none transition-colors duration-200 group-hover:bg-[#3A954F] z-0" />
               </div>
             </div>
           ))}
