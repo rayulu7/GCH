@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Subsidy() {
   return (
-    <section className="w-full bg-white">
+    <section id="subsidy-structure" className="w-full bg-white">
       {}
       <div className="mx-auto max-w-[1440px]">
         {}

@@ -26,7 +26,10 @@ const Navbar = () => {
     if (location.pathname === '/') {
       scrollToSection(sectionId);
     } else {
-      window.location.href = `/#${sectionId}`;
+      navigate(path);
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
     }
   };
 
@@ -169,12 +172,12 @@ const Navbar = () => {
           >
             GCH Store
           </Link>
-          <Link
-            to="/#contact-us"
-            className="text-green-600 hover:text-orange-500 transition-colors font-medium text-sm xl:text-base"
+          <button
+            onClick={() => handleNavigation('/', 'contact-us')}
+            className="text-green-600 hover:text-orange-500 transition-colors font-medium text-sm xl:text-base bg-transparent border-0 cursor-pointer"
           >
             Contact Us
-          </Link>
+          </button>
         </nav>
 
         <div className="hidden lg:block w-32"></div>
@@ -332,6 +335,12 @@ const Navbar = () => {
           >
             GCH Store
           </Link>
+          <button
+            onClick={() => handleNavigation('/', 'contact-us')}
+            className="block text-green-600 hover:text-orange-500 transition-colors font-medium text-sm sm:text-base bg-transparent border-0 cursor-pointer text-left"
+          >
+            Contact Us
+          </button>
 
           {isAuthenticated ? (
             <div className="space-y-2">
