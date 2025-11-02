@@ -169,6 +169,12 @@ const Navbar = () => {
           >
             GCH Store
           </Link>
+          <Link
+            to="/#contact-us"
+            className="text-green-600 hover:text-orange-500 transition-colors font-medium text-sm xl:text-base"
+          >
+            Contact Us
+          </Link>
         </nav>
 
         <div className="hidden lg:block w-32"></div>

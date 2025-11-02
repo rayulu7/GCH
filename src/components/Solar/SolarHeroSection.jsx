@@ -41,7 +41,7 @@ const SolarHeroSection = () => {
     <div 
       className="relative min-h-screen"
       style={{
-        backgroundImage: "url('/demo_image.jpg')",
+        backgroundImage: "url('/image.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
@@ -61,7 +61,7 @@ const SolarHeroSection = () => {
             
             {}
             <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
-              Reduce Your Power Bill in a transparent and haggle-free manner with our Solar Installations
+             Choose us for optimum solar performance through lifetime maintenance
               
             </h1>
             

@@ -16,38 +16,43 @@ export default function Footer() {
               </h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              GreenCarbonHub is promoted by a Civil Servant with 23 years of 
-              experience in administration, specializing in power management, 
-              solid waste management, and liquid waste management. With a team 
-              of experienced subject experts, GreenCarbonHub offers complete 
-              Net-Zero solutions under one roof.
+              GreenCarbonHub is promoted by an experienced team with 100+ years of cumulative experience in power and waste water management.Aided by a strong advisory board GreenCarbonHub offers integrated net-zero solutions.
             </p>
           </div>
 
         {}
         <div>
           <h3 className="text-lg font-semibold mb-6 text-gray-200">Our Offerings</h3>
-          <ul className="space-y-8">
+          <ul className="space-y-4">
 
             {}
             <li>
               <h4 className="text-sm font-medium text-gray-300">Solar Installation</h4>
               <div className="flex flex-col mt-2 space-y-1 text-xs text-gray-400">
-                <a href="/residential" className="hover:text-green-400 transition-colors">Residential</a>
-                <a href="/housing-society" className="hover:text-green-400 transition-colors">Commercial</a>
-                <a href="/industrial-commercial" className="hover:text-green-400 transition-colors">Corporate</a>
+                <a href="/residential" className="hover:text-green-400 transition-colors">- Solar Installation</a>
+                <a href="/housing-society" className="hover:text-green-400 transition-colors">- Water and water waste Management</a>
+                {/* <a href="/industrial-commercial" className="hover:text-green-400 transition-colors">Corporate</a> */}
               </div>
             </li>
-
-            {}
             <li>
+              <h4 className="text-sm font-medium text-gray-300">Maintenance</h4>
+            </li>
+            <li>
+              <h4 className="text-sm font-medium text-gray-300">Investments</h4>
+            </li>
+            <li>
+              <h4 className="text-sm font-medium text-gray-300">GCH Store</h4>
+            </li>
+
+            
+            {/* <li>
               <h4 className="text-sm font-medium text-gray-300">Water & Waste-water Management</h4>
               <div className="flex flex-col mt-2 space-y-1 text-xs text-gray-400">
                 <a href="#" className="hover:text-green-400 transition-colors">Residential</a>
                 <a href="#" className="hover:text-green-400 transition-colors">Commercial</a>
                 <a href="#" className="hover:text-green-400 transition-colors">Corporate</a>
               </div>
-            </li>
+            </li> */}
 
           </ul>
         </div>
@@ -55,12 +60,12 @@ export default function Footer() {
           {}
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li><a href="/about-us" className="text-gray-400 hover:text-green-400 transition-colors text-sm">About</a></li>
+            <ul className="space-y-5">
+              {/* <li><a href="/about-us" className="text-gray-400 hover:text-green-400 transition-colors text-sm">About</a></li> */}
               <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Blog</a></li>
               <li><a href="/#contact-us" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Contact Us</a></li>
               <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Partner with Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Client Registration</a></li>
+              <li><a href="/Signup" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Register Now</a></li>
             </ul>
           </div>
 

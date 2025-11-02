@@ -13,6 +13,7 @@ import DocumentRequirements from "./DocumentRequirements.jsx";
 import LoanCalculator from "./LoanCalculator.jsx";
 import RepaymentTable from "./RepaymentTable.jsx";
 import GetALoanForm from "./GetALoanForm.jsx";
+import WhyChooseGCH from "./WhyChooseGCH.jsx";
 
 function SolarInstallation() {
   const [sharedLoanData, setSharedLoanData] = useState({
@@ -27,7 +28,8 @@ function SolarInstallation() {
       <CTAButtons />
       <InstallationServices />
       <WhyChooseSolar />
-      <GCHBenefits />
+      {/* <GCHBenefits /> */}
+      <WhyChooseGCH />
       <SolarBenefitsCards />
       <Weprovide type="residential" />
       <Subsidy />

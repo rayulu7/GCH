@@ -9,37 +9,42 @@ import {
 } from "lucide-react";
 
 const WhyChooseGCH = () => {
-  const benefits = [
+   const benefits = [
     {
       id: 1,
-      icon: <DollarSign className="w-12 h-12 text-green-600" />,
-      title: "Easy Finance Options",
+      icon: <CheckCircle className="w-12 h-12 text-green-600" />,
+      title: "Standardised Scope of Work",
     },
-    {
+     {
       id: 2,
-      icon: <Users className="w-12 h-12 text-green-600" />,
-      title: "Free Consultancy",
+      icon: <Settings className="w-12 h-12 text-green-600" />,
+      title: "Choice of Branded Components",
     },
+
     {
       id: 3,
       icon: <TrendingDown className="w-12 h-12 text-green-600" />,
       title: "Lowest Industry Prices",
     },
+    
     {
       id: 4,
-      icon: <Home className="w-12 h-12 text-green-600" />,
-      title: "Transparent & Haggle-free Purchase",
+      icon: <DollarSign className="w-12 h-12 text-green-600" />,
+      title: "Easy Finance Options",
     },
     {
       id: 5,
-      icon: <CheckCircle className="w-12 h-12 text-green-600" />,
-      title: "Standardised Scope of Work",
+      icon: <Users className="w-12 h-12 text-green-600" />,
+      title: "Predictive analytics using AI and ML",
     },
+    
     {
       id: 6,
-      icon: <Settings className="w-12 h-12 text-green-600" />,
-      title: "Choice of Branded Components",
+      icon: <Home className="w-12 h-12 text-green-600" />,
+      title: "Lifetime Maintenance",
     },
+    
+   
   ];
 
   return (
@@ -82,7 +87,7 @@ const WhyChooseGCH = () => {
           <span className="font-semibold text-gray-800">GreenCarbonHub</span>’s
           engineers have successfully designed and installed numerous rooftop
           solar systems. We work closely with you to tailor solutions for your
-          unique energy needs — delivering reliability, top-tier products, and
+          unique energy needs delivering reliability, top-tier products, and
           24/7 support. Choose excellence. Choose sustainability.{" "}
           <span className="text-green-600 font-semibold">Contact us today!</span>
         </p>

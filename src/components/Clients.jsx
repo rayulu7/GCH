@@ -51,12 +51,12 @@ const Clients = () => {
           text-center mb-20 transition-all duration-1000
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
         `}>
-          <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
+          {/* <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             Trusted Partners
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-700 to-green-600 bg-clip-text text-transparent mb-6">
-            Our Valued Clients
+            Our Clients
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Partnering with industry leaders to deliver sustainable energy solutions that drive innovation and environmental responsibility
@@ -95,13 +95,13 @@ const Clients = () => {
                     {client.category}
                   </div>
                   
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 group-hover:text-green-700 transition-colors duration-300">
+                  {/* <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 group-hover:text-green-700 transition-colors duration-300">
                     {client.name}
                   </h3>
                   
                   <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {client.description}
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="absolute top-4 right-4 w-8 h-8 bg-green-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
@@ -112,11 +112,15 @@ const Clients = () => {
             </div>
           ))}
         </div>
-
+        <br/>
+        <br/>
+        <br/>
+         <h1 className = "text-4xl text-center md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-700 to-green-600 bg-clip-text text-transparent mb-4 mt-12">Our Achievements</h1>
         <div className={`
           mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
         `} style={{ transitionDelay: '600ms' }}>
+          
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">50+</div>
             <div className="text-gray-600 font-medium">Projects Completed</div>

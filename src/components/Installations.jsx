@@ -58,7 +58,7 @@ const Installations = () => (
     <section className="py-8 sm:py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 sm:mb-10 text-gray-800">
-          Installations
+          Installation
         </h2>
         <p className = "text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">Green Carbon Hub offers installation services at lowest industry prices using branded components. Our team with cumulative experience of 75+ years ensures long
         life-cycle.</p>

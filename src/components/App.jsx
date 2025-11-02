@@ -96,7 +96,7 @@ function HomePage() {
       <HomeServicesSection />
       <Clients />
       <Team />
-      <Board />
+      {/* <Board /> */}
       <Contact />
     </Layout>
   );

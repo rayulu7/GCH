@@ -71,9 +71,9 @@ const HomeServicesSection = () => {
               </h3>
               
              
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-center max-w-3xl mx-auto">
+              {/* <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-center max-w-3xl mx-auto">
                 {service.content}
-              </p>
+              </p> */}
               
               
               <div className="relative bg-white rounded-xl shadow-md border border-gray-200 flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 w-full max-w-sm sm:max-w-md mx-auto group mb-6"
@@ -90,7 +90,7 @@ const HomeServicesSection = () => {
                   <div className="w-full text-center flex-1 flex flex-col justify-between">
                     <div>
                       <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 group-hover:text-white transition-colors">
-                        Stay tuned for updates!
+                        {service.content}
                       </p>
                     </div>
                     <Link
