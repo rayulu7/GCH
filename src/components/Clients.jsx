@@ -55,7 +55,7 @@ const Clients = () => {
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             Trusted Partners
           </div> */}
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-700 to-green-600 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold bg-gray-800 bg-clip-text text-transparent mb-6">
             Our Clients
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -115,7 +115,7 @@ const Clients = () => {
         <br/>
         <br/>
         <br/>
-         <h1 className = "text-4xl text-center md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-700 to-green-600 bg-clip-text text-transparent mb-4 mt-12">Our Achievements</h1>
+         <h1 className = "text-4xl text-center md:text-6xl font-bold  bg-gray-800 bg-clip-text text-transparent mb-4 mt-12">Our Achievements</h1>
         <div className={`
           mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
@@ -126,12 +126,12 @@ const Clients = () => {
             <div className="text-gray-600 font-medium">Projects Completed</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">100%</div>
-            <div className="text-gray-600 font-medium">Client Satisfaction</div>
+            <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">150</div>
+            <div className="text-gray-600 font-medium">Tonnes of CO2 emissions reduced </div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">5+</div>
-            <div className="text-gray-600 font-medium">Years Experience</div>
+            <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">6000</div>
+            <div className="text-gray-600 font-medium">Trees Saved</div>
           </div>
         </div>
       </div>

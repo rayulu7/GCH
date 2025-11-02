@@ -60,8 +60,8 @@ const Installations = () => (
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 sm:mb-10 text-gray-800">
           Installation
         </h2>
-        <p className = "text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">Green Carbon Hub offers installation services at lowest industry prices using branded components. Our team with cumulative experience of 75+ years ensures long
-        life-cycle.</p>
+        {/* <p className = "text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">Green Carbon Hub offers installation services at lowest industry prices using branded components. Our team with cumulative experience of 75+ years ensures long
+        life-cycle.</p> */}
         <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 place-items-center">
             {cardData.slice(0, 2).map((card, idx) => (

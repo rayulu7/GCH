@@ -66,7 +66,7 @@ const Team = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-green-50">
-      <section ref={headerRef} className="pt-20 pb-16 bg-white">
+      <section ref={headerRef} className="pt-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className={`
             text-center transition-all duration-1000
@@ -75,7 +75,7 @@ const Team = () => {
             <h1 className="text-3xl md:text-6xl font-bold mb-4 text-gray-800">
               Our Team
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-4">
               Meet the passionate experts driving sustainable innovation
             </p>
             <div className="flex flex-wrap justify-center gap-3">
@@ -92,10 +92,10 @@ const Team = () => {
         </div>
       </section>
 
-      <section ref={sectionRef} className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section ref={sectionRef} className="bg-white pb-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-0">
 
-          <div className="flex justify-center mb-8 md:mb-12 lg:mb-16">
+          <div className="flex justify-center mb-0 pb-0">
             <div className="w-full max-w-sm mx-4 md:mx-0">
             {teamMembers.map((member, index) => (
               <div

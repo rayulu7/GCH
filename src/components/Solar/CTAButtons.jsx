@@ -20,7 +20,7 @@ const CTAButtons = () => {
           </button>
           
           <button 
-            onClick={() => scrollToSection('finance-options')}
+            onClick={() => scrollToSection('our-finance-options')}
             className="w-full sm:w-80 bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg"
           >
             VIEW FINANCE OPTIONS

@@ -29,11 +29,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact-us" className="min-h-screen bg-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact-us" className="bg-white pt-4 pb-4 sm:pt-8 sm:pb-8 lg:py-20 overflow-visible">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
 
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+        <div className="text-center mb-4 sm:mb-8 lg:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
             Contact Us
           </h2>
         </div>
@@ -41,8 +41,8 @@ export default function Contact() {
         {}
 
         <div className="max-w-xl mx-auto">
-          <div className="bg-gray-50 p-8 rounded-lg animate-fade-in-right">
-            <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
+          <div className="bg-gray-50 p-4 sm:p-6 lg:p-8 rounded-lg animate-fade-in-right overflow-visible">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" autoComplete="off">
               <input
                 type="text"
                 name="name"
@@ -80,18 +80,25 @@ export default function Contact() {
                 onChange={handleChange}
               />
               {}
-              <select
-                name="service"
-                required
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white"
-                value={form.service}
-                onChange={handleChange}
-              >
-                <option value="">Choose Service</option>
-                {services.map((svc) => (
-                  <option key={svc} value={svc}>{svc}</option>
-                ))}
-              </select>
+              <div className="relative">
+                <select
+                  name="service"
+                  required
+                  className="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-sm sm:text-base appearance-none pr-8 sm:pr-10"
+                  value={form.service}
+                  onChange={handleChange}
+                >
+                  <option value="">Choose Service</option>
+                  {services.map((svc) => (
+                    <option key={svc} value={svc}>{svc}</option>
+                  ))}
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 sm:pr-4 pointer-events-none">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
               <button
                 type="submit"
                 className="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition-colors animate-fade-up"
