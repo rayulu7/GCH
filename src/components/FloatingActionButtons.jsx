@@ -62,7 +62,7 @@ const FloatingActionButtons = () => {
           
           @media (max-width: 768px) {
             .floating-buttons-container {
-              bottom: 120px !important;
+              bottom: 105px !important;
               right: 15px !important;
               position: fixed !important;
               z-index: 99999999 !important;
