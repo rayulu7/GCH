@@ -28,7 +28,7 @@ const HeroSection = () => {
       </div>
 
       <div
-        className="absolute right-6 md:right-10 bottom-20 md:bottom-24"
+        className="absolute right-2 sm:right-4 md:right-10 bottom-20 md:bottom-24"
         style={{ animationDelay: "0.25s" }}
       >
         <a

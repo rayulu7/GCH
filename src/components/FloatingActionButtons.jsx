@@ -44,7 +44,7 @@ const FloatingActionButtons = () => {
           @media (max-width: 1024px) {
             .floating-buttons-container {
               position: fixed !important;
-              bottom: 15px !important;
+              bottom: 90px !important;
               right: 15px !important;
               z-index: 99999999 !important;
               transform: translateZ(0) !important;
@@ -62,7 +62,7 @@ const FloatingActionButtons = () => {
           
           @media (max-width: 768px) {
             .floating-buttons-container {
-              bottom: 15px !important;
+              bottom: 120px !important;
               right: 15px !important;
               position: fixed !important;
               z-index: 99999999 !important;
@@ -77,7 +77,7 @@ const FloatingActionButtons = () => {
           
           @media (max-width: 480px) {
             .floating-buttons-container {
-              bottom: 10px !important;
+              bottom: 120px !important;
               right: 10px !important;
               position: fixed !important;
               z-index: 99999999 !important;

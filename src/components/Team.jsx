@@ -65,8 +65,8 @@ const Team = () => {
   }, [teamMembers.length]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-green-50">
-      <section ref={headerRef} className="pt-20 bg-white">
+    <>
+      <section ref={headerRef} className="pt-20 pb-4 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className={`
             text-center transition-all duration-1000
@@ -92,11 +92,11 @@ const Team = () => {
         </div>
       </section>
 
-      <section ref={sectionRef} className="bg-white pb-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-0">
+      <section ref={sectionRef} className="bg-white pb-0 mb-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-0 mb-0">
 
           <div className="flex justify-center mb-0 pb-0">
-            <div className="w-full max-w-sm mx-4 md:mx-0">
+            <div className="w-full max-w-sm mx-4 md:mx-0 mb-0 pb-0">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -122,7 +122,7 @@ const Team = () => {
                   </div>
                 </div>
 
-                <div className="p-4 md:p-6">
+                <div className="px-4 pt-4 pb-0 md:px-6 md:pt-6 md:pb-0">
                   {/* <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
                   <p className="text-green-600 font-semibold mb-1 text-sm md:text-base">{member.position}</p>
                   <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4">{member.department}</p>
@@ -131,7 +131,7 @@ const Team = () => {
                     {member.bio}
                   </p> */}
 
-                  <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
+                  <div className="flex flex-wrap gap-1 md:gap-2 mb-2 md:mb-3">
                     {member.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
@@ -142,7 +142,7 @@ const Team = () => {
                   ))}
                   </div>
 
-                  <div className="flex space-x-2 md:space-x-3">
+                  <div className="flex space-x-2 md:space-x-3 mb-0">
                     <a
                       href={member.linkedin}
                       className="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
@@ -166,10 +166,7 @@ const Team = () => {
 
         </div>
       </section>
-
-      {}
-      {}
-    </div>
+    </>
   );
 };
 
