@@ -122,7 +122,7 @@ const Team = () => {
                   </div>
                 </div>
 
-                <div className="px-4 pt-4 pb-0 md:px-6 md:pt-6 md:pb-0">
+                <div className="px-6 pt-6 pb-6 md:px-8 md:pt-8 md:pb-8">
                   {/* <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
                   <p className="text-green-600 font-semibold mb-1 text-sm md:text-base">{member.position}</p>
                   <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4">{member.department}</p>

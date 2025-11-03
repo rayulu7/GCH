@@ -29,10 +29,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact-us" className="bg-white pt-0 pb-4 sm:pt-8 sm:pb-8 lg:py-20 overflow-visible">
+    <section id="contact-us" className="bg-white pt-4 pb-4 sm:pt-8 sm:pb-8 lg:py-20 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
 
-        <div className="text-center mb-0 sm:mb-8 lg:mb-16 animate-fade-in-up">
+        <div className="text-center mb-0 sm:mb-4 lg:mb-12 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
             Contact Us
           </h2>
