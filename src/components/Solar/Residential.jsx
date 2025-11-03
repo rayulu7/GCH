@@ -109,12 +109,12 @@ const ResidentialHeroSection = () => {
               <span className="text-sm md:text-lg font-bold text-green-600">Save Money, Save The Environment!</span>
             </div>
             
-            <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
             Best Residential Rooftop Solar Panel
             Installation Company in Hyderabad
             </h1>
             
-            <p className="text-base md:text-md lg:text-xl text-blue-100 mb-6 md:mb-8">
+            <p className="text-base md:text-md lg:text-xl text-white mb-6 md:mb-8">
             Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Reduce 0.84 tonnes of CO2 emissions per annum per KW of Solar power installed. Get Started Today! </p>
             <p>
             A Best Solar Company in Hyderabad that saves your Money and Time.

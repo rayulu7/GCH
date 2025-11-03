@@ -56,12 +56,12 @@ const WWHeroSection = () => {
             {}
             
             {}
-            <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
             Best Effluent/ Sewage Treatment Plant Services in India
             </h1>
             
             {}
-            <p className="font-semibold  md:text-xl lg:text-2xl text-black mb-6 md:mb-8">
+            <p className="font-semibold  md:text-xl lg:text-2xl text-white mb-6 md:mb-8">
             Choose Greencarbonhub’s Expert Wastewater Treatment Plant Team For Optimal Water Quality
             </p>
           </div>

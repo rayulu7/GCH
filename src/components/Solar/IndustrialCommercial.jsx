@@ -163,11 +163,11 @@ const IndustrialCommercial = () => {
                 <span className="text-sm md:text-lg font-bold text-green-600">Save Money, Save The Environment!</span>
               </div>
               
-              <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
+              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
               Reduce Your Power Bill By Upto 90% By Switching To Solar
               </h1>
               
-              <p className="text-base md:text-md lg:text-xl text-blue-100 mb-6 md:mb-8">
+              <p className="text-base md:text-md lg:text-xl text-white mb-6 md:mb-8">
               Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free Industrial Solar System Consultation in Hyderabad
               </p>
             </div>

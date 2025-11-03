@@ -89,11 +89,11 @@ const HousingSociety = () => {
                 <span className="text-sm md:text-lg font-bold text-green-600">Save Money, Save The Environment!</span>
               </div>
               
-              <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
+              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
               Reliable Rooftop Solar Power System for Housing Society in Hyderabad
               </h1>
               
-              <p className="text-base md:text-md lg:text-xl text-blue-100 mb-6 md:mb-8">
+              <p className="text-base md:text-md lg:text-xl text-white mb-6 md:mb-8">
               Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free solar consultation for housing society in Hyderabad Today!
               </p>
               {}

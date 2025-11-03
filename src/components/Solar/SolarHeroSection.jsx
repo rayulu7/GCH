@@ -41,7 +41,7 @@ const SolarHeroSection = () => {
     <div 
       className="relative min-h-screen"
       style={{
-        backgroundImage: "url('/image.jpg')",
+        backgroundImage: "url('/bg_banner.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
@@ -60,7 +60,7 @@ const SolarHeroSection = () => {
             </div>
             
             {}
-            <h1 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
              Choose us for optimum solar performance through lifetime maintenance
               
             </h1>

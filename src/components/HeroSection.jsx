@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[100svh] md:h-screen overflow-hidden">
+    <section className="relative h-[70svh] sm:h-[80svh] md:h-screen overflow-hidden">
       <img
         src="/bg_banner.jpeg"
         alt="Sustainability background"
@@ -11,8 +11,8 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10" />
 
-      <div className="relative z-10 max-w-7xl mx-auto h-full px-6">
-        <div className="h-full flex flex-col justify-start pt-32 md:pt-40">
+      <div className="relative z-10 max-w-7xl mx-auto h-full px-6 md:px-12 lg:px-16">
+        <div className="h-full flex flex-col justify-center md:justify-start pt-16 sm:pt-24 md:pt-16 lg:pt-32">
           <h1
             className="text-white font-extrabold leading-tight max-w-4xl
                        text-3xl sm:text-4xl md:text-6xl lg:text-7xl animate-fade-up"
@@ -20,15 +20,28 @@ const HeroSection = () => {
           >
             Reduce/Offset your Carbon Footprint
           </h1>
-          <br/>
-          <br />
-          <h2 className="text-orange-400 font-extrabold leading-tight max-w-4xl
-                       text-[15px] sm:text-[22px] md:text-[32px] lg:text-[37.5px] animate-fade-up" style={{ animationDelay: "0.12s" }}>We offer Integrated Net-zero solutions, with focus on solar and water & wastewater management, for businesses and individuals looking to reduce their carbon footprint. </h2>
+          <h2 className="text-orange-400 font-extrabold max-w-4xl mt-4 sm:mt-6 md:mt-6
+                       text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px] animate-fade-up" style={{ animationDelay: "0.12s" }}>We offer Integrated Net-zero solutions, with focus on solar and water & wastewater management, for businesses and individuals looking to reduce their carbon footprint. </h2>
+          
+          <div className="mt-6 md:hidden text-center">
+            <a
+              href="#get-started"
+              className="inline-block bg-orange-500 text-white
+                         px-10 py-4 rounded-full
+                         text-lg font-semibold shadow-lg
+                         transition-all duration-500
+                         animate-roll-up
+                         hover:-translate-y-1 hover:rotate-6 hover:bg-green-600 hover:shadow-xl
+                         focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-black/10"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </div>
 
       <div
-        className="absolute right-2 sm:right-4 md:right-10 bottom-20 md:bottom-24"
+        className="absolute hidden md:block right-2 sm:right-4 md:right-10 bottom-12 sm:bottom-16 md:bottom-24"
         style={{ animationDelay: "0.25s" }}
       >
         <a
