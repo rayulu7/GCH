@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/signup');
+  };
+
   return (
-    <section className="relative h-[70svh] sm:h-[80svh] md:h-screen overflow-hidden">
+    <section className="relative h-[88svh] sm:h-[80svh] md:h-screen overflow-hidden">
       <img
         src="/bg_banner.jpeg"
         alt="Sustainability background"
@@ -23,39 +30,41 @@ const HeroSection = () => {
           <h2 className="text-orange-400 font-extrabold max-w-4xl mt-4 sm:mt-6 md:mt-6
                        text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px] animate-fade-up" style={{ animationDelay: "0.12s" }}>We offer Integrated Net-zero solutions, with focus on solar and water & wastewater management, for businesses and individuals looking to reduce their carbon footprint. </h2>
           
-          <div className="mt-6 md:hidden text-center">
-            <a
-              href="#get-started"
+          <div className="mt-6 md:hidden text-center relative z-10">
+            <button
+              onClick={handleGetStarted}
               className="inline-block bg-orange-500 text-white
                          px-10 py-4 rounded-full
                          text-lg font-semibold shadow-lg
                          transition-all duration-500
                          animate-roll-up
                          hover:-translate-y-1 hover:rotate-6 hover:bg-green-600 hover:shadow-xl
-                         focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-black/10"
+                         focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-black/10
+                         cursor-pointer"
             >
               Get Started
-            </a>
+            </button>
           </div>
         </div>
       </div>
 
       <div
-        className="absolute hidden md:block right-2 sm:right-4 md:right-10 bottom-12 sm:bottom-16 md:bottom-24"
+        className="absolute hidden md:block right-2 sm:right-4 md:right-10 bottom-12 sm:bottom-16 md:bottom-24 z-10"
         style={{ animationDelay: "0.25s" }}
       >
-        <a
-          href="#get-started"
+        <button
+          onClick={handleGetStarted}
           className="inline-block bg-orange-500 text-white
                      px-10 md:px-12 py-4 md:py-5 rounded-full
                      text-lg md:text-xl font-semibold shadow-lg
                      transition-all duration-500
                      animate-roll-up
                      hover:-translate-y-1 hover:rotate-6 hover:bg-green-600 hover:shadow-xl
-                     focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-black/10"
+                     focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-black/10
+                     cursor-pointer"
         >
           Get Started
-        </a>
+        </button>
       </div>
 
       <style>{`
