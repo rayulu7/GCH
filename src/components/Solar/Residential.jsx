@@ -91,38 +91,165 @@ const ResidentialHeroSection = () => {
   };
 
   return (
-    <div 
-      className="relative min-h-screen"
-      style={{
-        backgroundImage: "url('/bg_banner.jpeg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Background Image - For desktop */}
+      <div 
+        className="hidden lg:block absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/bg_banner.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}
+      ></div>
       
-      <div className="relative z-10 flex flex-col lg:flex-row min-h-screen">
-        <div className="flex-1 flex items-center justify-center p-6 md:p-8 lg:p-12">
-          <div className="text-white max-w-2xl">
-            <div className=" px-4 md:px-6 py-3 rounded-full text-center mb-6 md:mb-8 inline-block">
-              <span className="text-sm md:text-lg font-bold text-green-600">Save Money, Save The Environment!</span>
+      {/* Overlay - Desktop */}
+      <div className="hidden lg:block absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+
+      {/* Mobile Banner Section - Hidden on desktop */}
+      <div 
+        className="block lg:hidden relative min-h-screen"
+        style={{
+          backgroundImage: "url('/bg_banner.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "30% center",
+          backgroundRepeat: "no-repeat"
+        }}
+      >
+        {/* Overlay - Mobile */}
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+        <div className="relative z-10 flex items-center justify-center min-h-screen p-6 md:p-8">
+          <div className="text-white max-w-2xl w-full text-center">
+            {/* Badge */}
+            <div className="text-green-400 mb-6 md:mb-8">
+              <span className="text-sm md:text-base font-semibold uppercase tracking-wide">Save Money, Save The Environment!</span>
             </div>
             
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
-            Best Residential Rooftop Solar Panel
-            Installation Company in Hyderabad
+            {/* Main Heading */}
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 md:mb-8">
+              Best Residential Rooftop Solar Panel Installation Company in Hyderabad
             </h1>
             
-            <p className="text-base md:text-md lg:text-xl text-white mb-6 md:mb-8">
-            Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Reduce 0.84 tonnes of CO2 emissions per annum per KW of Solar power installed. Get Started Today! </p>
-            <p>
-            A Best Solar Company in Hyderabad that saves your Money and Time.
+            {/* Description */}
+            <p className="text-white text-base md:text-lg mb-4">
+              Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Reduce 0.84 tonnes of CO2 emissions per annum per KW of Solar power installed. Get Started Today!
+            </p>
+            <p className="text-white text-base md:text-lg">
+              A Best Solar Company in Hyderabad that saves your Money and Time.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Form Section - Below Banner */}
+      <div className="block lg:hidden w-full p-6 md:p-8 relative z-10" style={{ backgroundColor: '#ffffff' }}>
+        <div className="max-w-md mx-auto">
+          {/* Contact Form */}
+          <div className="rounded-lg p-6 md:p-8" style={{ backgroundColor: '#ffffff' }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">Contact Us</h2>
+            
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" autoComplete="off">
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full block border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-base"
+                placeholder="Your Name"
+                value={form.name}
+                onChange={handleChange}
+              />
+              <input
+                type="tel"
+                name="phone"
+                required
+                className="w-full block border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-base"
+                placeholder="Phone Number"
+                value={form.phone}
+                onChange={handleChange}
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full block border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-base"
+                placeholder="Email"
+                value={form.email}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="address"
+                required
+                className="w-full block border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-base"
+                placeholder="Home Address"
+                value={form.address}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="city"
+                required
+                className="w-full block border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-base"
+                placeholder="City"
+                value={form.city}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="units"
+                required
+                className="w-full block border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white text-gray-800 placeholder-gray-500 text-base"
+                placeholder="Average Monthly Units"
+                value={form.units}
+                onChange={handleChange}
+              />
+              <input
+                type="hidden"
+                name="service"
+                value="Residential"
+              />
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold px-12 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-base min-w-[200px]"
+                  style={{ borderRadius: '5px' }}
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout - Side by Side */}
+      <div className="hidden lg:flex relative z-10 min-h-screen flex-row w-full">
+        {/* Banner Section - Left Side (Desktop) */}
+        <div className="flex-1 flex items-center justify-center p-12">
+          <div className="text-white max-w-2xl w-full">
+            {/* Badge */}
+            <div className="text-green-400 mb-8">
+              <span className="text-base font-semibold uppercase tracking-wide">Save Money, Save The Environment!</span>
+            </div>
+            
+            {/* Main Heading */}
+            <h1 className="text-white text-6xl xl:text-7xl font-bold leading-tight mb-8">
+              Best Residential Rooftop Solar Panel Installation Company in Hyderabad
+            </h1>
+            
+            {/* Description */}
+            <p className="text-white text-lg xl:text-xl mb-4">
+              Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Reduce 0.84 tonnes of CO2 emissions per annum per KW of Solar power installed. Get Started Today!
+            </p>
+            <p className="text-white text-lg xl:text-xl">
+              A Best Solar Company in Hyderabad that saves your Money and Time.
             </p>
           </div>
         </div>
 
-        <div className="w-full lg:w-[600px] xl:w-[700px] p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+        {/* Form Section - Right Side (Desktop) */}
+        <div className="w-[600px] xl:w-[700px] flex-shrink-0 p-12 flex flex-col justify-center">
+          {/* Contact Form */}
           <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:max-w-none lg:mx-0">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 md:mb-8 text-center lg:text-left">Contact Us</h2>
             
@@ -189,7 +316,7 @@ const ResidentialHeroSection = () => {
               <div className="flex justify-center lg:justify-start">
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base min-w-[120px] sm:min-w-[150px]"
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold px-8 sm:px-12 py-3 sm:py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-sm sm:text-base min-w-[160px] sm:min-w-[200px]"
                   style={{ borderRadius: '5px' }}
                 >
                   Send Message
