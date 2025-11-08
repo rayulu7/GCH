@@ -102,18 +102,18 @@ export default function Footer() {
               © 2025 <span className="text-orange-500">GreenCarbonHub</span>. All Rights Reserved.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center hover:opacity-80 transition">
+              <a href="https://www.facebook.com/GreenCarbonHub/" className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center hover:opacity-80 transition">
                 <Facebook className="w-4 h-4 text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-pink-500 rounded flex items-center justify-center hover:opacity-80 transition">
+              <a href="https://www.instagram.com/greencarbonhubofficial?igsh=MXZ3djdvc21xNG55Nw==" className="w-8 h-8 bg-pink-500 rounded flex items-center justify-center hover:opacity-80 transition">
                 <Instagram className="w-4 h-4 text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:opacity-80 transition">
+              <a href="https://x.com/GreenHub61470" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:opacity-80 transition">
                 <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </a>
-              <a href="#" className="w-8 h-8 bg-blue-700 rounded flex items-center justify-center hover:opacity-80 transition">
+              <a href="https://www.linkedin.com/company/ecoila?trk=blended-typeahead" className="w-8 h-8 bg-blue-700 rounded flex items-center justify-center hover:opacity-80 transition">
                 <Linkedin className="w-4 h-4 text-white" />
               </a>
             </div>
