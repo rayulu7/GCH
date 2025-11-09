@@ -126,15 +126,15 @@ const ResidentialHeroSection = () => {
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 md:mb-8">
+            <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
               Best Residential Rooftop Solar Panel Installation Company in Hyderabad
             </h1>
             
             {/* Description */}
-            <p className="text-white text-base md:text-lg mb-4">
+            <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px] mb-4">
               Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Reduce 0.84 tonnes of CO2 emissions per annum per KW of Solar power installed. Get Started Today!
             </p>
-            <p className="text-white text-base md:text-lg">
+            <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
               A Best Solar Company in Hyderabad that saves your Money and Time.
             </p>
           </div>
@@ -233,15 +233,15 @@ const ResidentialHeroSection = () => {
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-white text-6xl xl:text-7xl font-bold leading-tight mb-8">
+            <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl mb-8">
               Best Residential Rooftop Solar Panel Installation Company in Hyderabad
             </h1>
             
             {/* Description */}
-            <p className="text-white text-lg xl:text-xl mb-4">
+            <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px] mb-4">
               Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Reduce 0.84 tonnes of CO2 emissions per annum per KW of Solar power installed. Get Started Today!
             </p>
-            <p className="text-white text-lg xl:text-xl">
+            <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
               A Best Solar Company in Hyderabad that saves your Money and Time.
             </p>
           </div>

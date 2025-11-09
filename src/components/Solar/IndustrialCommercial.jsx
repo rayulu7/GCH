@@ -180,12 +180,12 @@ const IndustrialCommercial = () => {
               </div>
               
               {/* Main Heading */}
-              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 md:mb-8">
+              <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
                 Reduce Your Power Bill By Upto 90% By Switching To Solar
               </h1>
               
               {/* Description */}
-              <p className="text-white text-base md:text-lg">
+              <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
                 Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free Industrial Solar System Consultation in Hyderabad
               </p>
             </div>
@@ -291,12 +291,12 @@ const IndustrialCommercial = () => {
               </div>
               
               {/* Main Heading */}
-              <h1 className="text-white text-6xl xl:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl mb-8">
                 Reduce Your Power Bill By Upto 90% By Switching To Solar
               </h1>
               
               {/* Description */}
-              <p className="text-white text-lg xl:text-xl">
+              <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
                 Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free Industrial Solar System Consultation in Hyderabad
               </p>
             </div>

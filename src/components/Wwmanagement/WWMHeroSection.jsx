@@ -66,12 +66,12 @@ const WWHeroSection = () => {
         <div className="relative z-10 flex items-center justify-center min-h-screen p-6 md:p-8">
           <div className="text-white max-w-2xl w-full text-center">
             {/* Main Heading */}
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 md:mb-8">
+            <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
               Best Effluent/ Sewage Treatment Plant Services in India
             </h1>
             
             {/* Description */}
-            <p className="text-white text-base md:text-lg font-semibold">
+            <p className="text-white font-semibold text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
               Choose Greencarbonhub's Expert Wastewater Treatment Plant Team For Optimal Water Quality
             </p>
           </div>
@@ -151,12 +151,12 @@ const WWHeroSection = () => {
         <div className="flex-1 flex items-center justify-center p-12">
           <div className="text-white max-w-2xl w-full">
             {/* Main Heading */}
-            <h1 className="text-white text-6xl xl:text-7xl font-bold leading-tight mb-8">
+            <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl mb-8">
               Best Effluent/ Sewage Treatment Plant Services in India
             </h1>
             
             {/* Description */}
-            <p className="text-white text-lg xl:text-2xl font-semibold">
+            <p className="text-white font-semibold text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
               Choose Greencarbonhub's Expert Wastewater Treatment Plant Team For Optimal Water Quality
             </p>
           </div>

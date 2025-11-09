@@ -106,12 +106,12 @@ const HousingSociety = () => {
               </div>
               
               {/* Main Heading */}
-              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 md:mb-8">
+              <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
                 Reliable Rooftop Solar Power System for Housing Society in Hyderabad
               </h1>
               
               {/* Description */}
-              <p className="text-white text-base md:text-lg">
+              <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
                 Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free solar consultation for housing society in Hyderabad Today!
               </p>
             </div>
@@ -217,12 +217,12 @@ const HousingSociety = () => {
               </div>
               
               {/* Main Heading */}
-              <h1 className="text-white text-6xl xl:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl mb-8">
                 Reliable Rooftop Solar Power System for Housing Society in Hyderabad
               </h1>
               
               {/* Description */}
-              <p className="text-white text-lg xl:text-xl">
+              <p className="text-white text-[20px] sm:text-[28px] md:text-[36px] lg:text-[38px]">
                 Achieve NET ZERO emissions by shifting from fossil fuel-based energy to renewable energy by engaging GreenCarbonHub. Book An Appointment For A Free solar consultation for housing society in Hyderabad Today!
               </p>
             </div>

@@ -73,7 +73,7 @@ const SolarHeroSection = () => {
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6 md:mb-8">
+            <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
              Choose us for optimum solar performance through lifetime maintenance
             </h1>
           </div>
@@ -179,7 +179,7 @@ const SolarHeroSection = () => {
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-white text-6xl xl:text-7xl font-bold leading-tight mb-8">
+            <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl mb-8">
              Choose us for optimum solar performance through lifetime maintenance
             </h1>
           </div>
