@@ -68,9 +68,9 @@ const SolarHeroSection = () => {
         <div className="relative z-10 flex items-center justify-center min-h-screen p-6 md:p-8">
           <div className="text-white max-w-2xl w-full text-center">
             {/* Subsidy Badge */}
-            <div className="text-green-400 mb-6 md:mb-8">
+            {/* <div className="text-green-400 mb-6 md:mb-8">
               <span className="text-sm md:text-base font-semibold uppercase tracking-wide">AVAIL SUBSIDY UP TO ₹78,000</span>
-            </div>
+            </div> */}
             
             {/* Main Heading */}
             <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
@@ -174,9 +174,9 @@ const SolarHeroSection = () => {
         <div className="flex-1 flex items-center justify-center p-12">
           <div className="text-white max-w-2xl w-full">
             {/* Subsidy Badge */}
-            <div className="text-green-400 mb-8">
+            {/* <div className="text-green-400 mb-8">
               <span className="text-base font-semibold uppercase tracking-wide">AVAIL SUBSIDY UP TO ₹78,000</span>
-            </div>
+            </div> */}
             
             {/* Main Heading */}
             <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-7xl mb-8">
