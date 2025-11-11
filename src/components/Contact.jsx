@@ -10,8 +10,9 @@ const services = [
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
-    phone: "",
     email: "",
+    phone: "",
+    
     city: "",
     service: ""
   });
@@ -52,15 +53,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={handleChange}
               />
-              <input
-                type="tel"
-                name="phone"
-                required
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white"
-                placeholder="Phone Number"
-                value={form.phone}
-                onChange={handleChange}
-              />
+              
               <input
                 type="email"
                 name="email"
@@ -68,6 +61,15 @@ export default function Contact() {
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white"
                 placeholder="Email"
                 value={form.email}
+                onChange={handleChange}
+              />
+              <input
+                type="tel"
+                name="phone"
+                required
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white"
+                placeholder="Phone Number"
+                value={form.phone}
                 onChange={handleChange}
               />
               <input
